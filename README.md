@@ -1,10 +1,9 @@
-# Document Retrieval
+## Improvement
+### Document Retrieval
 原本結果為：
 - Precision: 0.2525661209068016
 - Recall: 0.8066447523089846
 
-## Improvement
-### Redirection
 訓練了136分鐘，在採用 Pandarallel 的情況下。
 
 | Experiment  | Precision | Recall | Filename |
@@ -24,6 +23,17 @@
     - 現在改用重複提及，如果有重複被搜尋到的就會被放到list內。
 3. 英文的重複搜尋還沒解決，如ACM acm同時存在
 4. 針對引號等等，不能分割搜尋
+
+### Sentence Retrieval
+利用原本訓練出來的model50, model100與model150下去做validation。
+
+原本的成績：
+| Model | Train-F1 | Train-P | Train-R | Valid-F1 | Valid-P | Valid-R |
+| ----- | -------- | ------- | ------- | -------- | ------- | ------- |
+| model50-0   | 0.357773 | 0.237802 | 0.722047 | 0.333525 | 0.216876 | 0.721698 |
+| model50-1   | 0.398642 | 0.267014 | 0.786220 | 0.364270 | 0.237342 | 0.783018 |
+| model100-1  | 0.403016 | 0.269849 | 0.795669 | 0.365551 | 0.238286 | 0.784591 |
+| model150-1  | 0.402539 | 0.269376 | 0.796062 | 0.364640 | 0.237657 | 0.783018 |
 
 ## Module Testing
 ### HanLP
