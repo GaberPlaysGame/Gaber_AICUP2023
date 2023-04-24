@@ -8,7 +8,7 @@
 
 | Experiment  | Precision | Recall | Filename |
 | ----------- | --------- | ------ | -------- |
-| Main                          | 0.25256612090680160 | 0.8062447523089846 | **train_doc5_aicup.jsonl**                     |
+| Main                          | 0.25093750000000560 | 0.8073333333333337 | **train_doc5_aicup.jsonl**                     |
 | Redirection, first 8          | 0.15681787513494116 | 0.8258028967254409 | **train_doc5_with_redirection.jsonl**          |
 | Fullname, Stopwords           | 0.16030084262924360 | 0.8328872795969775 | **train_doc5_with_stopwords.jsonl**            |
 | Fixed English bug             | 0.16064943924673190 | 0.8338318639798489 | **train_doc5_fix_english.jsonl**               |
@@ -37,7 +37,10 @@
 | model50-1-32   | 0.398642 | 0.267014 | 0.786220 | 0.364270 | 0.237342 | 0.783018 |
 | model100-1-32  | 0.403016 | 0.269849 | 0.795669 | 0.365551 | 0.238286 | 0.784591 |
 | model150-1-32  | 0.402539 | 0.269376 | 0.796062 | 0.364640 | 0.237657 | 0.783018 |
+| model30-1-64   | NaN | NaN | NaN | NaN | NaN | NaN |
 | model50-1-64   | 0.389274 | 0.259563 | 0.778125 | 0.388977 | 0.256796 | 0.801563 |
+| model60-1-64   | NaN | NaN | NaN | NaN | NaN | NaN |
+| model90-1-64   | NaN | NaN | NaN | NaN | NaN | NaN |
 
 ### Claim Validation
 CUDA 在 Colab 上還是容易爆 CudaOutOfMemoryError，我的GPU只能容許Batch Size=8，Colab只能24。
@@ -47,6 +50,7 @@ CUDA 在 Colab 上還是容易爆 CudaOutOfMemoryError，我的GPU只能容許Ba
 | ----- | ------- | ---------- | ------- | ---------- |
 | model.7900 | 0.4056 | 7900 | 0  | 8  |
 | model.950  | 0.4170 | 950  | 0  | 8  |
+| model.750  | 0.4259 | 750  | 0  | 32 |
 
 ## Module Testing
 ### HanLP
@@ -63,3 +67,6 @@ Wikipedia-api不能在Pandarallel內處理，會造成名為 JSONDecodeError 的
 
 ### Word Embedding
 在尋找 Word Embedding 時有想要使用 Sentence Embedding 的想法，可能會改用 Doc2Vec
+
+### ProofVer
+[Proofver](https://github.com/krishnamrith12/ProoFVer)
