@@ -8,17 +8,17 @@
 
 | Experiment  | Precision | Recall | F1-Score | Filename |
 | ----------- | --------- | ------ | -------- | -------- |
-| Main                          | 0.25093750000000560 | 0.8073333333333337 | NaN | **train_doc5_aicup.jsonl**                     |
-| Redirection, first 8          | 0.15681787513494116 | 0.8258028967254409 | NaN | **train_doc5_with_redirection.jsonl**          |
-| Fullname, Stopwords           | 0.16030084262924360 | 0.8328872795969775 | NaN | **train_doc5_with_stopwords.jsonl**            |
-| Fixed English bug             | 0.16064943924673190 | 0.8338318639798489 | NaN | **train_doc5_fix_english.jsonl**               |
-| Delete Replicate English page | 0.16275338850905655 | 0.8340942485306465 | NaN | **train_doc5_delete_replicate_eng_page.jsonl** |
-| Repeat Mention                | 0.23450026306606990 | 0.8795759865659112 | NaN | **train_doc5_repeat_mention.jsonl**            |
-| Quote Full Name               | 0.24161798354178782 | 0.8767422334172965 | NaN | **train_doc5_quote_fullname.jsonl**            |
-| On New Data                   | 0.24198516414141477 | 0.8701666666666668 | NaN | **train_doc5_new_1.jsonl**                     |
-| On Search                     | 0.01760738788282119 | 0.9074270833333332 | NaN | **train_doc5_search.jsonl**                    |
-| Tf-Idf On Search Data         | 0.33017187500000345 | 0.5558697916666666 | NaN | **train_doc5_tfidf.jsonl**                     |
-| Merge Tf-Idf and AICUP        | 0.197161 | 0.899203 | 0.378666 | **train_doc5_new_2.jsonl** |
+| Main                          | 0.250937 | 0.807333 | 0.382870 | **train_doc5_aicup.jsonl**                     |
+| Redirection, first 8          | 0.156818 | 0.825803 | 0.263582 | **train_doc5_with_redirection.jsonl**          |
+| Fullname, Stopwords           | 0.160301 | 0.832887 | 0.268856 | **train_doc5_with_stopwords.jsonl**            |
+| Fixed English bug             | 0.160649 | 0.833832 | 0.269396 | **train_doc5_fix_english.jsonl**               |
+| Delete Replicate English page | 0.162753 | 0.834094 | 0.272362 | **train_doc5_delete_replicate_eng_page.jsonl** |
+| Repeat Mention                | 0.234500 | 0.879576 | 0.370281 | **train_doc5_repeat_mention.jsonl**            |
+| Quote Full Name               | 0.241618 | 0.876742 | 0.378834 | **train_doc5_quote_fullname.jsonl**            |
+| On New Data                   | 0.241985 | 0.870167 | 0.378667 | **train_doc5_new_1.jsonl**                     |
+| On Only Wiki-Search           | 0.017607 | 0.907427 | 0.034544 | **train_doc5_search.jsonl**                    |
+| Tf-Idf On Search Data         | 0.330172 | 0.555870 | 0.414275 | **train_doc5_tfidf.jsonl**                     |
+| Merge Tf-Idf and AICUP        | 0.197161 | 0.899203 | 0.378666 | **train_doc5_new_2.jsonl**                     |
 
 還需要改善的點：
 1. 需要 Hyperlink，有些沒有直接提及。
