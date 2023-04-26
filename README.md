@@ -6,19 +6,19 @@
 
 訓練了136分鐘，在採用 Pandarallel 的情況下。
 
-| Experiment  | Precision | Recall | Filename |
+| Experiment  | Precision | Recall | F1-Score | Filename |
 | ----------- | --------- | ------ | -------- |
-| Main                          | 0.25093750000000560 | 0.8073333333333337 | **train_doc5_aicup.jsonl**                     |
-| Redirection, first 8          | 0.15681787513494116 | 0.8258028967254409 | **train_doc5_with_redirection.jsonl**          |
-| Fullname, Stopwords           | 0.16030084262924360 | 0.8328872795969775 | **train_doc5_with_stopwords.jsonl**            |
-| Fixed English bug             | 0.16064943924673190 | 0.8338318639798489 | **train_doc5_fix_english.jsonl**               |
-| Delete Replicate English page | 0.16275338850905655 | 0.8340942485306465 | **train_doc5_delete_replicate_eng_page.jsonl** |
-| Repeat Mention                | 0.23450026306606990 | 0.8795759865659112 | **train_doc5_repeat_mention.jsonl**            |
-| Quote Full Name               | 0.24161798354178782 | 0.8767422334172965 | **train_doc5_quote_fullname.jsonl**            |
-| On New Data                   | 0.24198516414141477 | 0.8701666666666668 | **train_doc5_new_1.jsonl**                     |
-| On Search                     | 0.01760738788282119 | 0.9074270833333332 | **train_doc5_search.jsonl**                    |
-| Tf-Idf On Search Data         | 0.33017187500000345 | 0.5558697916666666 | **train_doc5_tfidf.jsonl**                     |
-| Merge Tf-Idf and AICUP        | 0.19716101086413607 | 0.8992031250000001 | **train_doc5_tfidf.jsonl**                     |
+| Main                          | 0.25093750000000560 | 0.8073333333333337 | | **train_doc5_aicup.jsonl**                     |
+| Redirection, first 8          | 0.15681787513494116 | 0.8258028967254409 | | **train_doc5_with_redirection.jsonl**          |
+| Fullname, Stopwords           | 0.16030084262924360 | 0.8328872795969775 | | **train_doc5_with_stopwords.jsonl**            |
+| Fixed English bug             | 0.16064943924673190 | 0.8338318639798489 | | **train_doc5_fix_english.jsonl**               |
+| Delete Replicate English page | 0.16275338850905655 | 0.8340942485306465 | | **train_doc5_delete_replicate_eng_page.jsonl** |
+| Repeat Mention                | 0.23450026306606990 | 0.8795759865659112 | | **train_doc5_repeat_mention.jsonl**            |
+| Quote Full Name               | 0.24161798354178782 | 0.8767422334172965 | | **train_doc5_quote_fullname.jsonl**            |
+| On New Data                   | 0.24198516414141477 | 0.8701666666666668 | | **train_doc5_new_1.jsonl**                     |
+| On Search                     | 0.01760738788282119 | 0.9074270833333332 | | **train_doc5_search.jsonl**                    |
+| Tf-Idf On Search Data         | 0.33017187500000345 | 0.5558697916666666 | | **train_doc5_tfidf.jsonl**                     |
+| Merge Tf-Idf and AICUP        | 0.197161 | 0.899203 | 0.378666 | **train_doc5_new_2.jsonl** |
 
 還需要改善的點：
 1. 需要 Hyperlink，有些沒有直接提及。
@@ -57,6 +57,7 @@ CUDA 在 Colab 上還是容易爆 CudaOutOfMemoryError，我的GPU只能容許Ba
 | model.100  | 0.4471 | 100  | 1  | 32 | model90-1-64 |
 | model.425  | 0.4471 | 425  | 1  | 32 | model90-1-64 |
 | model.250  | 0.4559 | 250  | 1  | 32 | model90-1-64 |
+| model.
 
 ### Submission History
 | Model | Val_acc | Public Score | Private Score | Base Model |
