@@ -16,6 +16,9 @@
 | Repeat Mention                | 0.23450026306606990 | 0.8795759865659112 | **train_doc5_repeat_mention.jsonl**            |
 | Quote Full Name               | 0.24161798354178782 | 0.8767422334172965 | **train_doc5_quote_fullname.jsonl**            |
 | On New Data                   | 0.24198516414141477 | 0.8701666666666668 | **train_doc5_new_1.jsonl**                     |
+| On Search                     | 0.01760738788282119 | 0.9074270833333332 | **train_doc5_search.jsonl**                    |
+| Tf-Idf On Search Data         | 0.33017187500000345 | 0.5558697916666666 | **train_doc5_tfidf.jsonl**                     |
+| Merge Tf-Idf and AICUP        | 0.19716101086413607 | 0.8992031250000001 | **train_doc5_tfidf.jsonl**                     |
 
 還需要改善的點：
 1. 需要 Hyperlink，有些沒有直接提及。
