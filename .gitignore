@@ -129,7 +129,9 @@ dmypy.json
 .pyre/
 
 ipynb_checkpoints
-data
+data/wiki-text
+data/archive
+data/wiki.pkl
 checkpoints
 logs
 fairseq
