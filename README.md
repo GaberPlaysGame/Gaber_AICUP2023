@@ -1,7 +1,7 @@
 ## Improvement
 - Version 1: Redirect Wikipedia Searching
 - Version 2: TFIDF + Wikipedia Searching
-- Version 3: Neg_ratio Adjusting
+- Version 3: Neg_ratio Adjusting, TFIDF Adjusting
 
 ### Document Retrieval
 原本結果為：
