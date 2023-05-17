@@ -10,6 +10,7 @@ import hanlp
 import opencc
 import pandas as pd
 import torch
+import swifter
 from sentence_transformers import SentenceTransformer, util
 from hanlp.components.pipeline import Pipeline
 from pandarallel import pandarallel
@@ -42,23 +43,33 @@ def tokenize(text: str, stopwords: list) -> str:
 def get_pred_pages_sbert(
     series_data: pd.Series, 
     tokenizing_method: callable,
-    model: SentenceTransformer,
-    wiki_pages: pd.DataFrame,
+    # model: SentenceTransformer,
+    # wiki_pages: pd.DataFrame,
+    pool,
     topk: int,
     threshold: float
 ) -> set:
+    # Disable huggingface tokenizor parallelism warning
+    import os
+    os.environ["TOKENIZERS_PARALLELISM"] = "false"
+    os.environ["CUDA_LAUNCH_BLOCKING"] = '1'
 
+    import torch.cuda as cuda
+    cuda.empty_cache()
+    
     # Parameters:
     THRESHOLD_LOWEST = 0.55
     THRESHOLD_HIGHEST = 0.7
     THRESHOLD_SIM_LINE = threshold
     WEIGHT_SIM_ID = 0.05    # The lower it is, the higher sim_id is when it directly matches claim.
     
-    def sim_score_eval(s1, s2):
+    def sim_score_eval(sim_line, sim_id):
         weight_id = 1
         weight_line = 1
+
+        res = (weight_id + weight_line)*(sim_line*sim_id)/(weight_line*sim_line+weight_id*sim_id)
         
-        return (weight_id + weight_line)*(s1*s2)/(weight_line*s1+weight_id*s2)
+        return res
     
     def post_processing(page) -> str:
         import opencc
@@ -77,10 +88,11 @@ def get_pred_pages_sbert(
     direct_search = series_data["direct_match"]
     results = []
     mapping = {}
+    df_res = []
 
     tokens = tokenizing_method(claim)
-    emb_claim_tok = model.encode(tokens)
-    emb_claim = model.encode(claim)
+    emb_claim_tok = sbert_model.encode(tokens)
+    emb_claim = sbert_model.encode(claim)
 
     search_list = [post_processing(id) for id in search_list]
     if series_data["label"] != "NOT ENOUGH INFO":
@@ -103,9 +115,12 @@ def get_pred_pages_sbert(
             # search_tokens = tokenizing_method(search_lines)
         except:
             continue
+
+        if len(search_lines) == 0:
+             continue
         # search_processed_text = str(search_tokens["processed_text"].astype("string"))
         search_id_tok = tokenizing_method(search_id)
-        emb_id = model.encode(search_id_tok)
+        emb_id = sbert_model.encode(search_id_tok)
         sim_id = util.pytorch_cos_sim(emb_id, emb_claim).numpy()
         sim_id = sim_id[0][0]
         new_sim_id = 0
@@ -120,63 +135,103 @@ def get_pred_pages_sbert(
             new_sim_id = sim_id
 
         sim_score = 0
+        sim_line = 0
         sim_line_b = 0
-        for search_line in search_lines:
-            # print(search_line)
-            search_line_count = search_line.count('，')+1
-            if search_line_count > claim_sentences_count and claim_sentences_count > 1:
-                search_line_list = search_line.split('，')
-                sim_line = 0
-                for i in range(0, search_line_count-claim_sentences_count+1):
-                    line = "，".join(search_line_list[i:i+claim_sentences_count])
-                    # print(line)
-                    search_token = tokenizing_method(line)
-                    emb_search = model.encode(search_token)
-                    sim = util.pytorch_cos_sim(emb_search, emb_claim_tok).numpy()
-                    sim = sim[0][0]
-                    sim_line = max(sim, sim_line)
 
-                    emb_search = model.encode(line)
-                    sim = util.pytorch_cos_sim(emb_search, emb_claim).numpy()
-                    sim = sim[0][0]
-                    sim_line = max(sim, sim_line)
-            else:
-                search_token = tokenizing_method(search_line)
-                emb_search = model.encode(search_token)
-                sim_line = util.pytorch_cos_sim(emb_search, emb_claim_tok).numpy()
-                sim_line = sim_line[0][0]
+        embs = sbert_model.encode_multi_process(search_lines, pool=pool)
+        for emb in embs:
+            sim = util.pytorch_cos_sim(emb, emb_claim).numpy()
+            sim = sim[0][0]
+            sim_line = max(sim, sim_line)
 
-                emb_search = model.encode(search_line)
-                sim = util.pytorch_cos_sim(emb_search, emb_claim).numpy()
-                sim = sim[0][0]
-                sim_line = max(sim, sim_line)
+        search_lines_tok = [tokenizing_method(line) for line in search_lines]
+        embs = sbert_model.encode_multi_process(search_lines_tok, pool=pool)
+        for emb in embs:
+            sim = util.pytorch_cos_sim(emb, emb_claim_tok).numpy()
+            sim = sim[0][0]
+            sim_line = max(sim, sim_line)
+
+        if sim_line > THRESHOLD_SIM_LINE:
+            sim_line = max(sim_line, sim_line_b)
+            sim_line_b = sim_line
+            sim_score = sim_score_eval(sim_line, new_sim_id)
+            sim_score = max(sim_score, sim_line_b)
+            # print(sim_score, search_id)
+            if sim_score > THRESHOLD_LOWEST:
+                search_id = post_processing(search_id)
+                if search_id in mapping:
+                    mapping[search_id] = max(sim_score, mapping[search_id])
+                else:
+                    mapping[search_id] = sim_score
+
+        # for search_line in search_lines:
+        #     '''
+        #     # print(search_line)
             
-            # print(sim_scores)
-            if sim_line > THRESHOLD_SIM_LINE:
-                sim_line = max(sim_line, sim_line_b)
-                sim_line_b = sim_line
-                sim_score = sim_score_eval(sim_line, new_sim_id)
-                # print(sim_score, search_id)
-                if sim_score > THRESHOLD_LOWEST:
-                    search_id = post_processing(search_id)
-                    if search_id in mapping:
-                        mapping[search_id] = max(sim_score, mapping[search_id])
-                    else:
-                        mapping[search_id] = sim_score
+        #     # search_line_count = search_line.count('，')+1
+        #     # if search_line_count > claim_sentences_count and claim_sentences_count > 1:
+        #     #     search_line_list = search_line.split('，')
+        #     #     sim_line = 0
+        #     #     for i in range(0, search_line_count-claim_sentences_count+1):
+        #     #         line = "，".join(search_line_list[i:i+claim_sentences_count])
+        #     #         # print(line)
+        #     #         search_token = tokenizing_method(line)
+        #     #         emb_search = sbert_model.encode(search_token)
+        #     #         sim = util.pytorch_cos_sim(emb_search, emb_claim_tok).numpy()
+        #     #         sim = sim[0][0]
+        #     #         sim_line = max(sim, sim_line)
+
+        #     #         emb_search = sbert_model.encode(line)
+        #     #         sim = util.pytorch_cos_sim(emb_search, emb_claim).numpy()
+        #     #         sim = sim[0][0]
+        #     #         sim_line = max(sim, sim_line)
+        #     # else:
+        #     #     search_token = tokenizing_method(search_line)
+        #     #     emb_search = sbert_model.encode(search_token)
+        #     #     sim_line = util.pytorch_cos_sim(emb_search, emb_claim_tok).numpy()
+        #     #     sim_line = sim_line[0][0]
+
+        #     #     emb_search = sbert_model.encode(search_line)
+        #     #     sim = util.pytorch_cos_sim(emb_search, emb_claim).numpy()
+        #     #     sim = sim[0][0]
+        #     #     sim_line = max(sim, sim_line)
+        #     '''
+            
+        #     search_token = tokenizing_method(search_line)
+        #     emb_search = sbert_model.encode(search_token)
+        #     sim_line = util.pytorch_cos_sim(emb_search, emb_claim_tok).numpy()
+        #     sim_line = sim_line[0][0]
+
+        #     emb_search = sbert_model.encode(search_line)
+        #     sim = util.pytorch_cos_sim(emb_search, emb_claim).numpy()
+        #     sim = sim[0][0]
+        #     sim_line = max(sim, sim_line)
+
+        #     if sim_line > THRESHOLD_SIM_LINE:
+        #         sim_line = max(sim_line, sim_line_b)
+        #         sim_line_b = sim_line
+        #         sim_score = sim_score_eval(sim_line, new_sim_id)
+        #         # print(sim_score, search_id)
+        #         if sim_score > THRESHOLD_LOWEST:
+        #             search_id = post_processing(search_id)
+        #             if search_id in mapping:
+        #                 mapping[search_id] = max(sim_score, mapping[search_id])
+        #             else:
+        #                 mapping[search_id] = sim_score
         if search_id in gt_pages:
             print(f"Analysis on GT pages={search_id}: origin sim_id={sim_id}, new sim_id={new_sim_id}, sim_line={sim_line_b}, sim_score={sim_score}")
+        data = (claim, search_id, sim_id, new_sim_id, sim_line, sim_score)
+        df_res.append(data)
 
-    # print(mapping)
     mapping_sorted = sorted(mapping.items(), key=lambda x:x[1], reverse=True)
-    # print(mapping_sorted)
-    results = [k for k, v in mapping_sorted if v > THRESHOLD_HIGHEST][:topk]
+    # print(mapping_sorted[:topk])
+    if len(mapping_sorted) >= topk:
+        results = [k for k, v in mapping_sorted if v > THRESHOLD_HIGHEST][:topk]
+    else:
+        results= [k for k, v in mapping_sorted if v > THRESHOLD_LOWEST][:topk]
     # print(results)
-    if not results:     # List is empty
-        results= [k for k, v in mapping_sorted if v > THRESHOLD_LOWEST][:1]
-        # print(f"Empty, new_results={results}")   
 
     # Analysis on missed pages
-    
     if series_data["label"] != "NOT ENOUGH INFO":
         for page in gt_pages:
             if page in mapping:
@@ -190,19 +245,20 @@ def get_pred_pages_sbert(
                 else:
                     print(f"Missed: ID={page}, score < {THRESHOLD_LOWEST}")
 
+    df = pd.DataFrame(df_res, columns=['Claim', 'Search_ID', 'Sim_ID', 'Sim_ID_Adjusted', 'Sim_Line', 'Sim_Score'])
+
+    with open("data/train_doc5_sbert_logging.jsonl", "a", encoding="utf8") as f:
+        f.write(df.to_json(orient='records', lines=True, force_ascii=False))
+
     return set(results)
 
 if __name__ == '__main__':
     # print(torch.cuda.device_count())
-    sbert_model = SentenceTransformer('uer/sbert-base-chinese-nli', device='cpu')
+    sbert_model = SentenceTransformer('uer/sbert-base-chinese-nli', device='cuda')
+    pool = sbert_model.start_multi_process_pool()
 
     wiki_path = "data/wiki-pages"
-    min_wiki_length = 25
     topk = 5
-    min_df = 1
-    max_df = 0.5
-    use_idf = True
-    sublinear_tf = True
 
     wiki_cache = "wiki"
     target_column = "text"
@@ -237,7 +293,7 @@ if __name__ == '__main__':
     doc_path_tfidf = f"data/train_doc5_tfidf.jsonl"
 
     # num_of_samples = 3969
-    num_of_samples = 3969
+    num_of_samples = 500
     TRAIN_DATA_SEARCH = load_json(doc_path_search)
     train_df_search = pd.DataFrame(TRAIN_DATA_SEARCH[:num_of_samples])
 
@@ -248,15 +304,16 @@ if __name__ == '__main__':
                 for line in f
             ], name="sbert")
     else:
-        pandarallel.initialize(progress_bar=True, verbose=0, nb_workers=3)
+        pandarallel.initialize(progress_bar=False, verbose=0, nb_workers=3)
         print("Start predicting documents:")
-        predicted_results_sbert = train_df_search.parallel_apply(
+        predicted_results_sbert = train_df_search.progress_apply(
             partial(
                 get_pred_pages_sbert,
                 tokenizing_method=partial(tokenize, stopwords=stopwords),
-                model=sbert_model,
-                wiki_pages=wiki_pages,
-                topk=5,
+                # model=sbert_model,
+                # wiki_pages=wiki_pages,
+                pool=pool,
+                topk=topk,
                 threshold=0.375
             ), axis=1)
         save_doc(TRAIN_DATA[:num_of_samples], predicted_results_sbert, mode="train", suffix="")
