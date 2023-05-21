@@ -12,25 +12,17 @@
 
 | Experiment  | Precision | Recall | F1-Score | Filename |
 | ----------- | --------- | ------ | -------- | -------- |
-| Main                                       | 0.250937 | 0.807333 | 0.382870 | **train_doc5_aicup.jsonl**                     |
-| Redirection, first 8                       | 0.156818 | 0.825803 | 0.263582 | **train_doc5_with_redirection.jsonl**          |
-| Fullname, Stopwords                        | 0.160301 | 0.832887 | 0.268856 | **train_doc5_with_stopwords.jsonl**            |
-| Fixed English bug                          | 0.160649 | 0.833832 | 0.269396 | **train_doc5_fix_english.jsonl**               |
-| Delete Replicate English page              | 0.162753 | 0.834094 | 0.272362 | **train_doc5_delete_replicate_eng_page.jsonl** |
-| Repeat Mention                             | 0.234500 | 0.879576 | 0.370281 | **train_doc5_repeat_mention.jsonl**            |
-| Quote Full Name                            | 0.241618 | 0.876742 | 0.378834 | **train_doc5_quote_fullname.jsonl**            |
-| On New Data                                | 0.241985 | 0.870167 | 0.378667 | **train_doc5_new_1.jsonl**                     |
+| Original                                       | 0.250937 | 0.807333 | 0.382870 | **train_doc5_aicup.jsonl**                     |
 | On Only Wiki-Search                        | 0.017607 | 0.907427 | 0.034544 | **train_doc5_search.jsonl**                    |
 | Tf-Idf On Search Data                      | 0.330172 | 0.555870 | 0.414275 | **train_doc5_tfidf_1.jsonl**                   |
 | Merge Tf-Idf and AICUP                     | 0.197161 | 0.899203 | 0.323410 | **train_doc5_new_2.jsonl**                     |
-| Tf-Idf On Search Data, mindf=1, wikilen=15 | 0.347536 | 0.537667 | 0.422183 | **train_doc5_tfidf_2.jsonl**                   |
-| Merge, On TFIDF Ver. 2                     | 0.204287 | 0.899203 | 0.332935 | **train_doc5_new_3.jsonl**                     |
 | w2v + Tf-Idf On Search Data, thres=0.65    | 0.143234 | 0.635255 | 0.233761 | **train_doc5_tfidf_3.jsonl**                   |
 | Merge, On TFIDF Ver. 3                     | 0.125820 | 0.902380 | 0.220848 | **train_doc5_new_4.jsonl**                     |
 | w2v + Tf-Idf, thres=0.75, wv=300           | 0.158859 | 0.579969 | 0.249404 | **train_doc5_tfidf_4.jsonl**                   |
 | Merge, On TFIDF Ver. 4                     | 0.153136 | 0.900349 | 0.261752 | **train_doc5_new_5.jsonl**                     |
 | w2v + Tf-Idf, thres=0.8, wv=300            | 0.176479 | 0.478771 | 0.257896 | **train_doc5_tfidf_5.jsonl**                   |
 | Merge, On TFIDF Ver. 5                     | 0.186085 | 0.896547 | 0.308200 | **train_doc5_new_6.jsonl**                     |
+| Sentence BERT 加權                | 0.484753 | 0.884544 | 0.626286 | **train_doc5_new_6.jsonl**                     |
 
 還需要改善的點：
 1. 需要 Hyperlink，有些沒有直接提及。
@@ -62,6 +54,16 @@
 | model200-6-32-neg0.05 | 0.403486 | 0.269115 | 0.805859 | 0.385430 | 0.255156 | 0.787500 |
 | model50-6-32-neg0.01  | 0.395786 | 0.264401 | 0.786718 | 0.381569 | 0.252266 | 0.782813 |
 | model100-6-32-neg0.01 | 0.398201 | 0.265807 | 0.793359 | 0.384270 | 0.254141 | 0.787500 |
+| model150-7-32-neg0.01_sent5  | 0.414659 | 0.281621 | 0.785937 | 0.394098 | 0.262291 | 0.792187 |
+| model150-7-32-neg0.025_sent5 | 0.414759 | 0.282167 | 0.782421 | 0.394803 | 0.262916 | 0.792187 |
+| model150-7-32-neg0.05_sent5  | 0.417682 | 0.283808 | 0.790625 | 0.394608 | 0.262916 | 0.790625 |
+| model200-7-32-neg0.075_sent5_1e-5 | 0.417821 | 0.283886 | 0.791015 | 0.395859 | 0.263854 | 0.792187 |
+| model200-7-32-neg0.075_sent5_2e-5 | 0.420307 | 0.285527 | 0.796093 | 0.397340 | 0.264479 | 0.798437 |
+| model200-7-32-neg0.075_sent5_3e-5 | 0.419447 | 0.285136 | 0.792968 | 0.398239 | 0.265104 | 0.800000 |
+| model200-7-32-neg0.075_sent5_4e-5_e1_base    | 0.419925 | 0.285527 | 0.793359 | 0.400776 | 0.266666 | 0.806250 |
+| model400-7-32-neg0.075_sent5_4e-5_e2_base    | 0.420113 | 0.285449 | 0.795312 | 0.398239 | 0.265104 | 0.800000 |
+| model250-7-32-neg0.075_sent5_4e-5_e1_hflbert | 0.420342 | 0.285761 | 0.794531 | 0.400230 | 0.266354 | 0.804687 |
+| model250-7-32-neg0.075_sent5_3.5e-5_e1_hflbert | 0.420874 | 0.286152 | 0.795312 | 0.400423 | 0.266354 | 0.806250 |
 
 ### Claim Validation
 CUDA 在 Colab 上還是容易爆 CudaOutOfMemoryError，我的GPU只能容許Batch Size=8，Colab只能24。
