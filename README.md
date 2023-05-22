@@ -22,7 +22,7 @@
 | Merge, On TFIDF Ver. 4                     | 0.153136 | 0.900349 | 0.261752 | **train_doc5_new_5.jsonl**                     |
 | w2v + Tf-Idf, thres=0.8, wv=300            | 0.176479 | 0.478771 | 0.257896 | **train_doc5_tfidf_5.jsonl**                   |
 | Merge, On TFIDF Ver. 5                     | 0.186085 | 0.896547 | 0.308200 | **train_doc5_new_6.jsonl**                     |
-| Sentence BERT 加權                | 0.484753 | 0.884544 | 0.626286 | **train_doc5_new_6.jsonl**                     |
+| Sentence BERT 加權                | 0.484753 | 0.884544 | 0.626286 | **train_doc5_sbert.jsonl**                     |
 
 還需要改善的點：
 1. 需要 Hyperlink，有些沒有直接提及。
