@@ -23,13 +23,13 @@ from hw3_utils import jsonl_dir_to_df
 from dr_util import Claim, AnnotationID, Evidence, EvidenceID, PageTitle, SentenceID
 from dr_util import calculate_precision, calculate_f1, calculate_recall, save_doc
 
-pandarallel.initialize(progress_bar=True, verbose=0, nb_workers=10)
+pandarallel.initialize(progress_bar=True, verbose=0, nb_workers=16)
 tqdm.pandas()
 
 stopwords = read_stopwords_list()
 
 # data
-TRAIN_DATA = load_json("data/public_train.jsonl")
+TRAIN_DATA = load_json("data/public_train_0522.jsonl")
 TEST_DATA = load_json("data/public_test.jsonl")
 CONVERTER_T2S = opencc.OpenCC("t2s.json")
 CONVERTER_S2T = opencc.OpenCC("s2t.json")
@@ -40,12 +40,130 @@ def tokenize(text: str, stopwords: list) -> str:
 
     return " ".join([w for w in tokens if w not in stopwords])
 
+def do_st_corrections(text: str) -> str:
+    simplified = CONVERTER_T2S.convert(text)
+
+    return CONVERTER_S2T.convert(simplified)
+
+def get_nps_hanlp(
+    predictor: Pipeline,
+    d: Dict[str, Union[int, Claim, Evidence]],
+) -> List[str]:
+    claim = d["claim"]
+    tree = predictor(claim)["con"]
+    nps = [
+        do_st_corrections("".join(subtree.leaves()))
+        for subtree in tree.subtrees(lambda t: t.label() == "NP")
+    ]
+
+    return nps
+
+def get_pred_pages_search(
+        series_data: pd.Series, 
+        ):
+    import wikipedia
+    import re
+    import opencc
+    import pandas as pd
+
+    import numpy as np
+
+    wikipedia.set_lang("zh")
+    CONVERTER_T2S = opencc.OpenCC("t2s.json")
+    CONVERTER_S2T = opencc.OpenCC("s2t.json")
+    
+    def do_st_corrections(text: str) -> str:
+        simplified = CONVERTER_T2S.convert(text)
+        return CONVERTER_S2T.convert(simplified)
+    
+    def if_page_exists(page: str) -> bool:
+        import requests
+        url_base = "https://zh.wikipedia.org/wiki/"
+        new_url = [url_base + page, url_base + page.upper()]
+        for url in new_url:
+            r = requests.head(url)
+            if r.status_code == 200:
+                return True
+            else:
+                continue
+        return False
+
+    claim = series_data["claim"]
+    results = []
+    direct_results = []
+    nps = series_data["hanlp_results"]
+
+    def post_processing(page):
+        page = do_st_corrections(page)
+        page = page.replace(" ", "_")
+        page = page.replace("-", "")
+
+    for i, np in enumerate(nps):
+        # print(f"searching {np}")
+
+        if (if_page_exists(np)):
+            try:
+                page = do_st_corrections(wikipedia.page(title=np).title)
+                if page == np:
+                    # print(f"Found, np={np}, page={page}, claim={claim}")
+                    post_processing(page)
+                    direct_results.append(page)
+                else:
+                    # print(f"Redirect, np={np}, page={page}, claim={claim}")
+                    post_processing(page)
+                    direct_results.append(page)
+            except wikipedia.DisambiguationError as diserr:
+                for option in diserr.options:
+                    option = do_st_corrections(option)
+                    if new_option := re.sub(r"\s\(\S+\)", "", option) in claim:
+                        # print(f"Disambig, np={np}, page={option}, claim={claim}")
+                        post_processing(option)
+                        direct_results.append(option)
+                    post_processing(option)
+                    results.append(option)
+                page = do_st_corrections(wikipedia.search(np)[0])
+                if page == np:
+                    # print(f"Disambig, np={np}, page={page}, claim={claim}")
+                    post_processing(page)
+                    direct_results.append(page)
+            except wikipedia.PageError as pageerr:
+                pass
+
+        # Simplified Traditional Chinese Correction
+        wiki_search_results = [
+            do_st_corrections(w) for w in wikipedia.search(np)
+        ]
+
+        for term in wiki_search_results:
+            if (((new_term := term) in claim) or
+                ((new_term := term) in claim.replace(" ", "")) or
+                ((new_term := term.replace("·", "")) in claim) or                                   # 過濾人名
+                ((new_term := re.sub(r"\s\(\S+\)", "", term)) in claim) or                          # 過濾空格 / 消歧義
+                ((new_term := term.replace("(", "").replace(")", "").split()[0]) in claim and       # 消歧義與括號內皆有在裡面
+                    (new_term := term.replace("(", "").replace(")", "").split()[1]) in claim) or
+                ((new_term := term.replace("-", " ")) in claim) or                                  # 過濾槓號
+                ((new_term := term.lower()) in claim) or                                            # 過濾大小寫
+                ((new_term := term.lower().replace("-", "")) in claim) or                           # 過濾大小寫及槓號
+                ((new_term := re.sub(r"\s\(\S+\)", "", term.lower().replace("-", ""))) in claim)    # 過濾大小寫、槓號及消歧義
+                ):
+                post_processing(term)
+                direct_results.append(term)
+            # if prefix not in tmp_muji:  #忽略掉括號，如果括號有重複的話。假設如果有" 1 (數字)", 則"1 (符號)" 會被忽略
+            post_processing(term)
+            results.append(term)
+
+    direct_results = list(set(direct_results))
+    results = list(set(results))            # remove duplicates
+    series_data["predicted_pages"] = results
+    series_data["direct_match"] = direct_results
+
+    return series_data
+
 def get_pred_pages_sbert(
     series_data: pd.Series, 
     tokenizing_method: callable,
-    # model: SentenceTransformer,
-    # wiki_pages: pd.DataFrame,
-    pool,
+    model: SentenceTransformer,
+    wiki_pages: pd.DataFrame,
     topk: int,
     threshold: float
 ) -> set:
@@ -58,18 +176,21 @@ def get_pred_pages_sbert(
     cuda.empty_cache()
     
     # Parameters:
-    THRESHOLD_LOWEST = 0.55
-    THRESHOLD_HIGHEST = 0.7
+    THRESHOLD_LOWEST = 0.6
     THRESHOLD_SIM_LINE = threshold
     WEIGHT_SIM_ID = 0.05    # The lower it is, the higher sim_id is when it directly matches claim.
     
     def sim_score_eval(sim_line, sim_id):
-        weight_id = 1
-        weight_line = 1
-
-        res = (weight_id + weight_line)*(sim_line*sim_id)/(weight_line*sim_line+weight_id*sim_id)
+        if len(claim) > 15:
+            if sim_line > THRESHOLD_SIM_LINE:
+                res = 2*(1.1*sim_line*1.1*sim_id)/(1.1*sim_line+1.1*sim_id)
+            else:
+                res = 0
+        else:
+            res = sim_id
         
         return res
+    
     
     def post_processing(page) -> str:
         import opencc
@@ -83,50 +204,36 @@ def get_pred_pages_sbert(
         return page
 
     claim = series_data["claim"]
-    claim_sentences_count = claim.count('，')+1
     search_list = series_data["predicted_pages"]
     direct_search = series_data["direct_match"]
     results = []
     mapping = {}
-    df_res = []
 
     tokens = tokenizing_method(claim)
-    emb_claim_tok = sbert_model.encode(tokens)
-    emb_claim = sbert_model.encode(claim)
+    emb_claim_tok = model.encode(tokens)
+    emb_claim = model.encode(claim)
 
     search_list = [post_processing(id) for id in search_list]
-    if series_data["label"] != "NOT ENOUGH INFO":
-        gt_pages = set([
-            evidence[2]
-            for evidence_set in series_data["evidence"]
-            for evidence in evidence_set
-        ])
-    else:
-        gt_pages = set([])
 
     for search_id in search_list:
-        # print(search_id)
         search_series = wiki_pages.loc[wiki_pages['id'] == search_id]
         if search_series.empty:
             continue
         try:
             for temp in search_series["lines"]:
                 search_lines = temp
-            # search_tokens = tokenizing_method(search_lines)
         except:
             continue
 
         if len(search_lines) == 0:
              continue
-        # search_processed_text = str(search_tokens["processed_text"].astype("string"))
         search_id_tok = tokenizing_method(search_id)
-        emb_id = sbert_model.encode(search_id_tok)
+        emb_id = model.encode(search_id_tok)
         sim_id = util.pytorch_cos_sim(emb_id, emb_claim).numpy()
         sim_id = sim_id[0][0]
         new_sim_id = 0
         if search_id in direct_search:
             if sim_id > 0:
-                # print(f"{search_id}: sim_id={sim_id}")
                 new_sim_id = 1-((1-sim_id)*WEIGHT_SIM_ID)
             else:
                 sim_id = 0
@@ -138,14 +245,14 @@ def get_pred_pages_sbert(
         sim_line = 0
         sim_line_b = 0
 
-        embs = sbert_model.encode_multi_process(search_lines, pool=pool)
+        embs = model.encode_multi_process(search_lines, pool=pool)
         for emb in embs:
             sim = util.pytorch_cos_sim(emb, emb_claim).numpy()
             sim = sim[0][0]
             sim_line = max(sim, sim_line)
 
         search_lines_tok = [tokenizing_method(line) for line in search_lines]
-        embs = sbert_model.encode_multi_process(search_lines_tok, pool=pool)
+        embs = model.encode_multi_process(search_lines_tok, pool=pool)
         for emb in embs:
             sim = util.pytorch_cos_sim(emb, emb_claim_tok).numpy()
             sim = sim[0][0]
@@ -156,7 +263,6 @@ def get_pred_pages_sbert(
             sim_line_b = sim_line
             sim_score = sim_score_eval(sim_line, new_sim_id)
             sim_score = max(sim_score, sim_line_b)
-            # print(sim_score, search_id)
             if sim_score > THRESHOLD_LOWEST:
                 search_id = post_processing(search_id)
                 if search_id in mapping:
@@ -164,96 +270,26 @@ def get_pred_pages_sbert(
                 else:
                     mapping[search_id] = sim_score
 
-        # for search_line in search_lines:
-        #     '''
-        #     # print(search_line)
-            
-        #     # search_line_count = search_line.count('，')+1
-        #     # if search_line_count > claim_sentences_count and claim_sentences_count > 1:
-        #     #     search_line_list = search_line.split('，')
-        #     #     sim_line = 0
-        #     #     for i in range(0, search_line_count-claim_sentences_count+1):
-        #     #         line = "，".join(search_line_list[i:i+claim_sentences_count])
-        #     #         # print(line)
-        #     #         search_token = tokenizing_method(line)
-        #     #         emb_search = sbert_model.encode(search_token)
-        #     #         sim = util.pytorch_cos_sim(emb_search, emb_claim_tok).numpy()
-        #     #         sim = sim[0][0]
-        #     #         sim_line = max(sim, sim_line)
-
-        #     #         emb_search = sbert_model.encode(line)
-        #     #         sim = util.pytorch_cos_sim(emb_search, emb_claim).numpy()
-        #     #         sim = sim[0][0]
-        #     #         sim_line = max(sim, sim_line)
-        #     # else:
-        #     #     search_token = tokenizing_method(search_line)
-        #     #     emb_search = sbert_model.encode(search_token)
-        #     #     sim_line = util.pytorch_cos_sim(emb_search, emb_claim_tok).numpy()
-        #     #     sim_line = sim_line[0][0]
-
-        #     #     emb_search = sbert_model.encode(search_line)
-        #     #     sim = util.pytorch_cos_sim(emb_search, emb_claim).numpy()
-        #     #     sim = sim[0][0]
-        #     #     sim_line = max(sim, sim_line)
-        #     '''
-            
-        #     search_token = tokenizing_method(search_line)
-        #     emb_search = sbert_model.encode(search_token)
-        #     sim_line = util.pytorch_cos_sim(emb_search, emb_claim_tok).numpy()
-        #     sim_line = sim_line[0][0]
-
-        #     emb_search = sbert_model.encode(search_line)
-        #     sim = util.pytorch_cos_sim(emb_search, emb_claim).numpy()
-        #     sim = sim[0][0]
-        #     sim_line = max(sim, sim_line)
-
-        #     if sim_line > THRESHOLD_SIM_LINE:
-        #         sim_line = max(sim_line, sim_line_b)
-        #         sim_line_b = sim_line
-        #         sim_score = sim_score_eval(sim_line, new_sim_id)
-        #         # print(sim_score, search_id)
-        #         if sim_score > THRESHOLD_LOWEST:
-        #             search_id = post_processing(search_id)
-        #             if search_id in mapping:
-        #                 mapping[search_id] = max(sim_score, mapping[search_id])
-        #             else:
-        #                 mapping[search_id] = sim_score
-        if search_id in gt_pages:
-            print(f"Analysis on GT pages={search_id}: origin sim_id={sim_id}, new sim_id={new_sim_id}, sim_line={sim_line_b}, sim_score={sim_score}")
-        data = (claim, search_id, sim_id, new_sim_id, sim_line, sim_score)
-        df_res.append(data)
-
     mapping_sorted = sorted(mapping.items(), key=lambda x:x[1], reverse=True)
-    # print(mapping_sorted[:topk])
+
+    DIFF = 0.125
+    for k, v in mapping_sorted:
+        THRESHOLD_TOP = v
+        break
     if len(mapping_sorted) >= topk:
-        results = [k for k, v in mapping_sorted if v > THRESHOLD_HIGHEST][:topk]
+        results = [k for k, v in mapping_sorted if v > THRESHOLD_TOP-DIFF][:topk]
     else:
-        results= [k for k, v in mapping_sorted if v > THRESHOLD_LOWEST][:topk]
-    # print(results)
-
-    # Analysis on missed pages
-    if series_data["label"] != "NOT ENOUGH INFO":
-        for page in gt_pages:
-            if page in mapping:
-                if page not in results:
-                    print(f"Missed: ID={page}, score={mapping[page]}")
-                else:
-                    continue
-            else:
-                if page not in search_list:
-                    print(f"Missed: ID={page}, not in search_list")
-                else:
-                    print(f"Missed: ID={page}, score < {THRESHOLD_LOWEST}")
-
-    df = pd.DataFrame(df_res, columns=['Claim', 'Search_ID', 'Sim_ID', 'Sim_ID_Adjusted', 'Sim_Line', 'Sim_Score'])
-
-    with open("data/train_doc5_sbert_logging.jsonl", "a", encoding="utf8") as f:
-        f.write(df.to_json(orient='records', lines=True, force_ascii=False))
+        results = [k for k, v in mapping_sorted if v > THRESHOLD_LOWEST][:topk]
+    if not results:
+        results = [k for k, v in mapping_sorted][:topk]
+    if not results:
+        results = series_data["direct_match"]
+    if not results:
+        results = series_data["predicted_pages"][:topk]
 
     return set(results)
 
 if __name__ == '__main__':
-    # print(torch.cuda.device_count())
     sbert_model = SentenceTransformer('uer/sbert-base-chinese-nli', device='cuda')
     pool = sbert_model.start_multi_process_pool()
 
@@ -287,46 +323,67 @@ if __name__ == '__main__':
         wiki_pages.to_pickle(wiki_cache_path, protocol=4)
 
     doc_path = f"data/train_doc5.jsonl"
-    doc_path_aicup = f"data/train_doc5_aicup.jsonl"
     doc_path_sbert = f"data/train_doc5_sbert.jsonl"
     doc_path_search = f"data/train_doc5_search.jsonl"
-    doc_path_tfidf = f"data/train_doc5_tfidf.jsonl"
 
-    # num_of_samples = 3969
-    num_of_samples = 500
-    TRAIN_DATA_SEARCH = load_json(doc_path_search)
-    train_df_search = pd.DataFrame(TRAIN_DATA_SEARCH[:num_of_samples])
+    predictor = (hanlp.pipeline().append(
+        hanlp.load("FINE_ELECTRA_SMALL_ZH"),
+        output_key="tok",
+    ).append(
+        hanlp.load("CTB9_CON_ELECTRA_SMALL"),
+        output_key="con",
+        input_key="tok",
+    ))
 
-    if Path(doc_path_sbert).exists():
-        with open(doc_path_sbert, "r", encoding="utf8") as f:
-            predicted_results_sbert = pd.Series([
+    hanlp_file = f"data/hanlp_con_results.pkl"
+    if Path(hanlp_file).exists():
+        with open(hanlp_file, "rb") as f:
+            hanlp_results = pickle.load(f)
+    else:
+        hanlp_results = [get_nps_hanlp(predictor, d) for d in TRAIN_DATA]
+        with open(hanlp_file, "wb") as f:
+            pickle.dump(hanlp_results, f)
+
+    if Path(doc_path_search).exists():
+        with open(doc_path_search, "r", encoding="utf8") as f:
+            predicted_results_search = pd.Series([
                 set(json.loads(line)["predicted_pages"])
                 for line in f
-            ], name="sbert")
+            ], name="search")
     else:
-        pandarallel.initialize(progress_bar=False, verbose=0, nb_workers=3)
-        print("Start predicting documents:")
-        predicted_results_sbert = train_df_search.progress_apply(
-            partial(
-                get_pred_pages_sbert,
-                tokenizing_method=partial(tokenize, stopwords=stopwords),
-                # model=sbert_model,
-                # wiki_pages=wiki_pages,
-                pool=pool,
-                topk=topk,
-                threshold=0.375
-            ), axis=1)
-        save_doc(TRAIN_DATA[:num_of_samples], predicted_results_sbert, mode="train", suffix="")
+        pandarallel.initialize(progress_bar=True, verbose=0, nb_workers=10)
+        train_df = pd.DataFrame(TRAIN_DATA)
+        train_df.loc[:, "hanlp_results"] = hanlp_results
+        # predicted_results = train_df.progress_apply(get_pred_pages, axis=1)
+        train_df_search = train_df.parallel_apply(
+            get_pred_pages_search, axis=1)
+        predicted_results_search_p = train_df_search["predicted_pages"]
+        predicted_results_search_d = train_df_search["direct_match"]
+        save_doc(TRAIN_DATA, predicted_results_search_p, mode="train", suffix="_search", col_name="predicted_pages")
+        save_doc(TRAIN_DATA, predicted_results_search_d, mode="train", suffix="_search", col_name="direct_match")
 
-    old_precision = 0.3879699248120298
-    old_recall = 0.8124895572263992
-    old_f1 = 0.5247852770334176
+    # # num_of_samples = 3969
+    # num_of_samples = 500
+    # TRAIN_DATA_SEARCH = load_json(doc_path_search)
+    # train_df_search = pd.DataFrame(TRAIN_DATA_SEARCH[:num_of_samples])
 
-    print("On Search-TFIDF Data:")
-    precision = calculate_precision(TRAIN_DATA[:num_of_samples], predicted_results_sbert)
-    print(f"(Diff: {precision-old_precision})")
-    recall = calculate_recall(TRAIN_DATA[:num_of_samples], predicted_results_sbert)
-    print(f"(Diff: {recall-old_recall})")
-    f1 = calculate_f1(precision, recall)
-    print(f"F1-Score: {f1}")
-    print(f"(Diff: {f1-old_f1})")
+    # if Path(doc_path_sbert).exists():
+    #     with open(doc_path_sbert, "r", encoding="utf8") as f:
+    #         predicted_results_sbert = pd.Series([
+    #             set(json.loads(line)["predicted_pages"])
+    #             for line in f
+    #         ], name="sbert")
+    # else:
+    #     pandarallel.initialize(progress_bar=False, verbose=0, nb_workers=3)
+    #     print("Start predicting documents:")
+    #     predicted_results_sbert = train_df_search.progress_apply(
+    #         partial(
+    #             get_pred_pages_sbert,
+    #             tokenizing_method=partial(tokenize, stopwords=stopwords),
+    #             model=sbert_model,
+    #             wiki_pages=wiki_pages,
+    #             pool=pool,
+    #             topk=topk,
+    #             threshold=0.375
+    #         ), axis=1)
+    #     save_doc(TRAIN_DATA[:num_of_samples], predicted_results_sbert, mode="train", suffix="")
