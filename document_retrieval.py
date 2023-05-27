@@ -290,8 +290,9 @@ def get_pred_pages_sbert(
     return set(results)
 
 if __name__ == '__main__':
-    sbert_model = SentenceTransformer('uer/sbert-base-chinese-nli', device='cuda')
+    sbert_model = SentenceTransformer('uer/sbert-base-chinese-nli', device='cpu')
     pool = sbert_model.start_multi_process_pool()
+    print(pool)
 
     wiki_path = "data/wiki-pages"
     topk = 5
@@ -351,7 +352,7 @@ if __name__ == '__main__':
                 for line in f
             ], name="search")
     else:
-        pandarallel.initialize(progress_bar=True, verbose=0, nb_workers=10)
+        pandarallel.initialize(progress_bar=True, verbose=0, nb_workers=16)
         train_df = pd.DataFrame(TRAIN_DATA)
         train_df.loc[:, "hanlp_results"] = hanlp_results
         # predicted_results = train_df.progress_apply(get_pred_pages, axis=1)
@@ -360,9 +361,10 @@ if __name__ == '__main__':
         predicted_results_search_p = train_df_search["predicted_pages"]
         predicted_results_search_d = train_df_search["direct_match"]
         save_doc(TRAIN_DATA, predicted_results_search_p, mode="train", suffix="_search", col_name="predicted_pages")
-        save_doc(TRAIN_DATA, predicted_results_search_d, mode="train", suffix="_search", col_name="direct_match")
+        TRAIN_DATA_SEARCH = load_json(doc_path_search)
+        save_doc(TRAIN_DATA_SEARCH, predicted_results_search_d, mode="train", suffix="_search", col_name="direct_match")
 
-    # # num_of_samples = 3969
+    # num_of_samples = 3969
     # num_of_samples = 500
     # TRAIN_DATA_SEARCH = load_json(doc_path_search)
     # train_df_search = pd.DataFrame(TRAIN_DATA_SEARCH[:num_of_samples])
@@ -374,7 +376,7 @@ if __name__ == '__main__':
     #             for line in f
     #         ], name="sbert")
     # else:
-    #     pandarallel.initialize(progress_bar=False, verbose=0, nb_workers=3)
+    #     pandarallel.initialize(progress_bar=True, verbose=0, nb_workers=10)
     #     print("Start predicting documents:")
     #     predicted_results_sbert = train_df_search.progress_apply(
     #         partial(
