@@ -1,0 +1,500 @@
+{"id": 13334, "label": "supports", "claim": "邏輯編程的重點是將正規的邏輯風格帶入程式設計中。", "evidence": [[[12324, 10766, "邏輯編程", 8]]], "predicted_pages": ["邏輯編程"]}
+{"id": 9767, "label": "refutes", "claim": "DC漫畫中出現的超人是根據事實改編的角色。", "evidence": [[[8798, 8125, "超人", 0]]], "predicted_pages": ["超人", "DC漫畫改編電視劇列表", "DC漫畫", "女超人_(電影)", "DC漫畫中以蝙蝠俠名義登場的角色名單", "DC漫畫改編電影列表"]}
+{"id": 9546, "label": "NOT ENOUGH INFO", "claim": "日本基督教會對於臺灣議會設置請願運動提供了許多幫助。", "evidence": [[8613, null, null, null]], "predicted_pages": ["臺灣議會期成同盟會", "日本基督教", "臺灣議會設置請願運動", "日本基督教會"]}
+{"id": 10664, "label": "supports", "claim": "是第22和第24任韓國總統的格羅弗·克利夫蘭，有著誠信和品行良好的聲譽。", "evidence": [[[9717, 8861, "格羅弗·克利夫蘭", 0], [9717, 8861, "格羅弗·克利夫蘭", 6]]], "predicted_pages": ["崔太敏", "格羅弗·克利夫蘭", "總統", "韓國總統", "大韓民國"]}
+{"id": 6735, "label": "supports", "claim": "斯洛伐克西部的塞內奇區成立於1996年，面積共350.63平方公里。", "evidence": [[[5916, 5808, "塞內奇區", 3]], [[5916, 5809, "塞內奇區", 0], [5916, 5809, "塞內奇區", 1]]], "predicted_pages": ["塞內奇區", "阿拉瓜南_(馬拉尼昂州)", "內拉_(卡爾達斯省)", "科扎基_(佐洛喬夫區)", "博薩諾", "斯洛伐克"]}
+{"id": 3966, "label": "supports", "claim": "民國70年，謝長廷以非國民黨籍身份選上臺北市議員。", "evidence": [[[3184, 3357, "謝長廷", 4], [3184, 3357, "黨外運動", 0]]], "predicted_pages": ["謝長廷", "民國", "臺北市議員列表"]}
+{"id": 13165, "label": "supports", "claim": "半人馬座Xi1重量比太陽大，光譜爲摩根-肯納分類法中的A。", "evidence": [[[12290, 10736, "半人馬座ξ1", 6], [12290, 10736, "半人馬座ξ1", 8], [12290, 10736, "恆星光譜", 0], [12290, 10736, "恆星光譜", 7]]], "predicted_pages": ["太陽", "MOA2007BLG400L", "重量", "半人馬座ξ1", "人馬座", "半人馬座"]}
+{"id": 10390, "label": "NOT ENOUGH INFO", "claim": "小行星5752在山梨縣東部被川裏信弘在1992年時發現。", "evidence": [[9355, null, null, null]], "predicted_pages": ["小行星7427", "小行星", "小行星5882", "小行星8093", "小行星5752", "山梨縣"]}
+{"id": 9302, "label": "refutes", "claim": "聯合國行政機構的長官是聯合國祕書長，一般尊稱內閣。", "evidence": [[[8438, 7878, "聯合國祕書長", 39]]], "predicted_pages": ["祕書長", "聯合國祕書長"]}
+{"id": 14115, "label": "NOT ENOUGH INFO", "claim": "臺中市大里區內新國民小學的現任校長爲臺灣女歌手張文綺，其前身爲臺中縣大里市內新國民小學。", "evidence": [[13418, null, null, null]], "predicted_pages": ["臺中市大里區內新國民小學"]}
+{"id": 14095, "label": "NOT ENOUGH INFO", "claim": "屬於泛靈多神信仰的神道，信徒統計人數僅有千位。", "evidence": [[13505, null, null, null]], "predicted_pages": ["多神論", "神道", "皃姓", "神"]}
+{"id": 10461, "label": "refutes", "claim": "密西根大學在國際上默默無名。", "evidence": [[[9496, 8663, "密西根大學", 95]]], "predicted_pages": ["密歇根大學弗林特分校", "密歇根大學迪爾伯恩分校", "NGC_3115", "密西根大學", "國際"]}
+{"id": 9420, "label": "supports", "claim": "臺北市立大學博愛校區附近有重要的中央行政機構。", "evidence": [[[8473, 7907, "臺北市立大學博愛校區", 6]]], "predicted_pages": ["臺北市立大學", "臺北市立大學博愛校區"]}
+{"id": 8109, "label": "NOT ENOUGH INFO", "claim": "網路使用者由於少了真實身分，因此有更多的新聞自由。", "evidence": [[13101, null, null, null]], "predicted_pages": ["網路論戰", "景點分享", "新聞自由", "網路用戶"]}
+{"id": 9814, "label": "supports", "claim": "自1997年開始的一年一度的臺大杜鵑花節，內容包括學系博覽會，吸引高中生前來參觀，作爲升學時的參考。", "evidence": [[[9058, 8320, "臺大杜鵑花節", 0], [9058, 8320, "臺大杜鵑花節", 3], [9058, 8320, "臺大杜鵑花節", 4]]], "predicted_pages": ["臺大杜鵑花節"]}
+{"id": 10574, "label": "supports", "claim": "在所有權人死亡後，轉移所有權人的財產、債務、爵位、世襲官職等給一個或多個繼承人稱作繼承。", "evidence": [[[9549, 8709, "繼承", 0]]], "predicted_pages": ["繼承"]}
+{"id": 12162, "label": "supports", "claim": "在1996年起發行的二加元硬幣目的跟2元紙鈔有關，因此1996年時2元紙鈔也停止發行。", "evidence": [[[11110, 9955, "二加元硬幣", 0], [11110, 9955, "二加元硬幣", 5], [11110, 9955, "二加元硬幣", 6]]], "predicted_pages": ["二加元硬幣"]}
+{"id": 12324, "label": "NOT ENOUGH INFO", "claim": "被紅衛兵抓去刑訊逼供，後來墜樓而死的郭世英成立過X詩社。", "evidence": [[11346, null, null, null]], "predicted_pages": ["神州詩社", "X詩社", "紅衛兵"]}
+{"id": 11005, "label": "refutes", "claim": "臺灣日治時期的臺灣鐵道飯店，在當時是一座位於臺北市的高級洋式旅館，在二次大戰臺北大空襲中遭汽車炸燬。", "evidence": [[[10113, 9173, "臺灣鐵道飯店", 1]]], "predicted_pages": ["第二次世界大戰", "臺北", "臺北市", "臺灣鐵道飯店", "臺北大空襲"]}
+{"id": 1665, "label": "supports", "claim": "周汝昌研究《 紅樓夢 》。", "evidence": [[[1598, 1705, "周汝昌", 1]]], "predicted_pages": ["周汝昌", "紅樓夢"]}
+{"id": 5998, "label": "refutes", "claim": "最流行的《 毛主席語錄 》 是使用波長大約爲630到750nm的可見光色作爲書，因此又稱小紅書。", "evidence": [[[13240, 11444, "毛主席語錄", 0]]], "predicted_pages": ["毛主席語錄", "紅外天文學", "光", "小紅書", "語錄"]}
+{"id": 7785, "label": "supports", "claim": "早期前身是祐德中學的臺北市私立協和祐德高級中學，是於2015年祐德高中和協和工商兩校合併的高中附屬高職。", "evidence": [[[13057, 11306, "臺北市私立協和祐德高級中學", 0], [13057, 11306, "臺北市私立協和祐德高級中學", 2]]], "predicted_pages": ["臺北市", "臺北市私立協和祐德高級中學"]}
+{"id": 1315, "label": "supports", "claim": "\"固體理論\"由\"凝聚態理論\"改變名稱而來。", "evidence": [[[1717, 1840, "凝聚態物理學", 20]], [[1718, 1841, "凝聚態物理學", 20]]], "predicted_pages": ["理論", "混合弦理論", "名稱", "凝聚態物理學", "概念混成理論", "語態"]}
+{"id": 932, "label": "supports", "claim": "米開朗基羅於1475年出生，1564年去世，享年88歲。", "evidence": [[[542, 534, "米開朗基羅", 5]]], "predicted_pages": ["喬治·沙夫勒", "雷納託·瑟拉尼", "威爾·阿爾貝達", "米開朗基羅"]}
+{"id": 12165, "label": "refutes", "claim": "在1996年起燒燬的二加元硬幣目的是代替2元紙鈔，因此1996年時2元紙鈔也停止發行。", "evidence": [[[11115, 9960, "二加元硬幣", 0]]], "predicted_pages": ["二加元硬幣"]}
+{"id": 13211, "label": "NOT ENOUGH INFO", "claim": "香山車站以阿里山檜木所建造，爲臺灣現今存在的檜木車站。", "evidence": [[12162, null, null, null]], "predicted_pages": ["梨園寮車站", "香山車站_(臺灣)", "阿里山神社", "阿里山", "香山坑", "臺灣"]}
+{"id": 13435, "label": "NOT ENOUGH INFO", "claim": "博多港塔的外觀顏色原先爲紅與白兩色，在民國80年更改爲單一顏色紅色。", "evidence": [[12438, null, null, null]], "predicted_pages": ["紅色", "顏色", "湯加國旗"]}
+{"id": 1619, "label": "supports", "claim": "陸羽著有《茶經》，爲世界第一部茶葉專著，對茶文化貢獻卓越，被稱爲茶仙。", "evidence": [[[1337, 1433, "陸羽", 3]]], "predicted_pages": ["茶文化", "陸羽", "茶經"]}
+{"id": 13195, "label": "supports", "claim": "由於當地屬於紅色土壤，下雨時會呈現有色的流水，故村落稱爲赤水村。", "evidence": [[[12257, 10707, "赤水村_(臺灣)", 0]]], "predicted_pages": ["赤水村_(臺灣)"]}
+{"id": 7393, "label": "supports", "claim": "沙丁魚是沙丁魚屬的唯一物種，多用來製爲沙丁魚罐頭 。", "evidence": [[[6376, 6177, "沙丁魚", 0]]], "predicted_pages": ["沙丁魚"]}
+{"id": 1300, "label": "supports", "claim": "穀梁傳是《 春秋 》 三傳的其中一傳。", "evidence": [[[1198, 1270, "穀梁傳", 0]]], "predicted_pages": ["春秋", "穀梁傳"]}
+{"id": 10551, "label": "refutes", "claim": "北宋爲宋朝的其中一個州， 它的開國皇帝是宋太祖趙匡胤。", "evidence": [[[9541, 8703, "北宋", 0]]], "predicted_pages": ["宋朝", "趙匡濟", "北宋", "趙匡胤", "趙匡胤_(消歧義)", "趙弘殷"]}
+{"id": 5715, "label": "refutes", "claim": "梅庵_(肇慶)曾二度被列爲古物保險部門，兩次的級別也有所不同。", "evidence": [[[12715, 11032, "梅庵_(肇慶)", 5]]], "predicted_pages": ["肇慶市", "梅庵"]}
+{"id": 6328, "label": "supports", "claim": "代表作是《 哆啦A夢 》、《 奇天烈大百科 》的日本漫畫家藤子·F·不二雄，本名是藤本弘。", "evidence": [[[5541, 5493, "藤子·F·不二雄", 0], [5541, 5493, "藤子·F·不二雄", 2]]], "predicted_pages": ["哆啦A夢plus", "奇天烈大百科", "藤子·F·不二雄", "日本漫畫", "漫畫家", "哆啦A夢"]}
+{"id": 10883, "label": "supports", "claim": "馬丁 · 路德 · 金於1968年被人在田納西州孟斐斯一家汽車旅館暗殺。", "evidence": [[[9810, 8933, "馬丁·路德·金", 17]]], "predicted_pages": ["馬丁·路德·金"]}
+{"id": 12719, "label": "NOT ENOUGH INFO", "claim": "內容是發生在前作《星際大戰四部曲：曙光乍現》的三年後的《星際大戰五部曲：帝國大反擊》由美國導演製作，是續集超越前作的典範。", "evidence": [[11703, null, null, null]], "predicted_pages": ["星際大戰", "星際大戰五部曲：帝國大反擊", "續集", "星際大戰六部曲：絕地大反攻", "星際大戰四部曲：曙光乍現"]}
+{"id": 9481, "label": "supports", "claim": "文殊在佛教中是智慧的象徵，標準形象爲乘青獅 、 持寶劍，並被稱智慧第一。", "evidence": [[[8566, 7983, "文殊菩薩", 6], [8566, 7983, "文殊菩薩", 7]]], "predicted_pages": ["寶劍", "佛教", "文殊菩薩"]}
+{"id": 1521, "label": "supports", "claim": "德斯汀·荷夫曼創作大量經典的角色，令全球影迷難忘。", "evidence": [[[1272, 1361, "德斯汀·荷夫曼", 0]]], "predicted_pages": ["李正帆", "德斯汀·荷夫曼"]}
+{"id": 9205, "label": "supports", "claim": "一部英國電視喜劇戇豆先生，由劇中主角負責大部份編劇。", "evidence": [[[8375, 7830, "戇豆先生", 169]]], "predicted_pages": ["戇豆先生"]}
+{"id": 3137, "label": "supports", "claim": "鹿鼎記連載了2年11個月，是金庸封筆之作，收錄於 《 金庸作品集 》 中 。", "evidence": [[[4550, 4636, "鹿鼎記", 2], [4550, 4636, "鹿鼎記", 3]]], "predicted_pages": ["鹿鼎記", "金庸作品"]}
+{"id": 6628, "label": "refutes", "claim": "英國皇家郵輪泰坦尼克號於2000年建造完成。", "evidence": [[[5822, 5725, "泰坦尼克號", 5]]], "predicted_pages": ["紅寶石公主號", "黎明公主號", "泰坦尼克號", "歌詩達大西洋號", "英國皇家郵輪", "歌詩達維多利亞號"]}
+{"id": 13089, "label": "supports", "claim": "臺北市衛生局舊址爲市定古蹟，現爲一個可以舉行非營利活動的平臺。", "evidence": [[[12118, 10661, "臺北市政府衛生局舊址", 10], [12118, 10661, "臺北市政府衛生局舊址", 24]]], "predicted_pages": ["臺北市政府衛生局", "美中文化協會", "臺北市政府衛生局舊址", "臺灣古蹟列表", "非營利組織", "南加州中國知青協會"]}
+{"id": 6763, "label": "supports", "claim": "沈宗瀛在英國獲得有機化學博士學位後至美國做博士後研究。", "evidence": [[[5917, 5810, "沈宗瀛", 9]]], "predicted_pages": ["學位", "沈宗瀛", "美國", "博士後", "英國"]}
+{"id": 10827, "label": "supports", "claim": "仡佬族爲越南和中國的一個少數民族。", "evidence": [[[9844, 8960, "仡佬族", 0]]], "predicted_pages": ["仡佬族", "少數民族"]}
+{"id": 10918, "label": "supports", "claim": "李元祥是個十分貪心的人，興趣是蒐集金寶。", "evidence": [[[10052, 9129, "李元祥", 7]]], "predicted_pages": ["人", "興趣", "李元祥"]}
+{"id": 10989, "label": "refutes", "claim": "位於臺灣高雄市鼓山區的哈瑪星臺灣鐵道館設址於高雄市政府文化局，是全臺唯一以鐵道歷史爲主題的博物館。", "evidence": [[[10188, 9230, "哈瑪星臺灣鐵道館", 65]]], "predicted_pages": ["哈瑪星臺灣鐵道館", "哈瑪星", "高雄市政府", "高雄市", "高雄市政府文化局"]}
+{"id": 10330, "label": "supports", "claim": "曾擔任雪梨駐市作家的楊濟平是臺灣現代詩詩人，筆名則是楊平。", "evidence": [[[9403, 8589, "楊平_(臺灣)", 0], [9403, 8589, "楊平_(臺灣)", 2]]], "predicted_pages": ["現代詩", "詩人", "楊平"]}
+{"id": 11330, "label": "refutes", "claim": "毒品、細菌或真菌都會引起上呼吸道感染。", "evidence": [[[10399, 9391, "上呼吸道感染", 8]]], "predicted_pages": ["細菌性肺炎", "上呼吸道感染", "呼吸道感染", "甄氏外瓶黴"]}
+{"id": 9294, "label": "NOT ENOUGH INFO", "claim": "位於美國的一個名叫龐圖蘇克的村落，根據2010年的數據當地共有人口505人。", "evidence": [[8474, null, null, null]], "predicted_pages": ["人", "詹姆斯波特_(密蘇里州)", "哈丁_(蒙大拿州)", "美國", "薩拉曼卡鎮區_(堪薩斯州切羅基縣)", "盧布勒薩克"]}
+{"id": 12389, "label": "supports", "claim": "戴有祺在康熙帝時期成爲進士，但是後來就辭官隱居，晚景淒涼。", "evidence": [[[11415, 10192, "戴有祺", 4], [11415, 10192, "戴有祺", 0], [11415, 10192, "戴有祺", 5]]], "predicted_pages": ["康熙帝", "戴有祺", "謝於教"]}
+{"id": 10324, "label": "refutes", "claim": "有一名男性示威者的綽號是坦克人，於1900年隻身阻擋中國人民解放軍的59式坦克車隊駛離天安門廣場。", "evidence": [[[9396, 8583, "坦克人", 1]]], "predicted_pages": ["天安門", "59式坦克", "坦克人", "中國人民解放軍", "示威"]}
+{"id": 9430, "label": "supports", "claim": "朱邦復於1976年創制了由蔣經國命名的倉頡輸入法。", "evidence": [[[8431, 7871, "朱邦復", 1], [8431, 7871, "倉頡輸入法", 2], [8431, 7871, "朱邦復", 0]]], "predicted_pages": ["倉頡_(消歧義)", "1976年奧運會", "蔣經國政府", "廖承志致蔣經國先生信", "倉頡輸入法", "蔣經國"]}
+{"id": 9705, "label": "supports", "claim": "加拿大國家銀行是加拿大第六大商業銀行，是具有信用創作功能的金融機構。", "evidence": [[[8627, 8013, "NBC", 6], [8627, 8013, "加拿大國家銀行", 0]]], "predicted_pages": ["加拿大政黨列表", "金融", "加拿大", "加拿大廣場", "加拿大國家銀行", "金融機構"]}
+{"id": 10855, "label": "supports", "claim": "臺中市文化資產處爲臺中市政府文化局所屬二級機關 ，是臺中市歷史文化資產保護的專責機關，它在臺中市西區臺中州廳暨附屬建築群區 。", "evidence": [[[9892, 9000, "臺中市文化資產處", 0]]], "predicted_pages": ["臺中市政府文化局", "臺中市文化資產處"]}
+{"id": 3703, "label": "supports", "claim": "法國南部的摩納哥除了南部海岸線是靠地中海，其他三面皆被法國包圍。", "evidence": [[[4481, 4572, "摩納哥", 1]]], "predicted_pages": ["法國", "摩納哥", "法國南部"]}
+{"id": 13924, "label": "supports", "claim": "《啓示錄》有被收錄在新約聖經中。", "evidence": [[[13054, 11304, "啓示錄", 0]]], "predicted_pages": ["聖約瑟夫_(消歧義)", "啓示錄", "不義管家的比喻", "西乃抄本", "新約聖經", "聖經"]}
+{"id": 14217, "label": "refutes", "claim": "達拉斯龍屬生存於白堊紀晚期的南美洲，它目前僅有一個種特納利達拉斯龍。", "evidence": [[[13491, 11617, "達拉斯龍屬", 0]]], "predicted_pages": ["物種", "白堊紀", "埃拉爾巨龍屬", "恐蛇科", "達拉斯龍屬", "阿爾哈拉路龍屬"]}
+{"id": 14104, "label": "NOT ENOUGH INFO", "claim": "江南具有優越條件能夠發展農業，也有許多歷史文化名城及古都。", "evidence": [[13337, null, null, null]], "predicted_pages": ["農業", "希臘農業"]}
+{"id": 20396, "label": "NOT ENOUGH INFO", "claim": "發生於英國倫敦的伊朗大使館包圍戰有武裝分子挾持了26人，其中一名人質在行動前遇害，一名人質在行動後死亡。", "evidence": [[19993, null, null, null]], "predicted_pages": ["伊朗大使館包圍戰"]}
+{"id": 19021, "label": "NOT ENOUGH INFO", "claim": "中國無線電教育的開創者倪尚達教授，於文化大革命期間被尊崇。", "evidence": [[18487, null, null, null]], "predicted_pages": ["倪尚達", "考教授", "文化大革命", "中國", "教育"]}
+{"id": 13245, "label": "NOT ENOUGH INFO", "claim": "希臘神話中宙斯化身爲公牛追求Agenor之女，這頭公牛即爲後來的金牛座", "evidence": [[12146, null, null, null]], "predicted_pages": ["公牛", "宙斯", "獅子和三隻公牛", "神話", "畢宿八", "金牛座"]}
+{"id": 17936, "label": "NOT ENOUGH INFO", "claim": "中央銀行的目的不在營利，使幣值穩定是他的第一責任。", "evidence": [[17471, null, null, null]], "predicted_pages": ["中央銀行", "銀行", "責任"]}
+{"id": 12779, "label": "NOT ENOUGH INFO", "claim": "曾在臺灣設置的一個公共安全維護機關稱作臺灣警備總司令部，在第二次世界大戰後的1945年9月1日成立並隸屬於中華民國國防部，是中華民國政府當時用來進行軍事管制和反滲透的單位。", "evidence": [[11899, null, null, null]], "predicted_pages": ["中華民國國防部", "臺灣警備總司令部", "國防部", "警備總司令部"]}
+{"id": 18925, "label": "NOT ENOUGH INFO", "claim": "位於新北市的私立金陵女子高級中學於1956年創辦，鄧麗君跟林青霞都是校友。", "evidence": [[18413, null, null, null]], "predicted_pages": ["新北市私立金陵女子高級中學", "中學", "新北市私立育才國民小學", "新北市私立聖心女子高級中學", "鄧麗君", "新北市"]}
+{"id": 17875, "label": "NOT ENOUGH INFO", "claim": "《NOT FOUND》利用網頁錯誤時HTTP的回應，來借指淪陷正確的愛情。", "evidence": [[17258, null, null, null]], "predicted_pages": ["超文本傳輸協議", "HTTP_404", "跨網站指令碼", "502", "HTTP_451", "愛情"]}
+{"id": 15806, "label": "NOT ENOUGH INFO", "claim": "《複製人卡辛》被認爲是日本在電腦駭客與人工智慧背叛人類的題材中的泛濫作品。", "evidence": [[16089, null, null, null]], "predicted_pages": ["再造人卡辛", "日本", "智慧", "人工智慧叛變", "人類", "伊利亞斯·託菲斯"]}
+{"id": 17218, "label": "NOT ENOUGH INFO", "claim": "南京大學創立了中國最早的生物學系。", "evidence": [[16639, null, null, null]], "predicted_pages": ["南京大學地學院", "戲文", "妘姓", "南京大學", "王葆仁", "南京大學地球科學與工程學院"]}
+{"id": 20294, "label": "NOT ENOUGH INFO", "claim": "古希臘悲劇的重點不在悲劇性故事本身，而是崇高壯烈的英雄主義思想。", "evidence": [[19889, null, null, null]], "predicted_pages": ["悲劇", "古希臘悲劇"]}
+{"id": 15311, "label": "NOT ENOUGH INFO", "claim": "位於湖南省的湘西土家族苗族自治州，其總面積爲15,470平方公里，國內生產總值爲263.45萬元，主要民族爲土家族和苗族。", "evidence": [[14781, null, null, null]], "predicted_pages": ["湘西", "瀘溪縣", "湘西土家族苗族自治州", "古丈縣"]}
+{"id": 18363, "label": "NOT ENOUGH INFO", "claim": "在上海出生的亦舒是有名的作家，散文中常寫及樂享平靜的家庭生活，現爲全職作家及家庭主婦。", "evidence": [[17850, null, null, null]], "predicted_pages": ["家庭", "散文", "亦舒"]}
+{"id": 21039, "label": "NOT ENOUGH INFO", "claim": "咸豐帝喜歡看小說，在位時財政困難，大量印鈔造成通貨膨脹。", "evidence": [[20644, null, null, null]], "predicted_pages": ["惡性通貨膨脹", "小說", "通貨膨脹", "帝"]}
+{"id": 17490, "label": "NOT ENOUGH INFO", "claim": "1928年創辦的增城中學位於中國，校訓爲「人文、人本、人和」，首任傑出校友爲徐思達。", "evidence": [[17092, null, null, null]], "predicted_pages": ["中國", "增城中學"]}
+{"id": 20292, "label": "NOT ENOUGH INFO", "claim": "休斯頓火箭是因爲火箭有著速度和高遠的含義而取名。", "evidence": [[19822, null, null, null]], "predicted_pages": ["YF系列火箭發動機", "天頂2號運載火箭", "火箭"]}
+{"id": 17139, "label": "NOT ENOUGH INFO", "claim": "原稱嶺南公所的兩廣會館，1877年改建爲兩廣會館，位於臺灣府城，最終毀於第二次世界大戰被盟軍的轟炸。", "evidence": [[16604, null, null, null]], "predicted_pages": ["第二次世界大戰", "臺灣府城", "世界大戰", "兩廣會館_(臺南市)"]}
+{"id": 16027, "label": "NOT ENOUGH INFO", "claim": "創辦於1955年的臺中市東區力行國民小學於1988年7月1日成立力行國小少棒隊，曾七度代表國家參與世界賽。", "evidence": [[15410, null, null, null]], "predicted_pages": ["臺中市東區力行國民小學"]}
+{"id": 18939, "label": "NOT ENOUGH INFO", "claim": "阿根廷籍排球教練勞爾·洛薩諾曾獲波蘭總統萊赫·卡欽斯基授予國家獎 ，以表揚他爲波蘭體育的發展作出的貢獻。", "evidence": [[18423, null, null, null]], "predicted_pages": ["勞爾·洛薩諾", "尼可拉斯·尤利阿特", "大衛·康納爾斯基", "鮑威爾·扎托爾斯基", "波蘭體育", "卡欽斯基"]}
+{"id": 18129, "label": "NOT ENOUGH INFO", "claim": "河南省人張衡曾發明出地動儀和指南針。", "evidence": [[17694, null, null, null]], "predicted_pages": ["人", "張衡", "河南省"]}
+{"id": 20770, "label": "NOT ENOUGH INFO", "claim": "使用人口約爲300萬的湖州話是浙北吳語的重要一種。", "evidence": [[20344, null, null, null]], "predicted_pages": ["吳語", "湖州話"]}
+{"id": 20523, "label": "NOT ENOUGH INFO", "claim": "臺灣出版的電視劇《泰山爸爸》在第56屆金鐘獎被提名。", "evidence": [[20053, null, null, null]], "predicted_pages": ["泰山爸爸", "金鐘獎", "我家的美好時光"]}
+{"id": 15593, "label": "NOT ENOUGH INFO", "claim": "江西人袁隆平是中國雜交水稻育種的專家，「雜交水稻之父」的美好名譽，2021年因多器官功能衰竭住院，現已好轉。", "evidence": [[15244, null, null, null]], "predicted_pages": ["水稻", "袁隆平", "稻"]}
+{"id": 18952, "label": "NOT ENOUGH INFO", "claim": "位於瑞士中部的勒默斯維爾當地以工業生產爲主。", "evidence": [[18374, null, null, null]], "predicted_pages": ["裏希特斯維爾", "勒默斯維爾", "羅斯維爾_(伊利諾伊州沃倫縣)", "瑞士", "森林州", "楚格州"]}
+{"id": 17834, "label": "NOT ENOUGH INFO", "claim": "臺南市立建興國民中學校內有一棟歷史建築，建築於民國初年。", "evidence": [[17240, null, null, null]], "predicted_pages": ["民國", "中華民國大陸時期", "歷史建築", "臺南市", "建興", "臺南市立建興國民中學"]}
+{"id": 16821, "label": "NOT ENOUGH INFO", "claim": "透過印刷手段產生的版畫所使用的媒介只能是木板。", "evidence": [[16285, null, null, null]], "predicted_pages": ["書籍的右頁和左頁", "版畫"]}
+{"id": 14499, "label": "NOT ENOUGH INFO", "claim": "2022年的菲爾茲獎是線上形式製作的。", "evidence": [[14342, null, null, null]], "predicted_pages": ["菲爾茲獎"]}
+{"id": 14681, "label": "NOT ENOUGH INFO", "claim": "艾倫與媽媽的關係不佳，且父母彼此也不睦，因此他的童年不是很愉快。", "evidence": [[14083, null, null, null]], "predicted_pages": ["哥斯達黎加愉快航空"]}
+{"id": 16924, "label": "NOT ENOUGH INFO", "claim": "美國最古老的都市之一波士頓，因爲開發較早的緣故，使波士頓人口密度非常高。", "evidence": [[16558, null, null, null]], "predicted_pages": ["波士頓", "美國"]}
+{"id": 14530, "label": "NOT ENOUGH INFO", "claim": "最早襪子的發明主要爲護腳、禦寒及吸汗防臭，其類型有船襪、中筒襪和六趾襪等等。", "evidence": [[13855, null, null, null]], "predicted_pages": ["襪子", "長襪"]}
+{"id": 18960, "label": "NOT ENOUGH INFO", "claim": "臺中市立大安國民中學創校背景是由於中華民國政府的九年一貫義務教育，達成一鄉鎮一國中的目標。", "evidence": [[18477, null, null, null]], "predicted_pages": ["臺灣國中教育", "臺中市立大安國民中學", "高雄市國民教育輔導團", "臺中市", "宜蘭縣立內城國民中小學"]}
+{"id": 19551, "label": "NOT ENOUGH INFO", "claim": "裸子植物會產生孢子，而裸子植物起源於中泥盆世並在白堊紀隨著被子植物的興起後殲滅。", "evidence": [[19029, null, null, null]], "predicted_pages": ["裸子植物", "被子植物", "孢子體", "孢子"]}
+{"id": 15334, "label": "NOT ENOUGH INFO", "claim": "臺中市大里區塗城國民小學目前的校長是劉淑秋，首任校長是今戶千年，招警衛性別爲男女兼收。", "evidence": [[14829, null, null, null]], "predicted_pages": ["臺中市大里區塗城國民小學"]}
+{"id": 19201, "label": "NOT ENOUGH INFO", "claim": "公司史是一種由企業團體出版發行並記述自己公司歷史的書籍，而日本及英國企業大多有出版公司史的傳統。", "evidence": [[18731, null, null, null]], "predicted_pages": ["公司史"]}
+{"id": 18698, "label": "NOT ENOUGH INFO", "claim": "位於日本中部的岐阜縣是日本八個內陸縣份之一，由織田信長改的名稱來源於中國地名。", "evidence": [[18151, null, null, null]], "predicted_pages": ["織田信長", "長野縣", "日本", "岐阜縣"]}
+{"id": 14506, "label": "NOT ENOUGH INFO", "claim": "東吉野村曾想與奈良縣合併，但半年後決定放棄。", "evidence": [[13897, null, null, null]], "predicted_pages": ["2008年土耳其大獎賽", "吉野町站", "歐安利", "格魯吉亞在歐洲歌唱大賽之歷年表現", "東吉野村", "班頓·恩格林"]}
+{"id": 14547, "label": "NOT ENOUGH INFO", "claim": "從1980年代中期開始服役的GBU27鋪路三式激光制導炸彈，首次向國外傾倒是在2004年9月。", "evidence": [[14062, null, null, null]], "predicted_pages": ["炸彈"]}
+{"id": 16278, "label": "NOT ENOUGH INFO", "claim": "具有專一功能和即時計算效能的嵌入式系統，物理形態包括一些便攜設備，第一款大批次生產的嵌入式系統是1961年發佈的民兵I飛彈內的D-17自動制導電腦。", "evidence": [[15586, null, null, null]], "predicted_pages": ["嵌入式系統", "電子計算機", "RedBoot", "JFFS2", "IRMX"]}
+{"id": 20940, "label": "NOT ENOUGH INFO", "claim": "伍樂城曾經在香港青年交響樂團擔任首席小號手。", "evidence": [[20511, null, null, null]], "predicted_pages": ["香港超級聯賽非本地球員列表", "小號", "伍樂城", "香港青年協會李兆基小學", "香港青年協會李兆基書院"]}
+{"id": 18662, "label": "NOT ENOUGH INFO", "claim": "脊索動物門是在寒武紀出現的，而寒武紀時潘諾西亞大陸已經融合成岡瓦納大陸和三個較小的大陸。", "evidence": [[18176, null, null, null]], "predicted_pages": ["脊索動物", "原勞亞大陸", "寒武紀", "岡瓦納大陸", "潘諾西亞大陸"]}
+{"id": 20479, "label": "NOT ENOUGH INFO", "claim": "2010臺北國際花卉博覽會的會徽由五個人形花瓣組合而成，只使用黑白兩色。", "evidence": [[19885, null, null, null]], "predicted_pages": ["花瓣", "2010年臺北國際花卉博覽會", "士林區", "文山區"]}
+{"id": 21292, "label": "NOT ENOUGH INFO", "claim": "臺南市立後甲國民中學學生數爲臺灣前三名。", "evidence": [[20916, null, null, null]], "predicted_pages": ["臺南市立後甲國民中學", "臺灣國中教育", "臺灣", "臺南市"]}
+{"id": 15352, "label": "NOT ENOUGH INFO", "claim": "義大利畫家拉斐爾的畫作非常的多，拉斐爾去世是因爲醫生的錯誤治療所導致。", "evidence": [[14743, null, null, null]], "predicted_pages": ["意大利", "畫家", "醫生", "拉斐爾"]}
+{"id": 15794, "label": "NOT ENOUGH INFO", "claim": "只有不正宗的自貢市菜餚才需要使用味精。", "evidence": [[15245, null, null, null]], "predicted_pages": ["味精", "菜餚", "自貢市"]}
+{"id": 17438, "label": "NOT ENOUGH INFO", "claim": "吉思城堡是一座法國城堡，座落瓦茲河旁的山丘上，現已被摧毀。", "evidence": [[16975, null, null, null]], "predicted_pages": ["城堡", "法國", "瓦茲河", "巴拉諾夫桑多米爾斯基城堡"]}
+{"id": 15184, "label": "NOT ENOUGH INFO", "claim": "SAS是英國陸軍的一支特種部隊單位「特種空勤團」，他們的任務是在蒐集情報、在國外與警察合作反恐和人質拯救等等行動。", "evidence": [[14650, null, null, null]], "predicted_pages": ["特種空勤團", "SAS", "警察", "特種部隊", "特種警察"]}
+{"id": 20861, "label": "NOT ENOUGH INFO", "claim": "由於英國政治家約瑟夫·張伯倫的努力下，使維多利亞女王頒佈相關文件，伯明翰大學因而創立。", "evidence": [[20411, null, null, null]], "predicted_pages": ["約瑟夫·張伯倫", "伯明翰", "伯明翰大學", "維多利亞女王", "英國", "伍劭恩"]}
+{"id": 20353, "label": "NOT ENOUGH INFO", "claim": "埃米爾·斯帕希奇是一名穆斯林，共有一個哥哥一個弟弟，其中弟弟與他同爲職業足球員。", "evidence": [[19840, null, null, null]], "predicted_pages": ["穆罕默德·西索科", "法比安·本科", "兄弟姊妹", "穆斯林", "埃米爾·斯帕希奇"]}
+{"id": 17207, "label": "NOT ENOUGH INFO", "claim": "英國發售任天堂2DS三個禮拜後，由於銷量高使零售商漲價，結果導致銷量暴增。", "evidence": [[16663, null, null, null]], "predicted_pages": ["任天堂DS", "暢銷任天堂Switch遊戲列表", "任天堂2DS", "任天堂", "英國"]}
+{"id": 15831, "label": "NOT ENOUGH INFO", "claim": "以第一次世界大戰爲小說背景的《魂斷藍橋》，被獲譽爲小說史上最哀傷綺麗的不朽愛情書之一。", "evidence": [[15347, null, null, null]], "predicted_pages": ["魂斷藍橋", "藍橋"]}
+{"id": 18882, "label": "NOT ENOUGH INFO", "claim": "位於臺灣台北市西南側的中正區以一個臺北市地標爲名，區內有臺北車站和博愛特區。", "evidence": [[18409, null, null, null]], "predicted_pages": ["雙園區", "博愛特區", "臺北車站", "小南門站_(臺北市)", "中正公園_(臺中市)", "臺北市"]}
+{"id": 14824, "label": "NOT ENOUGH INFO", "claim": "福建省泉州府晉江縣人木庵性瑫，十三歲就開始篤信佛法，到了十九歲剃髮爲沙彌。", "evidence": [[14470, null, null, null]], "predicted_pages": ["木庵性瑫", "沙彌"]}
+{"id": 17740, "label": "NOT ENOUGH INFO", "claim": "日本企業家成立於臺北市的臺灣煉瓦株式會社是臺灣日治時期的一間公司。", "evidence": [[17360, null, null, null]], "predicted_pages": ["臺灣煉瓦", "日本", "臺北市", "臺灣日治時期", "日治時期"]}
+{"id": 21321, "label": "NOT ENOUGH INFO", "claim": "王者再臨的情節中，書中角色在平地展開最後的戰役。", "evidence": [[20947, null, null, null]], "predicted_pages": ["最後的戰役", "帕蘭諾平原戰役"]}
+{"id": 18830, "label": "NOT ENOUGH INFO", "claim": "已知最早的日本動畫是《塙凹內名刀之卷》，這是一部不到10分鐘的短篇動畫，講述了一個武士拿別人試他的新刀，但反而被打敗的故事。", "evidence": [[18331, null, null, null]], "predicted_pages": ["日本", "武士", "日本動畫", "塙凹內名刀之卷"]}
+{"id": 14437, "label": "NOT ENOUGH INFO", "claim": "位於臺灣東南部的臺東縣因爲清代的開發政策，導致開發時間較其它縣市晚，也長期是臺灣最缺乏食物資源的地方之一。", "evidence": [[13818, null, null, null]], "predicted_pages": ["臺東縣"]}
+{"id": 16859, "label": "NOT ENOUGH INFO", "claim": "全部都是原創的動畫的力量內容至今從未播出。", "evidence": [[16373, null, null, null]], "predicted_pages": ["漫畫", "程序設計", "邏輯編程", "DC", "角色", "事實"]}
+{"id": 17796, "label": "NOT ENOUGH INFO", "claim": "居住於君士坦丁堡的人職業通常是代代相傳，不會改變，且法律規定同職業的人才能互相結婚。", "evidence": [[17224, null, null, null]], "predicted_pages": ["職業", "法律", "君士坦丁堡", "斯里蘭卡LGBT權益"]}
+{"id": 18986, "label": "NOT ENOUGH INFO", "claim": "臺南水仙宮的十二塊康熙匾額皆在二次世界大戰的時候毀掉。", "evidence": [[18455, null, null, null]], "predicted_pages": ["第二次世界大戰", "世界大戰", "水仙宮", "臺南水仙宮"]}
+{"id": 17492, "label": "NOT ENOUGH INFO", "claim": "1928年創辦的增城中學位於中國廣州市，校訓爲「人文、人本、人和」，首任校長爲徐思達。", "evidence": [[17062, null, null, null]], "predicted_pages": ["廣州市", "增城中學"]}
+{"id": 18976, "label": "NOT ENOUGH INFO", "claim": "中國工商銀行是第一個在美國休斯頓設立機場的中資銀行。", "evidence": [[18451, null, null, null]], "predicted_pages": ["工商銀行", "中國工商銀行"]}
+{"id": 18691, "label": "NOT ENOUGH INFO", "claim": "新華網創立於1997年，以七種語言從早到晚連續而不間斷地發佈新聞信息。", "evidence": [[18155, null, null, null]], "predicted_pages": ["新華網", "晚上", "語言", "國際財經時報", "早晨"]}
+{"id": 17178, "label": "NOT ENOUGH INFO", "claim": "蟬擁有兩隻複眼與多隻單眼，因此視力極佳。", "evidence": [[16635, null, null, null]], "predicted_pages": ["複眼", "單眼", "眼", "索尼NEX5"]}
+{"id": 14549, "label": "NOT ENOUGH INFO", "claim": "從1980年代中期開始服役的GBU27鋪路三式激光制導炸彈，首次向國外銷售是在2004年9月由以色列購入。", "evidence": [[14070, null, null, null]], "predicted_pages": ["炸彈", "以色列", "187工程", "BXP衝鋒槍", "宇崎龍童"]}
+{"id": 17669, "label": "NOT ENOUGH INFO", "claim": "厄庇墨透斯將大部分優良的本能給了其他動物，使得人類沒有特別突出的智商。", "evidence": [[17270, null, null, null]], "predicted_pages": ["本能", "動物", "人類", "厄庇墨透斯", "智商"]}
+{"id": 15123, "label": "NOT ENOUGH INFO", "claim": "陳肇始是唯一一位掌管電玩遊戲的技師。", "evidence": [[14768, null, null, null]], "predicted_pages": ["陳肇始", "邁克·雷蒙", "胡文耀", "屈臣_(足球員)"]}
+{"id": 17479, "label": "NOT ENOUGH INFO", "claim": "納米比亞共和國是位於非洲的共和國，旁邊緊接大西洋，其名字來自於納米比沙漠，是世界上最古老的沙漠。", "evidence": [[16963, null, null, null]], "predicted_pages": ["納米比亞", "沙漠", "納米比沙漠"]}
+{"id": 16085, "label": "NOT ENOUGH INFO", "claim": "江門市地形主要是平坦地形，西北方高，東南方低。", "evidence": [[15369, null, null, null]], "predicted_pages": ["小鵜居島", "高原列表", "北德國", "地形"]}
+{"id": 16157, "label": "NOT ENOUGH INFO", "claim": "新撰組局長近藤勇是日本幕府末期劍士，於1834年出生，並於1868年去世。", "evidence": [[15635, null, null, null]], "predicted_pages": ["日本", "新選組", "幕府_(日本)", "近藤勇", "和田惟政"]}
+{"id": 21213, "label": "NOT ENOUGH INFO", "claim": "中國國民黨籍的連戰從政之前爲國際政治專長的學者出身，出生於1936年。", "evidence": [[20776, null, null, null]], "predicted_pages": ["連戰", "中國國民黨"]}
+{"id": 15460, "label": "NOT ENOUGH INFO", "claim": "臺灣在地發展的漢餅稱作臺式漢餅，而臺灣人喫糕餅的習慣是隨著閩粵朝鮮移民而來，經不斷改良各地的特色餅類成爲更貼合現代口感又具有地方特色的精緻小點。", "evidence": [[14993, null, null, null]], "predicted_pages": ["臺式漢餅", "糕點", "臺灣"]}
+{"id": 14704, "label": "NOT ENOUGH INFO", "claim": "朱珣個性品行端正、脾氣平和且沒什麼慾望，即使雙親已經超過九十，他仍然像孩子一樣侍奉著雙親。", "evidence": [[14160, null, null, null]], "predicted_pages": ["兒童", "親本"]}
+{"id": 15834, "label": "NOT ENOUGH INFO", "claim": "以第一次世界大戰爲美國電影背景的《魂斷藍橋》，被獲譽爲電影史上最哀傷綺麗的不朽愛情片之一。", "evidence": [[15345, null, null, null]], "predicted_pages": ["愛情片", "魂斷藍橋", "藍橋"]}
+{"id": 17703, "label": "NOT ENOUGH INFO", "claim": "施舟人一共有三個女兒，有兩個是和情婦所生。", "evidence": [[17361, null, null, null]], "predicted_pages": ["蘇米婭·斯瓦米納坦", "女兒"]}
+{"id": 14519, "label": "NOT ENOUGH INFO", "claim": "日野HS2ARXLUTF的製造商爲日本與臺灣，是一款大型公車。", "evidence": [[13929, null, null, null]], "predicted_pages": ["日野汽車", "製造業"]}
+{"id": 18945, "label": "NOT ENOUGH INFO", "claim": "阿根廷籍排球教練勞爾·洛薩諾因爲對波蘭體育的發展作出的貢獻，所以獲波蘭總統萊赫·卡欽斯基授予國家獎。", "evidence": [[18355, null, null, null]], "predicted_pages": ["勞爾·洛薩諾", "尼可拉斯·尤利阿特", "排球", "鮑威爾·扎托爾斯基", "波蘭體育", "鮑威爾·扎古穆尼"]}
+{"id": 17836, "label": "NOT ENOUGH INFO", "claim": "臺南市立建興國民中學校內有一棟歷史建築，廢棄於1919年。", "evidence": [[17188, null, null, null]], "predicted_pages": ["歷史建築", "臺南市", "原大埤信用組合", "建興", "臺南市立建興國民中學"]}
+{"id": 16643, "label": "NOT ENOUGH INFO", "claim": "大約80％的流產發生在懷孕的初期，而流產是指胚胎或胎兒發育到可在子宮外獨立生存之前的自然死亡，良好的產前護理與完善的產前檢查可能預防流產發生。", "evidence": [[16217, null, null, null]], "predicted_pages": ["流產", "人工流產", "妊娠", "女性生殖系統", "懷孕初期出血", "雙子宮畸形"]}
+{"id": 18471, "label": "NOT ENOUGH INFO", "claim": "1966年羅納德·里根當選美國西部州長，擊敗連任兩屆的派特·布朗，並在1970年的選戰中成功連任。", "evidence": [[17948, null, null, null]], "predicted_pages": ["羅納德·里根"]}
+{"id": 20331, "label": "NOT ENOUGH INFO", "claim": "燕山大學知名校友李書福是理學碩士畢業，於1996年收購吉利汽車。", "evidence": [[19898, null, null, null]], "predicted_pages": ["燕山大學", "李書福", "吉利汽車"]}
+{"id": 11237, "label": "NOT ENOUGH INFO", "claim": "M4是共有四人的臺灣演唱團體，已出道數年。", "evidence": [[10170, null, null, null]], "predicted_pages": ["人", "臺灣", "M4_(臺灣男子團體)", "MSG_A_Cappella"]}
+{"id": 13265, "label": "NOT ENOUGH INFO", "claim": "明朝的《武備全書》是火箭炮在醫事應用的最早文字紀錄。", "evidence": [[19351, null, null, null]], "predicted_pages": ["明朝", "武備", "信史", "鄂爾渾碑銘", "賈湖契刻符號", "生殖器穿洞"]}
+{"id": 16830, "label": "NOT ENOUGH INFO", "claim": "起始於1970年的國際標準書號是國際通用的一種代碼，一個國際標準書號只有一個或一份相應的報章雜誌與之對應。", "evidence": [[16532, null, null, null]], "predicted_pages": ["國際", "國際標準書號"]}
+{"id": 19222, "label": "NOT ENOUGH INFO", "claim": "墨西哥人何塞菲娜·巴斯克斯·莫塔是國家行動黨第一位女性立委候選人。", "evidence": [[18590, null, null, null]], "predicted_pages": ["國家行動黨", "何塞菲娜·巴斯克斯·莫塔", "王昌國"]}
+{"id": 18052, "label": "NOT ENOUGH INFO", "claim": "出生時身高有52釐米的奧斯卡王子於2016年3月2日獲獎 。", "evidence": [[17581, null, null, null]], "predicted_pages": ["艾絲黛拉公主_(瑞典)", "奧斯卡王子_(斯科訥公爵)"]}
+{"id": 18798, "label": "NOT ENOUGH INFO", "claim": "於2000年10月28日開放啓用的臺中都會公園是臺灣的都市公園中最容易觀賞松雀鷹的地方。", "evidence": [[18258, null, null, null]], "predicted_pages": ["松雀鷹", "伊比拉布埃拉公園", "格里斐斯公園", "臺灣", "臺中都會公園"]}
+{"id": 18779, "label": "NOT ENOUGH INFO", "claim": "瑞士最著名的山峯是少女峯，聯合國教科文組織於2001年把少女峯—阿萊奇冰川—比奇峯綜合山區列爲世界自然遺產。", "evidence": [[18265, null, null, null]], "predicted_pages": ["比奇峯", "阿萊奇冰川"]}
+{"id": 18966, "label": "NOT ENOUGH INFO", "claim": "臺中市立大安國民中學創校背景是由於中華民國政府想要廢除九年一貫義務教育。", "evidence": [[18473, null, null, null]], "predicted_pages": ["臺中市立大安國民中學"]}
+{"id": 17449, "label": "NOT ENOUGH INFO", "claim": "改建於1969年的臺中市立四育國民中學，爲男女合校，首任校長爲陳炯炎。", "evidence": [[16982, null, null, null]], "predicted_pages": ["臺中市立四育國民中學"]}
+{"id": 17614, "label": "NOT ENOUGH INFO", "claim": "酸性溶液能使通用酸鹼指示劑變色，與酸相對的另一種是鹼。", "evidence": [[17129, null, null, null]], "predicted_pages": ["酸鹼指示劑", "鹼", "酸"]}
+{"id": 18123, "label": "NOT ENOUGH INFO", "claim": "印度民族有 83 ％ 的居民住在山坡上。", "evidence": [[17666, null, null, null]], "predicted_pages": ["印度", "艾吞人", "阿瓦德人", "蒙達人", "印度民族"]}
+{"id": 16831, "label": "NOT ENOUGH INFO", "claim": "起始於1970年的國際標準書號是僅可在西方國家使用的代碼。", "evidence": [[16383, null, null, null]], "predicted_pages": ["波斯灣名稱爭議", "西方世界", "統一書號", "國際標準書號", "田園工作法"]}
+{"id": 16941, "label": "NOT ENOUGH INFO", "claim": "生於中國的徐靜蕾是女演員及導演，她執導的《杜拉拉昇職記》在中國大陸票房很低。", "evidence": [[16511, null, null, null]], "predicted_pages": ["杜拉拉昇職記", "中國", "徐靜蕾"]}
+{"id": 14460, "label": "NOT ENOUGH INFO", "claim": "1955年日本電影《楊貴妃》中的唐玄宗是由森雅之飾演。", "evidence": [[14001, null, null, null]], "predicted_pages": ["日本", "混連珠", "楊貴妃", "楊貴妃_(1955年電影)", "1955年", "唐玄宗"]}
+{"id": 18252, "label": "NOT ENOUGH INFO", "claim": "出生於1987年的熱雷米·夏爾迪是一位職業網球運動員，曾在2005年溫布頓網球公開賽青少年組男子單打賽事中奪下冠軍。", "evidence": [[17815, null, null, null]], "predicted_pages": ["托馬什·貝爾迪赫", "馬爾頓·福索維斯", "弗雷德裏克·尼爾森", "熱雷米·夏爾迪", "溫布爾登網球錦標賽", "安德烈·魯佈列夫_(網球運動員)"]}
+{"id": 15080, "label": "NOT ENOUGH INFO", "claim": "日落蛾是馬達加斯加的特有種，因爲尾巴和翅膀的顏色，很容易被誤認爲是蝴蝶。", "evidence": [[14619, null, null, null]], "predicted_pages": ["蝴蝶", "特有種", "馬達加斯加", "日落蛾"]}
+{"id": 16530, "label": "NOT ENOUGH INFO", "claim": "於1969年成立的虎豹企業於同年11月17日新加坡交易所主板上市，虎標萬金油是虎豹企業的註冊商標及產品。", "evidence": [[15966, null, null, null]], "predicted_pages": ["虎豹企業", "文祥機械", "勇利投資", "林增控股", "新加坡交易所", "STX_OSV_控股"]}
+{"id": 17065, "label": "NOT ENOUGH INFO", "claim": "外國人林鈺婷是山狗大後生樂團團長，2009年以個人詞曲創作《Piano》在文化部臺灣原創流行音樂大賽客語組獲得佳作。", "evidence": [[16623, null, null, null]], "predicted_pages": ["化學猴子", "林鈺婷"]}
+{"id": 17699, "label": "NOT ENOUGH INFO", "claim": "施舟人有兩個女兒是和前妻所生，一個女兒是和現任妻子所出。", "evidence": [[17218, null, null, null]], "predicted_pages": ["女兒", "哈拉德·舒馬赫"]}
+{"id": 15984, "label": "NOT ENOUGH INFO", "claim": "明治天皇因爲愛滋病引起的腎衰竭，導致身體代謝廢物無法排除，最後中毒而亡。", "evidence": [[15438, null, null, null]], "predicted_pages": ["腎功能衰竭", "艾滋病", "臺大醫院失誤移植愛滋病患器官案"]}
+{"id": 20445, "label": "NOT ENOUGH INFO", "claim": "發生時間介乎9月5日至9月21日的英仙座流星雨有固定出現頻率，且不容易檢視。", "evidence": [[19946, null, null, null]], "predicted_pages": ["英仙座流星雨", "寶瓶座η流星雨", "9月英仙座流星雨", "獵戶座流星雨", "流星雨", "英仙座"]}
+{"id": 15461, "label": "NOT ENOUGH INFO", "claim": "臺灣在地發展的漢餅稱作臺式漢餅，於今時今日臺式漢餅的市場以縮小至幾乎消失的程度。", "evidence": [[15348, null, null, null]], "predicted_pages": ["臺式漢餅", "臺灣"]}
+{"id": 17748, "label": "NOT ENOUGH INFO", "claim": "施舟人爲歐洲研究中華文化內容的第四代傳人。", "evidence": [[17221, null, null, null]], "predicted_pages": ["施舟人", "文化", "中華文化", "愛之堡", "羅森貝格寄宿學校"]}
+{"id": 20467, "label": "NOT ENOUGH INFO", "claim": "中國原創的長篇系列漫畫魔塵的主要角色光靈是擁有巨大超能力的小男孩。", "evidence": [[20016, null, null, null]], "predicted_pages": ["魔塵", "超能力", "漫畫", "光靈"]}
+{"id": 17529, "label": "NOT ENOUGH INFO", "claim": "亞洲偶像團體Ya-Ya-yah的歌曲《勇氣100%／直到世界大同》在Oricon公信榜最高名次達到第九名。", "evidence": [[16938, null, null, null]], "predicted_pages": ["2018年Oricon專輯周榜冠軍作品列表", "2019年Oricon專輯下載周榜冠軍作品列表", "2018年Oricon單曲周榜冠軍作品列表", "2011年Oricon單曲周榜冠軍作品列表", "2017年Oricon單曲周榜冠軍作品列表", "2009年Oricon單曲周榜冠軍作品列表"]}
+{"id": 20901, "label": "NOT ENOUGH INFO", "claim": "烏蘭巴托三十歲以下的市民達四成，有亞洲最年輕的城市的稱呼。", "evidence": [[20447, null, null, null]], "predicted_pages": ["亞洲", "公民", "烏蘭巴托", "新考蓬基", "阿爾及利亞城市列表"]}
+{"id": 16797, "label": "NOT ENOUGH INFO", "claim": "成長於臺南州的釋湛空曾經是黑幫角頭老大，並於1963年遭逮捕，在1994年間發起「大覺同心會」。", "evidence": [[16324, null, null, null]], "predicted_pages": ["角頭", "老大", "臺南州", "1963年", "釋湛空", "至尊派事件"]}
+{"id": 13458, "label": "NOT ENOUGH INFO", "claim": "蒙古國副議長丹增·倫代姜燦的特色是每當舉行記者招待會時，都會將淺綠色的鼻菸壺收起來。", "evidence": [[20332, null, null, null]], "predicted_pages": ["鼻菸"]}
+{"id": 19162, "label": "NOT ENOUGH INFO", "claim": "僞科學自稱有科學的思想，但實際上無法達到正當科學的標準，常見的雲象占卜即是一種僞科學。", "evidence": [[18634, null, null, null]], "predicted_pages": ["僞科學史", "科學", "僞科學", "預測", "占卜"]}
+{"id": 18819, "label": "NOT ENOUGH INFO", "claim": "許慎是炎帝神農氏的後裔，是文字學的開拓者，被譽爲「文聖」。", "evidence": [[18294, null, null, null]], "predicted_pages": ["神農", "氏", "許慎", "許慎墓", "文字學", "炎帝"]}
+{"id": 15848, "label": "NOT ENOUGH INFO", "claim": "湮滅於元末明初的崑曲是中國戲曲的劇種之一，被聯合國教科文組織列爲「人類口述和非物質遺產代表作」。", "evidence": [[15152, null, null, null]], "predicted_pages": ["戲曲", "崑曲", "聯合國教育、科學及文化組織", "遺產"]}
+{"id": 14533, "label": "NOT ENOUGH INFO", "claim": "孫鶴皋改名前叫孫天孫，是浙江省人，曾經擔任過廣東中國銀行員工和吉長鐵路會議處辦事員。", "evidence": [[13992, null, null, null]], "predicted_pages": ["劉裕猷", "納華威阿末", "孫鶴皋", "賈培源", "吳沛", "湯溪"]}
+{"id": 16356, "label": "NOT ENOUGH INFO", "claim": "生於1924年4月3日的美國電影男演員馬龍·白蘭度，憑藉《教父》中飾演維託·柯里昂獲得第二個奧斯卡影帝頭銜。", "evidence": [[15748, null, null, null]], "predicted_pages": ["馬龍·白蘭度", "科力士·韋德加", "西德尼·波蒂埃", "教父2", "丹尼爾·戴劉易斯", "美國電影"]}
+{"id": 17862, "label": "NOT ENOUGH INFO", "claim": "《十七歲的天空》劇情爲劇中角色周小天追尋自己的真愛的故事，此部劇使楊祐寧獲得金馬獎最佳新演員。", "evidence": [[17303, null, null, null]], "predicted_pages": ["十七歲的天空", "金馬獎最佳新演員", "愛的故事", "金馬獎"]}
+{"id": 17855, "label": "NOT ENOUGH INFO", "claim": "棱錐的體積公式爲任一面積乘以高除以三。", "evidence": [[17340, null, null, null]], "predicted_pages": ["體積", "空間時間", "棱錐", "環形", "密度", "面積"]}
+{"id": 16025, "label": "NOT ENOUGH INFO", "claim": "創辦於1955年的臺中市東區力行國民小學於1988年成立力行國小少棒隊，曾七度代表市場參與世界賽。", "evidence": [[15747, null, null, null]], "predicted_pages": ["臺中市東區力行國民小學"]}
+{"id": 21160, "label": "NOT ENOUGH INFO", "claim": "金胺O可以拿來給例如好氧結核桿菌的好氧抗酸細菌染色。", "evidence": [[20640, null, null, null]], "predicted_pages": ["抗酸染色", "羅丹明B", "細菌", "金胺O", "胺", "結核桿菌"]}
+{"id": 17079, "label": "NOT ENOUGH INFO", "claim": "高雄捷運車站文化中心站在2008年啓動，走路約5~7分鐘可到達文化中心。", "evidence": [[16603, null, null, null]], "predicted_pages": ["文化之森站", "高雄捷運公司", "高雄捷運"]}
+{"id": 18462, "label": "NOT ENOUGH INFO", "claim": "位於蘇格蘭的愛丁堡大學醫學院創設於18世紀，是英語世界最古老的醫學院。", "evidence": [[17967, null, null, null]], "predicted_pages": ["蘇格蘭", "愛丁堡", "英語", "愛丁堡大學", "皇家獸醫學院", "喬治城大學醫學院"]}
+{"id": 20443, "label": "NOT ENOUGH INFO", "claim": "發生時間介乎9月5日至9月21日的英仙座流星雨極大期約發生於9月9日，有固定出現頻率，且不容易觀察。", "evidence": [[19962, null, null, null]], "predicted_pages": ["英仙座流星雨", "9月英仙座流星雨", "獵戶座流星雨", "流星雨", "英仙座"]}
+{"id": 18493, "label": "NOT ENOUGH INFO", "claim": "廣東惠州人李柱銘曾在聖若瑟英文中學擔任授課教師，三年後他前往英國倫敦林肯律師學院學習法律。", "evidence": [[17962, null, null, null]], "predicted_pages": ["聖若瑟英文中學", "李柱銘", "教師", "林肯律師學院", "聖若瑟", "律師學院"]}
+{"id": 18474, "label": "NOT ENOUGH INFO", "claim": "1966年羅納德·里根當選加利福尼亞州州長，擊敗連任兩屆的派特·布朗，但之後未順利連任。", "evidence": [[17961, null, null, null]], "predicted_pages": ["加利福尼亞州", "曾蔡美佐", "羅納德·里根", "加利福尼亞州州長", "2007年烏茲別克斯坦總統選舉"]}
+{"id": 18675, "label": "NOT ENOUGH INFO", "claim": "臺南市學生人數最多的國中是臺南市立復興國民中學，解僱於1974年。", "evidence": [[18228, null, null, null]], "predicted_pages": ["臺灣國中教育", "臺南市立復興國民中學", "臺南市"]}
+{"id": 20323, "label": "NOT ENOUGH INFO", "claim": "皮克斯動畫工作室於2006年被迪士尼以交換電影票形式併購，但保證皮克斯保持運營上的獨立性。", "evidence": [[19816, null, null, null]], "predicted_pages": ["華特迪士尼公司", "華特迪士尼工作室電影", "幸運兔奧斯華", "皮克斯動畫工作室", "玩具總動員：遺忘的時光", "工作室"]}
+{"id": 14498, "label": "NOT ENOUGH INFO", "claim": "菲爾茲獎在2022年以網路形式舉辦。", "evidence": [[13981, null, null, null]], "predicted_pages": ["菲爾茲獎", "書評書目", "日本劇集列表_(2021年)"]}
+{"id": 16274, "label": "NOT ENOUGH INFO", "claim": "數字版權管理的使用存在爭議，亞馬遜、AT&T、AOL、Apple Inc.、Netflix都使用了數字版權管理，有幼童認爲數字版權管理是反競爭行爲。", "evidence": [[16246, null, null, null]], "predicted_pages": ["區域限制", "破解芯片", "行爲", "反競爭行爲", "數字版權管理"]}
+{"id": 18435, "label": "NOT ENOUGH INFO", "claim": "出生於中國黑龍江省的孫明明身高約等於一般成年男性身高的平均數字。", "evidence": [[17927, null, null, null]], "predicted_pages": ["黑龍江省", "男性", "人類身高"]}
+{"id": 19367, "label": "NOT ENOUGH INFO", "claim": "位於中國廣西省的紫金山因山陵的局部斷層紫色礫石外露呈紫金色而得名。", "evidence": [[18676, null, null, null]], "predicted_pages": ["礫石", "紫金山", "斷層", "金色"]}
+{"id": 18569, "label": "NOT ENOUGH INFO", "claim": "爲道教廟宇的臺東福安宮最初由陳番騰與其夫人一起主持立廟事宜，現任堂主由陳番騰擔任。", "evidence": [[18056, null, null, null]], "predicted_pages": ["夫人", "寺廟", "臺東福安宮", "道教"]}
+{"id": 17678, "label": "NOT ENOUGH INFO", "claim": "《星報》 是臺灣報紙，創立於1999年，主要報導電影新聞、買賣新聞。", "evidence": [[17362, null, null, null]], "predicted_pages": ["星報_(臺灣)", "報紙", "星報"]}
+{"id": 14416, "label": "NOT ENOUGH INFO", "claim": "人稱「貴州屋脊」的六盤水市是中華人民共和國貴州省下轄的地級市，其文化有一些少數民族的節慶，如跳水節、玩火節等。", "evidence": [[13737, null, null, null]], "predicted_pages": ["六盤水市", "貴州省"]}
+{"id": 14475, "label": "NOT ENOUGH INFO", "claim": "運動員葉珮兒曾代表香港參加過東亞運動會、亞運會、亞洲錦標賽和世界錦標賽，現在擔任香港射擊聯合總會的主席。", "evidence": [[13799, null, null, null]], "predicted_pages": ["香港射擊聯合總會", "亞洲錦標賽", "葉珮兒"]}
+{"id": 19171, "label": "NOT ENOUGH INFO", "claim": "馬耳他在1964年宣佈獨立，併成爲英聯邦的會員國，後來成立了共和國並於2004年加入EU。", "evidence": [[18772, null, null, null]], "predicted_pages": ["保羅·勞塔爾", "維謝格拉德集團", "馬耳他", "共和制"]}
+{"id": 20884, "label": "NOT ENOUGH INFO", "claim": "由於張志新向同事透露自己對於文化大革命的看法，遭同事舉報，最後被槍決。", "evidence": [[20292, null, null, null]], "predicted_pages": ["2019年巴黎警察總部襲擊", "革命", "張志新", "文化大革命", "瓦內薩·吉倫失蹤案"]}
+{"id": 15791, "label": "NOT ENOUGH INFO", "claim": "伍樂城在九歲學鋼琴，一年後學習長號。", "evidence": [[15325, null, null, null]], "predicted_pages": ["濱松國際鋼琴比賽", "鋼琴", "鋼琴記事簿"]}
+{"id": 17823, "label": "NOT ENOUGH INFO", "claim": "臺南市立後甲國民中學位於臺南市，現任校長爲陳瑞榮，其在臺南市學生人數大於臺南市立復興國民中學。", "evidence": [[17253, null, null, null]], "predicted_pages": ["臺灣國中教育", "臺南市立後甲國民中學", "校長", "臺南市", "臺南市立復興國民中學"]}
+{"id": 20668, "label": "NOT ENOUGH INFO", "claim": "一行禪師爲河南省人，也是一名老師。", "evidence": [[20191, null, null, null]], "predicted_pages": ["釋一行", "教師", "禪師", "河南省", "杯渡禪師"]}
+{"id": 21158, "label": "NOT ENOUGH INFO", "claim": "金胺O可以拿來給例如結核桿菌的抗酸黴菌染色。", "evidence": [[20448, null, null, null]], "predicted_pages": ["抗酸染色", "羅丹明B", "金胺O", "胺", "結核桿菌"]}
+{"id": 18718, "label": "NOT ENOUGH INFO", "claim": "三面被海圍繞的千葉縣由原上總國、安房國、下總國合併設置而成，且位於日本關東地方。", "evidence": [[18152, null, null, null]], "predicted_pages": ["關東", "上總國", "千葉縣", "下總國", "關東地方", "安房國"]}
+{"id": 18848, "label": "NOT ENOUGH INFO", "claim": "《碧藍幻想Versus》是一款遊戲，目標是通過結合攻擊來清空他們的角色的生命槽來消滅對手，從而贏得比賽。", "evidence": [[18322, null, null, null]], "predicted_pages": ["碧藍幻想Versus", "塔防遊戲", "生命值", "賽車遊戲", "遊戲", "碧藍幻想"]}
+{"id": 20565, "label": "NOT ENOUGH INFO", "claim": "蟬的視力相當良好，只有兩隻眼睛。", "evidence": [[20142, null, null, null]], "predicted_pages": ["眼"]}
+{"id": 14545, "label": "NOT ENOUGH INFO", "claim": "從1980年代中期開始服役的GBU27鋪路三式激光制導炸彈，首次向國外銷售是在2004年9月。", "evidence": [[14325, null, null, null]], "predicted_pages": ["炸彈", "宇崎龍童", "BXP衝鋒槍"]}
+{"id": 17702, "label": "NOT ENOUGH INFO", "claim": "施舟人和前妻沒有小孩。", "evidence": [[17202, null, null, null]], "predicted_pages": ["妻子", "施舟人", "兒童", "布魯斯·鄧恩"]}
+{"id": 17216, "label": "NOT ENOUGH INFO", "claim": "中國最早的生理學系是南京大學創立的。", "evidence": [[16712, null, null, null]], "predicted_pages": ["南京大學地學院", "戲文", "南京大學地理與海洋科學學院", "南京大學", "中國"]}
+{"id": 18926, "label": "NOT ENOUGH INFO", "claim": "位於新北市的私立金陵女子高級中學於1956年創辦，鄧麗君跟林青霞都是鄰居。", "evidence": [[18362, null, null, null]], "predicted_pages": ["新北市私立淡江高級中學", "新北市私立金陵女子高級中學", "中學", "新北市私立育才國民小學", "新北市私立聖心女子高級中學", "新北市"]}
+{"id": 20181, "label": "NOT ENOUGH INFO", "claim": "道路總長爲260英里的309省道是一條浙江省的省道，其起點在寧波市。", "evidence": [[19725, null, null, null]], "predicted_pages": ["通蘇嘉甬鐵路", "道路", "浙江省", "省道", "廣島高速道路", "薩卡加維亞火山口"]}
+{"id": 20307, "label": "NOT ENOUGH INFO", "claim": "由於位於臺南二中對面的總館十分老舊，已經不符合21世紀需求，因此2021年新的臺南市立圖書館總館於永康東橋重劃區開幕。", "evidence": [[19831, null, null, null]], "predicted_pages": ["世紀", "臺南市立圖書館", "臺南市立圖書館總館", "2021", "臺南市", "臺南市立圖書館公園總館"]}
+{"id": 17144, "label": "NOT ENOUGH INFO", "claim": "原稱嶺南公所的兩廣會館，1877年改建爲兩廣會館，位於高山，最後毀於二次大戰被盟軍的轟炸。", "evidence": [[16649, null, null, null]], "predicted_pages": ["第二次世界大戰", "同鄉會館", "山", "鐵行會館", "兩廣會館_(臺南市)"]}
+{"id": 18367, "label": "NOT ENOUGH INFO", "claim": "在上海出生的亦舒是有名的作家，散文中常寫及樂享吵鬧的家庭生活，現爲業餘作家及家庭主婦。", "evidence": [[17845, null, null, null]], "predicted_pages": ["家庭", "散文", "亦舒"]}
+{"id": 15382, "label": "NOT ENOUGH INFO", "claim": "一種核反應形式稱作核聚變，反應過程中物質並沒有朋友，1951年時美國在覈試驗中完成了人類首次的核聚變。", "evidence": [[14943, null, null, null]], "predicted_pages": ["美國", "仿星器", "核試驗", "核聚變"]}
+{"id": 19986, "label": "NOT ENOUGH INFO", "claim": "位於廈門灣的金門縣離臺灣島有210公里，緯度與臺中市相當。", "evidence": [[19736, null, null, null]], "predicted_pages": ["金門縣", "緯度", "切羅聖安東尼奧", "廈門灣", "臺中市", "臺灣"]}
+{"id": 10164, "label": "NOT ENOUGH INFO", "claim": "以關東地方爲主要建設區域的富士電視臺，員工人數1,314人。", "evidence": [[16365, null, null, null]], "predicted_pages": ["關東地方", "富士電視臺"]}
+{"id": 20571, "label": "NOT ENOUGH INFO", "claim": "七星山在火山噴發結束後被侵蝕成不一樣的七個山頭，如同北斗七星而得名。", "evidence": [[20075, null, null, null]], "predicted_pages": ["七星山", "火山", "七星", "北斗七星", "北斗"]}
+{"id": 19004, "label": "NOT ENOUGH INFO", "claim": "北海道生野站由於四周都是農地，被認爲是人煙鮮少、難以到達的祕境車站。", "evidence": [[18456, null, null, null]], "predicted_pages": ["新吉野車站", "耕地", "天幕站", "西方站_(高知縣)"]}
+{"id": 19710, "label": "NOT ENOUGH INFO", "claim": "川端町河畔是日治時代臺北的納涼賞月有名地點，夏季可以在那裏喫冰消暑。", "evidence": [[19244, null, null, null]], "predicted_pages": ["冰", "夏季", "川端町", "川端町_(臺北市)"]}
+{"id": 18513, "label": "NOT ENOUGH INFO", "claim": "亞洲天后張惠妹是首位在臺東縣立體育場開個人大型售票演唱會的歌手，湧入上數十名人潮。", "evidence": [[18028, null, null, null]], "predicted_pages": ["下一站天后_一生第一次個人演唱會", "奇幻樂園演唱會", "張惠妹", "Ameizing世界巡迴演唱會", "張惠妹演唱會列表", "下一站天后演唱會"]}
+{"id": 15563, "label": "NOT ENOUGH INFO", "claim": "俄羅斯的少數民族包含楚瓦什人，是屬於典型的歐亞混合人種，而主要信仰東正教，並且是來自中亞說突厥語的民族。", "evidence": [[15341, null, null, null]], "predicted_pages": ["突厥語族", "阿的裏烏拉爾", "人種", "楚瓦什人", "少數民族", "中亞"]}
+{"id": 16982, "label": "NOT ENOUGH INFO", "claim": "湖南長沙人楊昌濟曾未曾擔任北京大學教授，是中國近代教育家及倫理學家。", "evidence": [[16568, null, null, null]], "predicted_pages": ["楊昌濟", "中國", "陳寶泉"]}
+{"id": 18719, "label": "NOT ENOUGH INFO", "claim": "位於日本關東地方東南部的千葉縣由原上總國、安房國、下總國合併設置而成，且千葉縣三面被海圍繞。", "evidence": [[18143, null, null, null]], "predicted_pages": ["上總國", "關東", "千葉縣", "下總國", "關東地方", "安房國"]}
+{"id": 18571, "label": "NOT ENOUGH INFO", "claim": "爲道教廟宇的臺東福安宮最早由陳番騰與其夫人一起主導建廟相關事務，首代堂主由陳番騰擔任。", "evidence": [[18043, null, null, null]], "predicted_pages": ["寺廟", "道教"]}
+{"id": 18923, "label": "NOT ENOUGH INFO", "claim": "是明朝政治人物的盧瑀是浙江寧波府出身，於成化五年登進士，曾因進食被貶。", "evidence": [[18412, null, null, null]], "predicted_pages": ["明朝", "進士", "盧瑀", "成化", "明朝政治"]}
+{"id": 19205, "label": "NOT ENOUGH INFO", "claim": "納米比亞的名稱來自世上最古老的沙漠，語意爲廣闊的地方。", "evidence": [[18739, null, null, null]], "predicted_pages": ["盧特沙漠", "納米比亞", "沙漠", "荒漠列表"]}
+{"id": 15239, "label": "NOT ENOUGH INFO", "claim": "於2003年建築完成的翠豐臺位於香港新界，由其士集團負責承建，原是荃灣南豐紗廠的設廠地。", "evidence": [[14718, null, null, null]], "predicted_pages": ["其士國際", "翠豐臺", "海翩匯", "南豐紗廠", "荃灣西站", "寶石大廈"]}
+{"id": 14564, "label": "NOT ENOUGH INFO", "claim": "位於臺灣台中市的亞洲大學，是一所創辦於2001年的私立大學，目前進駐人數共有387人。", "evidence": [[14338, null, null, null]], "predicted_pages": ["人", "埼玉學園大學", "日本醫療大學", "亞洲大學_(韓國)", "東京女子大學", "亞洲大學"]}
+{"id": 17421, "label": "NOT ENOUGH INFO", "claim": "中國政治家伍廷芳是首位取得外國律師資格的華人，與妻子未有生子。", "evidence": [[16919, null, null, null]], "predicted_pages": ["中國", "伍廷芳", "楊淑妃_(後周太祖)"]}
+{"id": 20997, "label": "NOT ENOUGH INFO", "claim": "董士宏爲武士，是一名明朝政治人物 。", "evidence": [[20647, null, null, null]], "predicted_pages": ["董士宏"]}
+{"id": 20298, "label": "NOT ENOUGH INFO", "claim": "古希臘悲劇的重點不在英雄主義思想，而是崇高壯烈的悲劇故事本身。", "evidence": [[19886, null, null, null]], "predicted_pages": ["悲劇", "古希臘悲劇"]}
+{"id": 14756, "label": "NOT ENOUGH INFO", "claim": "靜宜大學附近的臺中都會公園成爲民衆休閒遊憩的空間，此地是容易觀賞得到松雀鷹的地方。", "evidence": [[14205, null, null, null]], "predicted_pages": ["臺中都會公園"]}
+{"id": 15694, "label": "NOT ENOUGH INFO", "claim": "四川人封從德是六四天安門事件的學生運動領袖，現在與妻子居住於美國。", "evidence": [[15363, null, null, null]], "predicted_pages": ["美國", "六四事件", "天安門", "封從德"]}
+{"id": 17700, "label": "NOT ENOUGH INFO", "claim": "施舟人一共有三個兒子，有兩個是和前妻所生。", "evidence": [[17278, null, null, null]], "predicted_pages": ["托馬斯·哈克爾·韋勒", "愛麗絲·李道爾", "兒子", "君士坦丁二世_(羅馬帝國)"]}
+{"id": 20175, "label": "NOT ENOUGH INFO", "claim": "309省道是一條浙江省的省道，其起點位於寧波市，道路總長爲420公里。", "evidence": [[19591, null, null, null]], "predicted_pages": ["阿列河", "309省道_(浙江)", "欣科河", "埃爾雷託諾", "雷瓦_(中央邦)", "213省道_(浙江)"]}
+{"id": 17089, "label": "NOT ENOUGH INFO", "claim": "女演員河娜京出生於1984年，大學就讀首爾綜合藝術大學，曾參加第23屆世界大學生小姐競選。", "evidence": [[16571, null, null, null]], "predicted_pages": ["首爾綜合藝術實用學校", "首爾特別市", "王菲_(香港小姐)", "河娜京", "夏季世界大學生運動會足球比賽"]}
+{"id": 18677, "label": "NOT ENOUGH INFO", "claim": "臺南市學生人數最多的國中是臺南市立復興國民中學，創辦於1974年8月。", "evidence": [[18082, null, null, null]], "predicted_pages": ["臺灣國中教育", "臺南市立復興國民中學", "臺南市"]}
+{"id": 18479, "label": "NOT ENOUGH INFO", "claim": "香港電影《縱橫四海》的主題曲是張清芳所演唱的。", "evidence": [[17972, null, null, null]], "predicted_pages": ["香港電影", "香港", "張清芳", "主題曲", "縱橫四海", "陳慧嫺演唱會列表"]}
+{"id": 16313, "label": "NOT ENOUGH INFO", "claim": "於1822年發現超臨界流體的特性，屬性介於氣體和液體之間且不存在表面張力，而最常用的超臨界流體是二氧化碳和水。", "evidence": [[16111, null, null, null]], "predicted_pages": ["超臨界流", "臨界點_(熱力學)", "二氧化碳", "超臨界流體", "超臨界二氧化碳"]}
+{"id": 13120, "label": "NOT ENOUGH INFO", "claim": "類固醇眼藥水會升高眼壓，長期使用會導致酸中毒。", "evidence": [[19363, null, null, null]], "predicted_pages": ["乳酸性酸中毒", "眼壓", "酸中毒", "甲醇中毒", "酮酸中毒", "眼藥水"]}
+{"id": 20815, "label": "NOT ENOUGH INFO", "claim": "第39任美國總統吉米·卡特於醫療機構出生，曾獲得諾貝爾醫學獎。", "evidence": [[20350, null, null, null]], "predicted_pages": ["吉米·卡特", "厄爾·威爾伯·薩瑟蘭", "諾貝爾生理學或醫學獎", "蘇恩·伯格斯特龍"]}
+{"id": 17861, "label": "NOT ENOUGH INFO", "claim": "《十七歲的天空》劇情爲主角周小天追尋自己的一夜情的故事，此部劇使楊祐寧獲得金馬獎最佳新演員。", "evidence": [[17226, null, null, null]], "predicted_pages": ["十七歲的天空", "金馬獎最佳新演員", "金馬獎"]}
+{"id": 20324, "label": "NOT ENOUGH INFO", "claim": "皮克斯動畫工作室於21世紀初被迪士尼以交換股票形式併購，但保證皮克斯保持運營上的獨立性。", "evidence": [[19948, null, null, null]], "predicted_pages": ["華特迪士尼公司", "皮克斯動畫工作室", "工作室"]}
+{"id": 20836, "label": "NOT ENOUGH INFO", "claim": "定陶之戰中，呂布以爲曹操的兵力薄弱，於是領軍進攻，結果遭到曹操埋伏，呂布的軍隊因而大敗潰堤而死亡。", "evidence": [[20278, null, null, null]], "predicted_pages": ["魏續", "侯成", "定陶之戰_(東漢)", "定陶之戰"]}
+{"id": 16976, "label": "NOT ENOUGH INFO", "claim": "JS是由兄妹檔組成的音樂組合，其特色爲哥哥的晦澀難懂詞曲創作，搭配妹妹的中音域嗓音與歌唱技巧。", "evidence": [[16552, null, null, null]], "predicted_pages": ["兄弟姊妹", "雷同二友", "佛羅倫斯·佛斯特·珍金絲", "走音天后", "音樂組合"]}
+{"id": 15417, "label": "NOT ENOUGH INFO", "claim": "植物界中梵茜草在科學分類上的科跟產於中國的血茜草相異。", "evidence": [[14897, null, null, null]], "predicted_pages": ["茜草", "梵茜草", "中國茜草"]}
+{"id": 13240, "label": "NOT ENOUGH INFO", "claim": "近況的研究認爲羅倫佐的油對於已經出現遺傳疾病徵的病患沒有改善。", "evidence": [[19358, null, null, null]], "predicted_pages": ["患者", "無效醫療", "羅倫佐的油", "油", "疾病"]}
+{"id": 15881, "label": "NOT ENOUGH INFO", "claim": "育有2女的張學友曾在1992年獲封爲香港樂壇「四大天王」之一，也於1998年當選香港十大傑出青年。", "evidence": [[15610, null, null, null]], "predicted_pages": ["香港音樂", "香港十大傑出青年", "香港", "十大傑出青年", "張學友"]}
+{"id": 18215, "label": "NOT ENOUGH INFO", "claim": "紀念薩圖爾努斯的節日是每隔四年舉辦一次。", "evidence": [[17724, null, null, null]], "predicted_pages": ["太平洋運動會", "歐洲籃球錦標賽", "水球世界盃", "中華人民共和國農民運動會", "法語系運動會足球比賽", "馬加比厄運動會"]}
+{"id": 18968, "label": "NOT ENOUGH INFO", "claim": "因爲北冰洋的經度較高，加上夏季會有大量的融冰造成熱量的消耗，使得氣溫較地球其他地區還要低。", "evidence": [[18435, null, null, null]], "predicted_pages": ["冰", "北極氣候", "溫度", "亞熱帶", "經度", "北冰洋"]}
+{"id": 17695, "label": "NOT ENOUGH INFO", "claim": "荷蘭女王爵殿下朱麗安娜女王因肺炎於2004年在莎士迪克宮駕崩。", "evidence": [[17292, null, null, null]], "predicted_pages": ["朱麗安娜女王"]}
+{"id": 15103, "label": "NOT ENOUGH INFO", "claim": "屏山書院於乾隆52年毀壞，就沒有再建立其它書院。", "evidence": [[14633, null, null, null]], "predicted_pages": ["乾隆", "屏山書院"]}
+{"id": 14731, "label": "NOT ENOUGH INFO", "claim": "信義宗認爲上帝一開始創作的世界是骯髒的，直到亞當與夏娃屈服撒旦引誘後，所有人類都承受著完美純潔。", "evidence": [[14330, null, null, null]], "predicted_pages": ["亞當與夏娃", "信義宗", "夏娃", "亞當", "撒但"]}
+{"id": 15086, "label": "NOT ENOUGH INFO", "claim": "馬三立的父親是「相聲八德」之一，而馬三立對相聲毫無興趣。", "evidence": [[14606, null, null, null]], "predicted_pages": ["父親", "馬三立"]}
+{"id": 17691, "label": "NOT ENOUGH INFO", "claim": "荷蘭女王爵殿下朱麗安娜女王因肺炎於莎士迪克宮駕崩。", "evidence": [[17349, null, null, null]], "predicted_pages": ["肺炎", "女王", "朱麗安娜女王", "拿騷的路易絲·朱麗安娜"]}
+{"id": 15883, "label": "NOT ENOUGH INFO", "claim": "於1998年當選香港十大傑出青年且曾獲封爲香港樂壇「四大天王」之一的張學友育有2女。", "evidence": [[15248, null, null, null]], "predicted_pages": ["香港音樂", "香港十大傑出青年", "夏天的故事", "香港", "十大傑出青年", "張學友"]}
+{"id": 18810, "label": "NOT ENOUGH INFO", "claim": "臺南制麻株式會社是臺灣在日治時期的黃麻製品加工廠，臺灣總督府特別選定臺南州作爲黃麻生產重心，在嘉南大圳通水區以外的土地優先替代米作改種黃麻。", "evidence": [[18304, null, null, null]], "predicted_pages": ["臺南制麻"]}
+{"id": 15736, "label": "NOT ENOUGH INFO", "claim": "在德國發現的聚醋酸乙烯酯是一種彈性的聚合物，它最常用於玻璃用膠。", "evidence": [[15306, null, null, null]], "predicted_pages": ["黏合劑", "玻璃", "德國", "聚醋酸乙烯酯", "乙酸乙烯酯", "聚合物科學"]}
+{"id": 18809, "label": "NOT ENOUGH INFO", "claim": "臺南制麻株式會社是臺灣的黃麻製品加工廠，臺灣總督府選定臺南州作爲黃麻生產重心，在嘉南大圳通水區以外的土地優先取代米作改種黃麻。", "evidence": [[18321, null, null, null]], "predicted_pages": ["臺南制麻", "黃麻"]}
+{"id": 15850, "label": "NOT ENOUGH INFO", "claim": "位於東京都的花園神社，在德川家康1590年進入江戶時就已經歪曲，主祭神是宇迦之御魂神、日本武尊、保食神。", "evidence": [[15205, null, null, null]], "predicted_pages": ["東京都", "日本", "江戶", "德川家康", "花園神社", "日本武尊"]}
+{"id": 15084, "label": "NOT ENOUGH INFO", "claim": "日落蛾是馬達加斯加的特有種，由於尾巴和翅膀的長相，很輕易被誤認爲是蝴蝶。", "evidence": [[14622, null, null, null]], "predicted_pages": ["蝴蝶", "特有種", "馬達加斯加", "日落蛾"]}
+{"id": 15389, "label": "NOT ENOUGH INFO", "claim": "現時羅馬尼亞收入最高的公司是破產於1966年的達契亞汽車，已於1999年被收購。", "evidence": [[14905, null, null, null]], "predicted_pages": ["達契亞汽車"]}
+{"id": 17884, "label": "NOT ENOUGH INFO", "claim": "虎山實小於2022年12月獲得了聯合國Eco School第四面綠旗認證，成爲亞洲第一所永久綠旗的學校。", "evidence": [[17206, null, null, null]], "predicted_pages": ["亞洲", "聯合國", "學校", "臺中市議會第三屆議員列表", "臺南市仁德區虎山實驗小學", "東吳大學法學院"]}
+{"id": 18217, "label": "NOT ENOUGH INFO", "claim": "阿曼蘇丹國的男青年多半娶自己的堂妹爲第一任妻子，由於近親結婚產生了很多先天畸形的後代，於是阿曼人逐漸擴大了擇偶的範圍。", "evidence": [[17729, null, null, null]], "predicted_pages": ["後代", "阿曼", "青年", "堂親", "妻子"]}
+{"id": 20139, "label": "NOT ENOUGH INFO", "claim": "朱鳴陽爲福建人，他是明朝的好人。", "evidence": [[19594, null, null, null]], "predicted_pages": ["明朝", "朱鳴陽", "好人文化"]}
+{"id": 17975, "label": "NOT ENOUGH INFO", "claim": "1945年沃夫岡·呂茨意外身亡，其埋葬之墓地無人知道。", "evidence": [[17511, null, null, null]], "predicted_pages": ["2010年冬季奧林匹克運動會雪橇比賽", "奧武島_(名護市)", "沃夫岡·呂茨", "亞拉維爾"]}
+{"id": 18232, "label": "NOT ENOUGH INFO", "claim": "臺北市的仁愛路行經行政區域有中正區、大安區、信義區，而仁愛路三段爲100公尺寬的林園大道，是目前臺北市最寬敞的道路。", "evidence": [[17787, null, null, null]], "predicted_pages": ["仁愛公園_(新北市)", "新北市高樓列表", "環東快速道路", "臺北市", "四草大道"]}
+{"id": 20843, "label": "NOT ENOUGH INFO", "claim": "煙臺海軍學校的前身是南洋水師槍炮官所建立負責收要學習駕駛的學生的水師學堂，取代因爲八國聯軍而毀滅的天津水師學堂。", "evidence": [[20362, null, null, null]], "predicted_pages": ["天津武備學堂", "煙臺海軍學校", "水師", "天津水師學堂", "八國聯軍", "南洋水師"]}
+{"id": 18694, "label": "NOT ENOUGH INFO", "claim": "位於日本中部的岐阜縣是日本八個內陸縣份之一，名稱來源於中國地名。", "evidence": [[18193, null, null, null]], "predicted_pages": ["長野縣", "日本", "岐阜縣"]}
+{"id": 15833, "label": "NOT ENOUGH INFO", "claim": "以第一次世界大戰爲電影背景的《魂斷藍橋》，被獲譽爲電影史上最愉快的不朽愛情片之一。", "evidence": [[15280, null, null, null]], "predicted_pages": ["愛情片", "魂斷藍橋"]}
+{"id": 19825, "label": "NOT ENOUGH INFO", "claim": "根據2000年美國人口普查 ，羅京安縣共有車輛 67,725 。", "evidence": [[19452, null, null, null]], "predicted_pages": ["羅京安縣_(維吉尼亞州)", "2000年美國人口普查", "特倫頓_(密歇根州)", "羅切斯特_(印第安納州)", "努凡_(佛蒙特州)", "帕拉岡_(印第安納州)"]}
+{"id": 15078, "label": "NOT ENOUGH INFO", "claim": "日落蛾是馬達加斯加的特有種，因爲尾巴和翅膀的長相，很容易被誤認爲是蝴蝶。", "evidence": [[14611, null, null, null]], "predicted_pages": ["蝴蝶", "特有種", "馬達加斯加", "日落蛾"]}
+{"id": 16058, "label": "NOT ENOUGH INFO", "claim": "文化部所轄國定古蹟臺南北極殿位處於臺灣，在臺南市區最高點，坐南朝北。", "evidence": [[15476, null, null, null]], "predicted_pages": ["北極殿", "臺南北極殿", "臺南市"]}
+{"id": 18122, "label": "NOT ENOUGH INFO", "claim": "印度民族有 83 ％ 的人民保母信奉印度教。", "evidence": [[17664, null, null, null]], "predicted_pages": ["印度", "卡圖瓦縣", "孟加拉地區", "桑巴縣", "印度民族", "納巴日縣"]}
+{"id": 17920, "label": "NOT ENOUGH INFO", "claim": "建立臺南市立崇明國民中學是因爲要解決東區越來越多的兒童人口所造成的國中數不足問題。", "evidence": [[17444, null, null, null]], "predicted_pages": ["數", "摩納哥填海工程", "臺南市立崇明國民中學", "東區_(臺南市)", "兒童", "臺南市"]}
+{"id": 18546, "label": "NOT ENOUGH INFO", "claim": "保羅·烏切洛是生活於中世紀末期和文藝復興初期的義大利畫家，一般認爲出生於1397年的普拉託韋基奧。", "evidence": [[18005, null, null, null]], "predicted_pages": ["意大利", "文藝復興", "保羅·烏切洛", "中世紀後期"]}
+{"id": 20872, "label": "NOT ENOUGH INFO", "claim": "海地共和國的游泳選手弗朗茨·多聖維在2016年的冬季奧林匹克運動會沒有進入決賽。", "evidence": [[20400, null, null, null]], "predicted_pages": ["海莉·安德森", "冬季奧林匹克運動會", "埃裏克·尚託", "北村久壽雄", "奧林匹克運動會", "海地"]}
+{"id": 20738, "label": "NOT ENOUGH INFO", "claim": "位於巴黎的渡船路的名稱由來仍是未知。", "evidence": [[20217, null, null, null]], "predicted_pages": ["渡船路", "巴黎"]}
+{"id": 17635, "label": "NOT ENOUGH INFO", "claim": "五大茶葉進口國爲英國、俄羅斯、巴基斯坦、美國和埃及，進口量佔世界總進口量的60%左右。", "evidence": [[17114, null, null, null]], "predicted_pages": ["各國石油進口量列表", "英國茶文化", "茶", "中華人民共和國戰略石油儲備", "世界", "中茶公司"]}
+{"id": 17810, "label": "NOT ENOUGH INFO", "claim": "臺北市立動物園在2004年發生一名男子吸毒後跳入獅子區，被一頭雄非洲獅咬傷。", "evidence": [[17302, null, null, null]], "predicted_pages": ["獅", "臺北市立動物園", "鯨魚爆炸"]}
+{"id": 17832, "label": "NOT ENOUGH INFO", "claim": "臺南市立建興國民中學校內有一棟歷史建築，建築於民國五年。", "evidence": [[17324, null, null, null]], "predicted_pages": ["民國", "歷史建築", "張彩廷紀念碑與福音堂", "建興", "臺南市立建興國民中學"]}
+{"id": 17885, "label": "NOT ENOUGH INFO", "claim": "虎山實小於2022年底獲得了聯合國Eco School第四面綠旗認證，成爲亞洲第一所暫時性綠旗的學校。", "evidence": [[17219, null, null, null]], "predicted_pages": ["亞洲", "喬安娜·埃文斯", "聯合國", "學校", "貴金古高速公路", "國家聯盟"]}
+{"id": 14803, "label": "NOT ENOUGH INFO", "claim": "位於美國印地安納州的布萊克斯堡的許多資訊皆未知，採用北美東部時區。", "evidence": [[14234, null, null, null]], "predicted_pages": ["信息", "北美洲", "美國", "北美東部時區", "布萊克斯堡_(印地安納州)"]}
+{"id": 13529, "label": "NOT ENOUGH INFO", "claim": "羅榮桓在1919年與大兩歲的第一任妻子結婚，1926年誕下了女兒，然而隔年由於羅榮桓再次離家求救，從此沒有聯繫。", "evidence": [[20372, null, null, null]], "predicted_pages": ["巴伐利亞的瑪麗·索菲", "1919年", "卡門·羅梅羅·洛佩斯", "瑪麗亞·特蕾莎·拉法埃拉_(西班牙)", "米歇爾·班奈特", "妻子"]}
+{"id": 14496, "label": "NOT ENOUGH INFO", "claim": "2022年的菲爾茲獎是線上形式頒發的。", "evidence": [[13954, null, null, null]], "predicted_pages": ["菲爾茲獎"]}
+{"id": 18218, "label": "NOT ENOUGH INFO", "claim": "阿曼蘇丹國的男青年多半娶自己的親戚爲妻子，由於近親結婚產生了很多先天畸形的後代，於是阿曼人逐漸擴大了擇偶的範圍。", "evidence": [[17713, null, null, null]], "predicted_pages": ["妻子", "後代", "親屬", "阿曼"]}
+{"id": 17845, "label": "NOT ENOUGH INFO", "claim": "國立中央大學覆校後的第一所附屬高中爲中壢高中。", "evidence": [[17276, null, null, null]], "predicted_pages": ["新北市立明德高級中學", "廣西師範大學附屬中學", "國立中央大學附屬中壢高級中學", "高級中學", "國立中央大學"]}
+{"id": 14808, "label": "NOT ENOUGH INFO", "claim": "位於美國印地安納州的布萊克斯堡的面積和人口皆未知，採用北美東部肉乾。", "evidence": [[14242, null, null, null]], "predicted_pages": ["紐裏_(印地安納州)", "東部", "北美洲", "美國", "比裏奇_(印地安納州)", "裏弗裏奇_(印地安納州)"]}
+{"id": 17215, "label": "NOT ENOUGH INFO", "claim": "中國最早的生物學系是南京大學創立的。", "evidence": [[16738, null, null, null]], "predicted_pages": ["南京大學地學院", "戲文", "南京大學地理與海洋科學學院", "南京大學", "南京大學地球科學與工程學院", "中國"]}
+{"id": 20300, "label": "NOT ENOUGH INFO", "claim": "古希臘悲劇的重點不在悲劇性故事本身，而是崇高壯烈的思想。", "evidence": [[19843, null, null, null]], "predicted_pages": ["悲劇", "思想", "古希臘悲劇"]}
+{"id": 15830, "label": "NOT ENOUGH INFO", "claim": "以第一次世界大戰爲電影背景的《魂斷藍橋》，被獲譽爲電影史上最哀傷綺麗的不磨滅愛情片之一。", "evidence": [[15443, null, null, null]], "predicted_pages": ["愛情片", "第一次世界大戰", "魂斷藍橋", "藍橋"]}
+{"id": 16424, "label": "NOT ENOUGH INFO", "claim": "在美國紐約羅徹斯特大學工作的神經科學家進行鍼刺入小鼠組織實驗時，發現有大量的腺苷釋放，幫助抑制疼痛，這項研究給了鍼灸效果可能的解釋。", "evidence": [[15915, null, null, null]], "predicted_pages": ["神經科學", "羅徹斯特大學", "疼痛", "鍼灸", "實驗", "清除記憶基因"]}
+{"id": 20518, "label": "NOT ENOUGH INFO", "claim": "臺灣出版的漫畫《泰山爸爸》在第56屆金鐘獎被提名。", "evidence": [[20030, null, null, null]], "predicted_pages": ["泰山爸爸", "金鐘獎"]}
+{"id": 15788, "label": "NOT ENOUGH INFO", "claim": "伍樂城在九歲學鋼琴，十歲學習小號。", "evidence": [[15351, null, null, null]], "predicted_pages": ["鮑天卯", "李齊_(小提琴家)", "鋼琴", "矢吹香那"]}
+{"id": 19027, "label": "NOT ENOUGH INFO", "claim": "生於巴黎的威廉·薩默塞特·毛姆曾在疫情期間加入紅十字會和救護隊服役。", "evidence": [[18448, null, null, null]], "predicted_pages": ["威廉·薩默塞特·毛姆", "巴黎", "國際紅十字與紅新月運動"]}
+{"id": 20471, "label": "NOT ENOUGH INFO", "claim": "黑麝生活在位於海拔3000到4400米之間的針葉林線附近，又叫馬麝。", "evidence": [[19972, null, null, null]], "predicted_pages": ["黑麝"]}
+{"id": 16096, "label": "NOT ENOUGH INFO", "claim": "明報較少使用聳動大標題，內容沒有色情圖畫，且排版色彩較單調。", "evidence": [[16179, null, null, null]], "predicted_pages": ["西樓月"]}
+{"id": 14678, "label": "NOT ENOUGH INFO", "claim": "艾倫與媽媽的關係緊張，且雙親彼此也不睦，因此他的童年不是很愉快。", "evidence": [[14302, null, null, null]], "predicted_pages": ["哥斯達黎加愉快航空", "親本", "童年"]}
+{"id": 15162, "label": "NOT ENOUGH INFO", "claim": "清朝時廕生出身的王文煥曾任嘉定縣知縣一職，生卒年不詳。", "evidence": [[14762, null, null, null]], "predicted_pages": ["王文煥", "王坤_(清朝)", "鄺兆雷", "鄺廷保", "曠輔廷", "徐誠_(洪武進士)"]}
+{"id": 17814, "label": "NOT ENOUGH INFO", "claim": "臺北市立動物園在2004年發生一名男子吸毒後跳入獅子區，被一頭雄非洲獅咬傷手。", "evidence": [[17237, null, null, null]], "predicted_pages": ["獅", "臺北市立動物園", "鯨魚爆炸"]}
+{"id": 18981, "label": "NOT ENOUGH INFO", "claim": "臺南水仙宮的十二塊清朝匾額皆在二次世界大戰的時候毀掉。", "evidence": [[18501, null, null, null]], "predicted_pages": ["第二次世界大戰", "清朝", "水仙宮", "世界大戰", "臺南水仙宮"]}
+{"id": 15885, "label": "NOT ENOUGH INFO", "claim": "於1880年出生在美國阿拉巴馬州的海倫·凱勒因疾病失去了觸覺和聽力。", "evidence": [[15404, null, null, null]], "predicted_pages": ["美國", "海倫·凱勒", "疾病"]}
+{"id": 16618, "label": "NOT ENOUGH INFO", "claim": "國立臺灣交響樂團是在臺灣歷史最久遠的管弦樂團，建立於1945年，現任團長爲蔡繼琨。", "evidence": [[15980, null, null, null]], "predicted_pages": ["臺灣歷史", "國立臺灣交響樂團"]}
+{"id": 15007, "label": "NOT ENOUGH INFO", "claim": "1967年，大衛·林區與第一任妻子結婚，兩人育有一名兒子。", "evidence": [[14509, null, null, null]], "predicted_pages": ["一色紗英", "安娜·巴甫洛夫娜", "老福雷斯特·瑪氏", "兒子", "許子欣", "馬克·安東尼_(歌手)"]}
+{"id": 14541, "label": "NOT ENOUGH INFO", "claim": "水木清華BBS是清華大學目前的官方BBS，截至2005年3月16日前總髮文篇數達到30萬，是中國高校中人氣最旺的BBS。", "evidence": [[13813, null, null, null]], "predicted_pages": ["水木清華BBS", "日月光華BBS", "RISE_(SPEED專輯)"]}
+{"id": 11981, "label": "NOT ENOUGH INFO", "claim": "位於日本富山縣的礪波，以盜賣鬱金香的球根而聞名。", "evidence": [[11054, null, null, null]], "predicted_pages": ["礪波", "鬱金香", "富山縣"]}
+{"id": 13117, "label": "NOT ENOUGH INFO", "claim": "類固醇眼藥水會升高眼壓，長期使用會導致青光眼。", "evidence": [[19372, null, null, null]], "predicted_pages": ["青光眼", "眼壓", "潑尼松龍", "眼藥水"]}
+{"id": 17477, "label": "NOT ENOUGH INFO", "claim": "納米比亞共和國是位於非洲的共和國，北部緊接大西洋，其名字來自於納米比沙漠，是世界上最古老的沙漠。", "evidence": [[16971, null, null, null]], "predicted_pages": ["納米比亞", "沙漠", "伊吉迪沙漠", "納米比沙漠"]}
+{"id": 20333, "label": "NOT ENOUGH INFO", "claim": "燕山大學知名校友李書福是理學碩士畢業，於1996年創辦汽車品牌。", "evidence": [[19825, null, null, null]], "predicted_pages": ["瞿振元", "碩士", "中央戲劇學院校友列表", "燕山大學", "李書福", "理學碩士"]}
+{"id": 18160, "label": "NOT ENOUGH INFO", "claim": "河源市族群以漢族客家人爲主，節慶與婚喪都有濃厚的客家色彩。", "evidence": [[17662, null, null, null]], "predicted_pages": ["河源市", "漢族", "循衡地區", "客家基因族譜"]}
+{"id": 11400, "label": "NOT ENOUGH INFO", "claim": "膝上襪的流行是源自日本，大部分是以黑色爲主，可以修飾腿部 。", "evidence": [[10324, null, null, null]], "predicted_pages": ["黑色", "腿", "日本", "膝上襪"]}
+{"id": 18356, "label": "NOT ENOUGH INFO", "claim": "擁有世界遺產的托斯卡尼以釀酒著名，特別是義大利最受歡迎的酒基安蒂酒。", "evidence": [[17856, null, null, null]], "predicted_pages": ["戈蘭高地酒廠", "意大利", "托斯卡納大區", "基安蒂酒", "酒"]}
+{"id": 15566, "label": "NOT ENOUGH INFO", "claim": "楚瓦什人是屬於典型的歐亞混合人種，主要信仰跟新疆的維吾爾族一樣是回教。", "evidence": [[14963, null, null, null]], "predicted_pages": ["楚瓦什共和國", "楚瓦什人", "伊斯蘭教", "維吾爾族"]}
+{"id": 20848, "label": "NOT ENOUGH INFO", "claim": "煙臺海軍學校的前身是北洋水師槍炮官所建立負責收要學習英文的學生的水師學堂，取代因爲八國聯軍而毀滅的天津水師學堂。", "evidence": [[20258, null, null, null]], "predicted_pages": ["天津武備學堂", "北洋水師", "煙臺海軍學校", "水師", "天津水師學堂", "八國聯軍"]}
+{"id": 16779, "label": "NOT ENOUGH INFO", "claim": "在倒幕運動、維新運動中活躍的西鄉從道，是1843年出生於日本的軍人，西鄉從道的學生是西鄉隆盛。", "evidence": [[16287, null, null, null]], "predicted_pages": ["西鄉隆盛", "西鄉", "西鄉從道", "日本"]}
+{"id": 13322, "label": "NOT ENOUGH INFO", "claim": "聶華苓發表第一篇作品那年同時從國立中央大學外文系畢業。", "evidence": [[19743, null, null, null]], "predicted_pages": ["顏元叔", "國立中央大學", "劉傑中", "英文系", "聶華苓"]}
+{"id": 20318, "label": "NOT ENOUGH INFO", "claim": "臺北市流浪貓保護協會於2016年失火時被人發現地下鐵藏有60只聲帶已被割掉的貴賓犬。", "evidence": [[19896, null, null, null]], "predicted_pages": ["貴賓犬", "臺北市流浪貓保護協會"]}
+{"id": 21057, "label": "NOT ENOUGH INFO", "claim": "日本政治家高木毅被週刊報導曾經潛入一名20歲的少女家中偷走她的衣物。", "evidence": [[20510, null, null, null]], "predicted_pages": ["高木毅", "日本", "日本政治"]}
+{"id": 16478, "label": "NOT ENOUGH INFO", "claim": "曾獲選爲香港十大傑出青年的伍樂城曾遠赴波士頓伯克利音樂學院進修5年，是1971年出生於香港的著名作曲人。", "evidence": [[16252, null, null, null]], "predicted_pages": ["十大傑出青年", "香港十大傑出青年", "波士頓", "伍樂城"]}
+{"id": 17705, "label": "NOT ENOUGH INFO", "claim": "香港立法會規定議員在宣誓之前不可以參與會議與表決。", "evidence": [[17348, null, null, null]], "predicted_pages": ["2016年香港立法會宣誓風波", "民意代表", "香港立法會"]}
+{"id": 19989, "label": "NOT ENOUGH INFO", "claim": "位於廈門灣九龍江出口的金門縣離臺灣島有210公里，緯度與臺中市相當。", "evidence": [[19549, null, null, null]], "predicted_pages": ["金門縣", "九龍江", "緯度", "臺中市", "臺灣"]}
+{"id": 18851, "label": "NOT ENOUGH INFO", "claim": "《碧藍幻想Versus》是一款遊戲，目標是通過結合攻擊來清空他們的角色的血液來消滅對手，從而贏得比賽。", "evidence": [[18308, null, null, null]], "predicted_pages": ["碧藍幻想Versus", "塔防遊戲", "2016年夏季奧林匹克運動會新加坡代表團", "賽車遊戲", "遊戲", "碧藍幻想"]}
+{"id": 17619, "label": "NOT ENOUGH INFO", "claim": "酸性溶液能在通用酸鹼指示劑中改變顏色，與酸相對的另一種是鹼。", "evidence": [[17113, null, null, null]], "predicted_pages": ["酸鹼指示劑", "鹼", "酸"]}
+{"id": 15875, "label": "NOT ENOUGH INFO", "claim": "迄2016年1月已有超過兩萬六千部作品出版的卡魯斯出版社創立於1972年且位於德國。", "evidence": [[15128, null, null, null]], "predicted_pages": ["卡魯斯出版社", "德國", "烏爾都語維基百科", "三坪房間的侵略者！？", "梨俱吠陀維基", "植綏蟎科"]}
+{"id": 16473, "label": "NOT ENOUGH INFO", "claim": "1971年出生於香港的著名作曲人伍樂城曾遠赴波士頓伯克利音樂學院進修5年，並於2011年獲選爲香港十大傑出青年。", "evidence": [[15969, null, null, null]], "predicted_pages": ["十大傑出青年", "香港十大傑出青年", "香港", "伍樂城"]}
+{"id": 17539, "label": "NOT ENOUGH INFO", "claim": "位於大安區的南埔，西臨臺灣海峽，其居民主要姓氏有王姓、呂姓、黃姓。", "evidence": [[17031, null, null, null]], "predicted_pages": ["圍頭村", "故郡村", "呂姓", "臺灣海峽"]}
+{"id": 20165, "label": "NOT ENOUGH INFO", "claim": "2016年創立的幸福傳聲基金會會定期專業培訓具心志的義工及製作固定主題的心靈節目。", "evidence": [[19615, null, null, null]], "predicted_pages": ["幸福傳聲基金會", "志願者"]}
+{"id": 19850, "label": "NOT ENOUGH INFO", "claim": "小港漁港位於臺灣台東縣成功鎮，由新港區漁會進行逃稅。", "evidence": [[19681, null, null, null]], "predicted_pages": ["南寮漁港", "成功鎮", "小港漁港", "小港漁港_(臺東縣)", "小港"]}
+{"id": 18505, "label": "NOT ENOUGH INFO", "claim": "在浙江鄉試前三名的馬應圖是政治人物。", "evidence": [[18004, null, null, null]], "predicted_pages": ["鄉試", "張琦_(天順進士)", "馬應圖", "浙江省"]}
+{"id": 17175, "label": "NOT ENOUGH INFO", "claim": "視力極佳的蟬擁有兩隻複眼與三隻單眼。", "evidence": [[16723, null, null, null]], "predicted_pages": ["複眼", "單眼", "眼"]}
+{"id": 17119, "label": "NOT ENOUGH INFO", "claim": "擁有中國唯一的熱帶雨林自然保護區的西雙版納傣族自治州設立於1953年，並由中國雲南省所管轄。", "evidence": [[16611, null, null, null]], "predicted_pages": ["自治州", "雲南省", "西雙版納傣族自治州"]}
+{"id": 18518, "label": "NOT ENOUGH INFO", "claim": "古希臘悲劇表現主題在於表現崇高壯烈的英雄主義思想，一般認爲起源於當時的祭祀。", "evidence": [[18022, null, null, null]], "predicted_pages": ["祭祀", "古希臘悲劇", "古希臘", "悲劇", "希臘"]}
+{"id": 20448, "label": "NOT ENOUGH INFO", "claim": "回族出身的張全亮是中國武術家，1941年出生於北京市。", "evidence": [[19954, null, null, null]], "predicted_pages": ["中國武術", "張全亮", "北京市"]}
+{"id": 14534, "label": "NOT ENOUGH INFO", "claim": "孫鶴皋改名前叫孫天孫，是浙江省人，曾經擔任過銀行協理和鐵路會議處處長。", "evidence": [[14012, null, null, null]], "predicted_pages": ["孫鶴皋", "賈培源", "吳沛", "湯溪", "科室主管", "朱利安·布拉西爾"]}
+{"id": 13122, "label": "NOT ENOUGH INFO", "claim": "甾族化合物眼藥水會使眼壓上升，長時間使用會造成青光眼。", "evidence": [[19141, null, null, null]], "predicted_pages": ["葡萄膜炎", "眼壓", "眼藥水", "青光眼", "骨塑型蛋白"]}
+{"id": 17821, "label": "NOT ENOUGH INFO", "claim": "臺南市立後甲國民中學位於臺南市東區，現任校長爲陳瑞榮，其在臺南市學生人數少於臺南市立復興國民中學。", "evidence": [[17191, null, null, null]], "predicted_pages": ["臺南市立後甲國民中學", "臺南市立復興國民中學"]}
+{"id": 15031, "label": "NOT ENOUGH INFO", "claim": "加拿大衛生部及美國FDA資料指出，每天食用至少3000毫克的大麥β-葡聚糖或是750毫克的膳食纖維可以降低血液中的脂質。", "evidence": [[14512, null, null, null]], "predicted_pages": ["大麥", "寧國山核桃", "過溝菜蕨", "美國食品藥品監督管理局", "血液", "脂類"]}
+{"id": 13133, "label": "NOT ENOUGH INFO", "claim": "生態毒理學的模式生物有棘皮動物。", "evidence": [[19162, null, null, null]], "predicted_pages": ["模式生物", "毒理學", "棘皮動物", "動物"]}
+{"id": 15355, "label": "NOT ENOUGH INFO", "claim": "義大利畫家拉斐爾的畫作非常的多，拉斐爾37歲時去世是因爲醫生的錯誤治療所導致。", "evidence": [[14726, null, null, null]], "predicted_pages": ["意大利", "醫生", "2013年蒙地卡羅勞力士大師賽單打比賽", "拉斐爾", "畫家"]}
+{"id": 20691, "label": "NOT ENOUGH INFO", "claim": "海星沒有腦部構造，在世界上所有海洋的海草上大概有 1,600 種海星出現。", "evidence": [[20156, null, null, null]], "predicted_pages": ["海星", "海", "腦"]}
+{"id": 15769, "label": "NOT ENOUGH INFO", "claim": "在中國古代，彗星被認爲是不祥的預兆，而歐洲則認爲彗星是聖母的預示。", "evidence": [[15279, null, null, null]], "predicted_pages": ["彗星"]}
+{"id": 17424, "label": "NOT ENOUGH INFO", "claim": "中國政治家伍廷芳是首位取得外國律師資格的華人，與妻子育有一兒子。", "evidence": [[17045, null, null, null]], "predicted_pages": ["兒子", "伍廷芳"]}
+{"id": 17741, "label": "NOT ENOUGH INFO", "claim": "日本企業家撤廢於臺北市的臺灣煉瓦株式會社是臺灣日治時期的一間公司。", "evidence": [[17186, null, null, null]], "predicted_pages": ["臺灣煉瓦", "日本", "臺北市_(省轄市)", "臺北市", "臺灣日治時期", "臺灣"]}
+{"id": 18563, "label": "NOT ENOUGH INFO", "claim": "建校於1910年的臺南市立麻豆國民中學是陳水扁和吳淑珍的母校。", "evidence": [[18037, null, null, null]], "predicted_pages": ["吳淑珍", "臺南市立麻豆國民中學", "陳水扁"]}
+{"id": 16844, "label": "NOT ENOUGH INFO", "claim": "在童年時已當過廚師的陳家樂曾獲得《第11屆華語青年影像論壇》的「年度新銳男演員獎」。", "evidence": [[16529, null, null, null]], "predicted_pages": ["陳家樂", "第23屆金馬獎", "第21屆金馬獎", "第7屆金馬獎", "新褲子", "第54屆金馬獎"]}
+{"id": 13835, "label": "NOT ENOUGH INFO", "claim": "2002年北臺灣旱災缺水危機比1980年、1995年都更嚴重，其原因是前一年臺北市政府在當時採取大量放水後，雨量匱乏與工業需水量驟增。", "evidence": [[14010, null, null, null]], "predicted_pages": ["2002年北臺灣旱災缺水危機", "水危機"]}
+{"id": 15798, "label": "NOT ENOUGH INFO", "claim": "正宗的自貢市食物不需要使用味精。", "evidence": [[15319, null, null, null]], "predicted_pages": ["味精", "食物", "2012年夏季殘疾人奧林匹克運動會射擊混合50米手槍SH1級比賽", "2012年夏季殘疾人奧林匹克運動會射擊女子10米空氣步槍SH1級比賽"]}
+{"id": 19223, "label": "NOT ENOUGH INFO", "claim": "墨西哥人何塞菲娜·巴斯克斯·莫塔是國家行動黨第一位女性總管候選人。", "evidence": [[18592, null, null, null]], "predicted_pages": ["墨西哥", "國家行動黨", "何塞菲娜·巴斯克斯·莫塔"]}
+{"id": 17206, "label": "NOT ENOUGH INFO", "claim": "倫敦發售任天堂2DS三個禮拜後，由於銷量低迷使零售商降價，結果導致銷量暴增。", "evidence": [[16682, null, null, null]], "predicted_pages": ["任天堂DS", "任天堂2DS", "任天堂3DS", "任天堂", "倫敦"]}
+{"id": 15214, "label": "NOT ENOUGH INFO", "claim": "臺灣女演員蔣黎麗有兩個房子，她的長子林威利也參與過連續劇的演出。", "evidence": [[14672, null, null, null]], "predicted_pages": ["長子", "蔣黎麗", "臺灣", "馬維欣"]}
+{"id": 16862, "label": "NOT ENOUGH INFO", "claim": "全部都是原創的動畫的力量在2010年時於東京電視臺的深夜動畫時段播放。", "evidence": [[16397, null, null, null]], "predicted_pages": ["世紀末超自然學院", "釣球", "深夜動畫", "東京電視臺", "動畫的力量", "朝日放送製作星期日早上8時30分動畫"]}
+{"id": 20286, "label": "NOT ENOUGH INFO", "claim": "海倫娜·博納姆·卡特本來想從事學術研究，但父母罹病使她輟學，並進入戲劇圈尋找掃地機會。", "evidence": [[19835, null, null, null]], "predicted_pages": ["學術", "親本"]}
+{"id": 16024, "label": "NOT ENOUGH INFO", "claim": "創辦於1955年的臺中市東區力行國民小學於1988年成立力行國小少棒隊，曾七度代表國家參與世界賽。", "evidence": [[15366, null, null, null]], "predicted_pages": ["臺中市東區力行國民小學"]}
+{"id": 12448, "label": "NOT ENOUGH INFO", "claim": "國立臺灣體育運動大學，前身爲日本人創辦的 「 臺灣省立體育專科學校 」 ，是一所位於臺中市北區的國立大學。", "evidence": [[11467, null, null, null]], "predicted_pages": ["日本", "國學院大學北海道短期大學部", "北海學園大學短期大學部", "臺中市", "國立臺灣體育運動大學", "日本人"]}
+{"id": 18256, "label": "NOT ENOUGH INFO", "claim": "熱雷米·夏爾迪是一位職業網球運動員，退休於1987年，並且是2005年溫布頓網球公開賽青少年組男子單打賽事的冠軍。", "evidence": [[17823, null, null, null]], "predicted_pages": ["托馬什·貝爾迪赫", "馬爾頓·福索維斯", "雨果·加斯頓", "弗雷德裏克·尼爾森", "熱雷米·夏爾迪", "溫布爾登網球錦標賽"]}
+{"id": 18742, "label": "NOT ENOUGH INFO", "claim": "德陽市在汶川大地震發生時並未受任何波及。", "evidence": [[18246, null, null, null]], "predicted_pages": ["漫畫", "程序設計", "邏輯編程", "DC", "角色", "事實"]}
+{"id": 18173, "label": "NOT ENOUGH INFO", "claim": "臺灣知名樂團五月天曾來到臺北萬華的青年公園取景。", "evidence": [[17646, null, null, null]], "predicted_pages": ["臺北", "五月天獲獎與提名列表", "萬華區", "青年公園"]}
+{"id": 19157, "label": "NOT ENOUGH INFO", "claim": "僞科學自稱有科學的思想，但實際上也達到正當科學的標準，常見的星座占卜即是一種僞科學。", "evidence": [[18675, null, null, null]], "predicted_pages": ["科學", "星座", "僞科學"]}
+{"id": 20597, "label": "NOT ENOUGH INFO", "claim": "赤道幾內亞第四繁榮城市阿科尼貝在2008年人口爲13,382人。", "evidence": [[20055, null, null, null]], "predicted_pages": ["多姆扎萊", "沙赫布尼耶", "年", "赤道幾內亞", "布蓋祖勒", "阿科尼貝"]}
+{"id": 18877, "label": "NOT ENOUGH INFO", "claim": "區內有臺北車站和博愛特區的中正區以「中正紀念堂」爲名，位於位於臺灣台北市西南側。", "evidence": [[18381, null, null, null]], "predicted_pages": ["中正裏_(新北市板橋區)", "中正紀念堂", "博愛特區", "臺北車站", "中正公園_(臺中市)", "臺中市西區中正國民小學"]}
+{"id": 14699, "label": "NOT ENOUGH INFO", "claim": "朱珣個性品行端正、脾氣平和且沒什麼慾望，即使父親已經超過九十，他仍然像孩子一樣侍奉著父親。", "evidence": [[14095, null, null, null]], "predicted_pages": ["父親"]}
+{"id": 18495, "label": "NOT ENOUGH INFO", "claim": "亞洲人李柱銘曾在聖若瑟英文中學擔任授課教師，三年後他前往英國倫敦林肯律師學院學習法律。", "evidence": [[17985, null, null, null]], "predicted_pages": ["聖若瑟英文中學", "李柱銘", "教師", "林肯律師學院", "聖若瑟", "律師學院"]}
+{"id": 18223, "label": "NOT ENOUGH INFO", "claim": "漫畫家藤島康介小時候受松本零士漫畫的影響，立志成爲漫畫家。", "evidence": [[17832, null, null, null]], "predicted_pages": ["漫畫家", "松本零士", "馬榮成", "藤島康介"]}
+{"id": 15745, "label": "NOT ENOUGH INFO", "claim": "楊勇是湖南省的一個務農家族的成員，曾經是勞動童子軍的隊長。", "evidence": [[15389, null, null, null]], "predicted_pages": ["揚·埃格蘭", "陳俊豪", "隊長", "楊勇", "湖南省"]}
+{"id": 19531, "label": "NOT ENOUGH INFO", "claim": "日治時期時有行政區稱作泉町，名稱由來是因爲境內生產「高尾」、「山下」等飲用水。", "evidence": [[19053, null, null, null]], "predicted_pages": ["泉町", "飲用水", "日治時期"]}
+{"id": 18716, "label": "NOT ENOUGH INFO", "claim": "位於日本關西地方的千葉縣由原上總國、安房國、下總國合併設置而成，且千葉縣三面被海圍繞。", "evidence": [[18080, null, null, null]], "predicted_pages": ["上總國", "千葉縣", "下總國", "國", "總國", "安房國"]}
+{"id": 14837, "label": "NOT ENOUGH INFO", "claim": "韭菜起源於亞洲，已經有3000多年曆史，其胡蘿蔔素很多，僅次於胡蘿蔔。", "evidence": [[14359, null, null, null]], "predicted_pages": ["胡蘿蔔", "亞洲", "胡蘿蔔素", "韭菜"]}
+{"id": 18511, "label": "NOT ENOUGH INFO", "claim": "首位在臺東縣立體育場開個人大型售票演唱會的歌手是亞洲天后阿妹，湧入上萬名人潮。", "evidence": [[18035, null, null, null]], "predicted_pages": ["奇幻樂園演唱會", "下一站天后_一生第一次個人演唱會", "Ameizing世界巡迴演唱會", "張惠妹演唱會列表", "下一站天后演唱會", "移動城堡世界巡迴演唱會"]}
+{"id": 21295, "label": "NOT ENOUGH INFO", "claim": "臺南市立後甲國民中學生物數爲臺南前三名。", "evidence": [[20830, null, null, null]], "predicted_pages": ["臺灣國中教育", "臺南市立後甲國民中學", "臺南市"]}
+{"id": 21422, "label": "NOT ENOUGH INFO", "claim": "世界新聞週報宣示他們的報導是真實的，但其實是內容荒誕的創意報紙。", "evidence": [[20815, null, null, null]], "predicted_pages": ["世界新聞網絡", "世界新聞週報"]}
+{"id": 14708, "label": "NOT ENOUGH INFO", "claim": "佛教系稻荷信仰的社祠艋舺豐川閣，位於有明町。", "evidence": [[14100, null, null, null]], "predicted_pages": ["稻荷神", "祠", "臺北稻荷神社", "艋舺豐川閣"]}
+{"id": 15147, "label": "NOT ENOUGH INFO", "claim": "日本人對擺盤的執著讓日本料理的內在非常適合欣賞，被評爲天堂的門。", "evidence": [[14814, null, null, null]], "predicted_pages": ["日本料理"]}
+{"id": 20865, "label": "NOT ENOUGH INFO", "claim": "女性的生殖細胞由卵巢產生，與男性的精子氧化，產生獨立生物個體。", "evidence": [[20331, null, null, null]], "predicted_pages": ["生殖細胞", "男性", "卵巢", "女性", "人類繁殖", "精子"]}
+{"id": 15309, "label": "NOT ENOUGH INFO", "claim": "寶瓶座又稱作水瓶座，面積排行是全天88個星座中的倒數第十位，1846年天文學家也在水瓶座附近發現海王星。", "evidence": [[14804, null, null, null]], "predicted_pages": ["雙魚座", "海王星", "天蠍座", "寶瓶座"]}
+{"id": 15564, "label": "NOT ENOUGH INFO", "claim": "俄羅斯的民族包含楚瓦什人，是屬於典型的歐亞混合人種，而主要信仰東正教，並且是來自中亞的民族。", "evidence": [[14948, null, null, null]], "predicted_pages": ["俄羅斯", "楚瓦什人", "中亞"]}
+{"id": 15854, "label": "NOT ENOUGH INFO", "claim": "位於東京都的花園神社的存在在德川家康1590年進入江戶時才被發現。", "evidence": [[15236, null, null, null]], "predicted_pages": ["東京都", "江戶", "東照宮", "德川家康", "花園神社"]}
+{"id": 20526, "label": "NOT ENOUGH INFO", "claim": "教育家史蒂芬·沃爾夫勒姆1959年出生於倫敦，曾先後就讀於伊頓公學、牛津大學。", "evidence": [[20047, null, null, null]], "predicted_pages": ["公學", "牛津大學", "史蒂芬·沃爾夫勒姆", "倫敦", "教育家", "伊頓公學"]}
+{"id": 14508, "label": "NOT ENOUGH INFO", "claim": "東吉野村曾想與吉野町合併，但半年後的春天決定放棄。", "evidence": [[13964, null, null, null]], "predicted_pages": ["東吉野村", "吉野町站", "春季"]}
+{"id": 15526, "label": "NOT ENOUGH INFO", "claim": "歐亞大陸的赫爾辛基是全球第二北端的首都，1952年的夏季奧林匹克運動會在此舉辦。", "evidence": [[15268, null, null, null]], "predicted_pages": ["赫爾辛基", "1952年奧運會", "崔忠植", "夏季奧林匹克運動會", "田島政治"]}
+{"id": 20344, "label": "NOT ENOUGH INFO", "claim": "國立臺灣大學法律學院的圖書館有三層樓，內有兩間討論室，共有180個閱覽位。", "evidence": [[19861, null, null, null]], "predicted_pages": ["圖書館", "哥倫比亞法學院", "國立臺灣大學", "國立臺灣大學法律學院", "法學院", "中南財經大學圖書館"]}
+{"id": 18854, "label": "NOT ENOUGH INFO", "claim": "《碧藍幻想Versus》是一款遊戲，目標是通過結合攻擊來清空他們的角色的生命槽來創造對手，從而贏得比賽。", "evidence": [[18338, null, null, null]], "predicted_pages": ["碧藍幻想Versus", "生命值", "賽車遊戲", "競賽", "遊戲", "碧藍幻想"]}
+{"id": 13179, "label": "NOT ENOUGH INFO", "claim": "以文字記載經典的佛教流派的和尚必須不喫飛禽、走獸、魚蝦等動物身體。", "evidence": [[19134, null, null, null]], "predicted_pages": ["和尚", "動物", "尊勝咒", "佛教", "長腕和尚蟹", "素食主義"]}
+{"id": 16498, "label": "NOT ENOUGH INFO", "claim": "現年23歲的袁一琦是SNH48的成員，一直以來都是在團體活動。", "evidence": [[15634, null, null, null]], "predicted_pages": ["陳思_(SNH48)", "萬麗娜", "SNH48", "易嘉愛", "袁一琦", "龔詩淇"]}
+{"id": 19252, "label": "NOT ENOUGH INFO", "claim": "徐州市的資金有1041.87 萬，是中國國家歷史文化名城。", "evidence": [[18778, null, null, null]], "predicted_pages": ["國家歷史文化名城", "平遙縣", "徐州市", "亳_(消歧義)", "瀋陽市", "中國"]}
+{"id": 13262, "label": "NOT ENOUGH INFO", "claim": "藍調音樂的最早形式是貧困非裔黑人奴隸的業餘音樂。", "evidence": [[19159, null, null, null]], "predicted_pages": ["非裔", "黑人", "藍調"]}
+{"id": 19345, "label": "NOT ENOUGH INFO", "claim": "位於臺灣台中市南屯區的同安厝在清治末期至日治初期隸屬於捒東下堡，嶺東科技大學第二校區位於同安厝的區域。", "evidence": [[18802, null, null, null]], "predicted_pages": ["臺中市南屯區南屯國民小學", "捒東下堡", "打貓東下堡", "南屯區", "臺中市南屯區鎮平國民小學", "臺中市南屯區黎明國民小學"]}
+{"id": 15805, "label": "NOT ENOUGH INFO", "claim": "《複製人卡辛》被認爲是日本在3C駭客與人工智慧背叛人類的題材中的先鋒。", "evidence": [[15275, null, null, null]], "predicted_pages": ["再造人卡辛", "駭客入侵系列", "人類", "日本"]}
+{"id": 14696, "label": "NOT ENOUGH INFO", "claim": "在比薩出生的伽利略證實在比薩斜塔做了質量相異者同時落地實驗。", "evidence": [[14343, null, null, null]], "predicted_pages": ["比薩", "質量", "伽利略·伽利萊", "實驗", "比薩斜塔"]}
+{"id": 18361, "label": "NOT ENOUGH INFO", "claim": "擁有世界遺產的托斯卡尼以釀酒著名，特別是歐洲最受歡迎的酒基安蒂酒。", "evidence": [[17852, null, null, null]], "predicted_pages": ["基安蒂酒", "酒", "托斯卡納大區", "戈蘭高地酒廠"]}
+{"id": 17593, "label": "NOT ENOUGH INFO", "claim": "位於島根縣的都野津車站是西日本旅客鐵道的山陰本線車站，從2005年開始成爲無人車站，現時車站大樓內設有自動售票機。", "evidence": [[17142, null, null, null]], "predicted_pages": ["林站", "都野津站", "日本", "西日本旅客鐵道", "山陰本線", "島根縣"]}
+{"id": 20527, "label": "NOT ENOUGH INFO", "claim": "科學家史蒂芬·沃爾夫勒姆1959年出生於英國，曾先後就讀於伊頓公學、牛津大學。", "evidence": [[20034, null, null, null]], "predicted_pages": ["公學", "拉德利公學", "牛津大學", "史蒂芬·沃爾夫勒姆", "英國", "伊頓公學"]}
+{"id": 18111, "label": "NOT ENOUGH INFO", "claim": "根據2003年的資料，半導體佔了德州儀器85%的收入。", "evidence": [[17675, null, null, null]], "predicted_pages": ["博祖姆", "德州儀器", "年", "收入", "各國每年人均能量消耗列表", "半導體"]}
+{"id": 18117, "label": "NOT ENOUGH INFO", "claim": "根據2003年的資料，氮化鎵佔了德州儀器85%的收入。", "evidence": [[17619, null, null, null]], "predicted_pages": ["博祖姆", "德州儀器", "氮化鎵", "年", "收入", "各國每年人均能量消耗列表"]}
+{"id": 15876, "label": "NOT ENOUGH INFO", "claim": "位於德國的卡魯斯出版社出租於1972年，迄2016年1月已有超過兩萬六千部作品出版。", "evidence": [[15124, null, null, null]], "predicted_pages": ["哈佛大學出版社", "長江文藝出版社", "卡魯斯出版社", "德國", "烏爾都語維基百科", "梨俱吠陀維基"]}
+{"id": 15511, "label": "NOT ENOUGH INFO", "claim": "過去曾存在的臺灣觀光學院，是在2006年改制而成的，是臺灣第一所完成解散清算的學校財團法人。", "evidence": [[15321, null, null, null]], "predicted_pages": ["臺灣觀光學院"]}
+{"id": 21059, "label": "NOT ENOUGH INFO", "claim": "中國畫家徐悲鴻17歲時被父母逼婚，後來生了兒子，但妻子死亡後，留下的長子感染天花而死。", "evidence": [[20686, null, null, null]], "predicted_pages": ["天花", "中國", "中國畫", "兒子", "畫家"]}
+{"id": 19309, "label": "NOT ENOUGH INFO", "claim": "由香港電視娛樂有限公司製作的太平紋身店是一部懸疑類電視劇，於2021年1月18日至2月5日在ViuTV首播。", "evidence": [[18669, null, null, null]], "predicted_pages": ["娛樂風雲", "ViuTV電視劇集列表_(2020年代)", "太平紋身店", "香港電視娛樂", "理想國_(電視劇)", "詭探前傳"]}
+{"id": 14500, "label": "NOT ENOUGH INFO", "claim": "2022年的菲爾茲獎是google meet形式頒發的。", "evidence": [[13976, null, null, null]], "predicted_pages": ["Google聯絡人", "Google播客", "菲爾茲獎", "Google", "Google_Duo", "Google_Meet"]}
+{"id": 14954, "label": "NOT ENOUGH INFO", "claim": "臺東郵局旗下的延平支局因爲已有五十年曆史，外觀老舊，故邀請彩繪家以阿美族特色來彩繪延平支局外牆，形成當地的特色景點。", "evidence": [[14486, null, null, null]], "predicted_pages": ["歷史"]}
+{"id": 16818, "label": "NOT ENOUGH INFO", "claim": "所使用的媒介有木刻版畫、銅板版畫、石版版畫、絲網版畫和數位版的版畫屬於一種視覺藝術形式，是透過印刷手段產生，至今發現最早的版畫收藏在英國大英博物館。", "evidence": [[16303, null, null, null]], "predicted_pages": ["木刻版畫", "視覺藝術", "版畫"]}
+{"id": 17812, "label": "NOT ENOUGH INFO", "claim": "臺北市立動物園在民國93年發生一名男子服用毒品後跳入獅子區，被一頭雄非洲獅咬傷。", "evidence": [[17275, null, null, null]], "predicted_pages": ["獅", "動物園", "臺北市立動物園"]}
+{"id": 21371, "label": "NOT ENOUGH INFO", "claim": "曾在澳洲交易所上市的香港飛機工程成立於1950年，主要業務是進行商用飛機的大修及維修業務。", "evidence": [[20879, null, null, null]], "predicted_pages": ["太平協和集團", "飛機", "香港飛機工程"]}
+{"id": 19335, "label": "NOT ENOUGH INFO", "claim": "在朝鮮唯一的政黨是朝鮮勞動黨，現任最高領導人是金正恩，在1949年由金正恩創建。", "evidence": [[18837, null, null, null]], "predicted_pages": ["金正恩", "朝鮮勞動黨永遠的總書記", "朝鮮勞動黨", "最高領導人"]}
+{"id": 20303, "label": "NOT ENOUGH INFO", "claim": "由於位於臺南二中對面的總館十分老舊，已經不符合現代需求，因此2029年新的臺南市立圖書館總館於永康東橋重劃區開幕。", "evidence": [[19977, null, null, null]], "predicted_pages": ["臺南市立圖書館", "臺南市", "臺南市立圖書館公園總館", "臺南市立圖書館總館"]}
+{"id": 9865, "label": "NOT ENOUGH INFO", "claim": "世界歷史上首次將「主權在民」的思想立入的法規爲《中華民國臨時約法》。", "evidence": [[15958, null, null, null]], "predicted_pages": ["中華民國臨時約法", "主權在民"]}
+{"id": 14785, "label": "NOT ENOUGH INFO", "claim": "創辦於1994年的臺北市內湖區南湖國民小學和紐西蘭布里斯本新班利丘小學是姊妹校，位於臺北市內湖區。", "evidence": [[14188, null, null, null]], "predicted_pages": ["內湖區", "臺北市內湖區南湖國民小學"]}
+{"id": 17943, "label": "NOT ENOUGH INFO", "claim": "國立臺灣大學醫學人文博物館是一棟兩層樓建築，非院區人員不可進入二樓。", "evidence": [[17465, null, null, null]], "predicted_pages": ["國立臺灣大學", "重慶醫科大學附屬第二醫院", "高峯植物園", "灣岸長島停車區", "國立臺灣大學醫學人文博物館"]}
+{"id": 19338, "label": "NOT ENOUGH INFO", "claim": "分佈於中國、臺灣、日本、朝鮮、中南半島、印尼及印度等地的挖耳草又稱韓信草，爲脣形科植物。", "evidence": [[18610, null, null, null]], "predicted_pages": ["脣形科", "斑偉蜓", "韓信草"]}
+{"id": 16979, "label": "NOT ENOUGH INFO", "claim": "湖南長沙人楊昌濟曾擔任北京大學教授，是中國近代教育家及哲學家。", "evidence": [[16520, null, null, null]], "predicted_pages": ["楊昌濟", "吳有訓", "中國"]}
+{"id": 16053, "label": "NOT ENOUGH INFO", "claim": "文化部所轄國定古蹟臺南北極殿位處於臺南市，在臺南市區最低點，坐南朝北。", "evidence": [[15415, null, null, null]], "predicted_pages": ["北極殿", "南", "臺南北極殿", "臺南市"]}
+{"id": 18869, "label": "NOT ENOUGH INFO", "claim": "女演員劉玉玲於紐約皇后區的傑克遜高地長大，父母分別出生於北京和上海。", "evidence": [[18360, null, null, null]], "predicted_pages": ["紐約", "伊麗莎白·帕金斯", "劉玉玲", "皇后區", "劉雪華"]}
+{"id": 13136, "label": "NOT ENOUGH INFO", "claim": "棘皮動物可以作爲生物研究領域的模式生物。", "evidence": [[19426, null, null, null]], "predicted_pages": ["模式生物", "棘皮動物"]}
+{"id": 21014, "label": "NOT ENOUGH INFO", "claim": "臺北市立成功高級中學制服以白襯衫黑褲的西裝造型取代原本的卡其軍訓服。", "evidence": [[20522, null, null, null]], "predicted_pages": ["中學", "西裝", "襯衫", "臺北市立成功高級中學", "卡其色", "制服"]}
+{"id": 14809, "label": "NOT ENOUGH INFO", "claim": "位於臺北市的青年公園建造於1975年，原爲日治時期的日軍古亭莊練兵場。", "evidence": [[14280, null, null, null]], "predicted_pages": ["臺北市", "臺北南機場"]}
+{"id": 20376, "label": "NOT ENOUGH INFO", "claim": "由於連年戰亂、民不聊生，西漢初年漢高祖劉邦採取政府無爲，百姓自治的治理方法與民一同休養生息。", "evidence": [[20004, null, null, null]], "predicted_pages": ["西漢", "劉邦"]}
+{"id": 16351, "label": "NOT ENOUGH INFO", "claim": "臺灣日治中後期臺灣的首府是隸屬於臺北州的臺北市，後來從州轄市改製爲省轄市。", "evidence": [[15454, null, null, null]], "predicted_pages": ["彰化市_(省轄市)", "嘉義市_(1945年－1950年)", "臺北州", "臺北市_(省轄市)", "臺北市_(消歧義)", "臺北市"]}
+{"id": 20432, "label": "NOT ENOUGH INFO", "claim": "根據中華民國法律《文化資產保存法》第17條，古蹟依主管機關區分爲「國定」、「直轄市定」、「縣（市）定」。", "evidence": [[19932, null, null, null]], "predicted_pages": ["法律", "市", "文化資產保存法", "臺灣古蹟列表", "中華民國法律"]}
+{"id": 14341, "label": "NOT ENOUGH INFO", "claim": "種植韭菜已有3000多年的歷史，而起源於亞洲的韭菜除了被歸類爲葷食外，在一些國家也被列爲入侵植物。", "evidence": [[13449, null, null, null]], "predicted_pages": ["韭菜"]}
+{"id": 15099, "label": "NOT ENOUGH INFO", "claim": "屏山書院於乾隆52年毀壞，但在地方政府和士紳的努力下，設立「鳳儀書院」延續原「屏山書院」的功能，成爲文教中心。", "evidence": [[14653, null, null, null]], "predicted_pages": ["乾隆", "鳳儀書院", "書院", "屏山書院", "屏山書院_(臺灣)"]}
+{"id": 15770, "label": "NOT ENOUGH INFO", "claim": "在中國古代，彗星被認爲是不祥的預兆，而歐洲則認爲彗星是上帝的禮物。", "evidence": [[15312, null, null, null]], "predicted_pages": ["禮物", "彗星", "上帝", "中國歷史"]}
+{"id": 17726, "label": "NOT ENOUGH INFO", "claim": "以前的諾基亞是手機市場龍頭，在西元兩千年的市值高達兩千五百億美元，僅次於麥當勞與可口可樂。", "evidence": [[17250, null, null, null]], "predicted_pages": ["麥當勞", "諾基亞6290", "可口可樂", "市值", "諾基亞Asha_500", "諾基亞N97"]}
+{"id": 19528, "label": "NOT ENOUGH INFO", "claim": "日治時期時臺南市的行政區之一稱作泉町，名稱由來是因爲境內生產「高尾」、「山下」等神木。", "evidence": [[19063, null, null, null]], "predicted_pages": ["重田榮治", "澎湖縣馬公市各里沿革列表", "泉町", "池田敏雄_(民俗研究者)", "臺南市", "日治時期"]}
+{"id": 14507, "label": "NOT ENOUGH INFO", "claim": "東吉野村曾想與吉野町合併，但半年後決定延期。", "evidence": [[13832, null, null, null]], "predicted_pages": ["東吉野村", "2021年亞洲青年運動會", "吉野町"]}
+{"id": 21216, "label": "NOT ENOUGH INFO", "claim": "擁有黨籍的連戰從政之前爲國際政治專長的學者出身，出生於1936年。", "evidence": [[20559, null, null, null]], "predicted_pages": ["連戰"]}
+{"id": 20902, "label": "NOT ENOUGH INFO", "claim": "烏蘭巴托五十歲以下的市民達四成，有世界上最年輕的城市的稱呼。", "evidence": [[20418, null, null, null]], "predicted_pages": ["公民", "烏蘭巴托", "新考蓬基", "阿爾及利亞城市列表", "世界"]}
+{"id": 14712, "label": "NOT ENOUGH INFO", "claim": "艋舺豐川閣是日本宗教信仰的社祠，位於有明町。", "evidence": [[14206, null, null, null]], "predicted_pages": ["日本", "有明站", "伊崎田站", "有明町", "初山別村", "高凪優名"]}
+{"id": 18865, "label": "NOT ENOUGH INFO", "claim": "曾是醫生的威廉·薩默塞特·毛姆以自己的經驗創作了第一部長篇小說，此後棄醫從文，並在1947年設立毛姆文學獎獎勵35歲以下的優秀廚師。", "evidence": [[18420, null, null, null]], "predicted_pages": ["毛姆文學獎", "長篇小說", "威廉·薩默塞特·毛姆", "文學獎"]}
+{"id": 16848, "label": "NOT ENOUGH INFO", "claim": "曾獲得《第11屆華語青年影像論壇》的「年度新銳男演員獎」的陳家樂的童年並無演藝紀錄。", "evidence": [[16546, null, null, null]], "predicted_pages": ["朱星傑", "新褲子"]}
+{"id": 16163, "label": "NOT ENOUGH INFO", "claim": "新撰組局長近藤勇是日本的劍士，於1834年出生，並於1868年去世。", "evidence": [[16028, null, null, null]], "predicted_pages": ["貴族院_(西班牙)", "日本", "新選組", "近藤勇", "近藤康用"]}
+{"id": 17464, "label": "NOT ENOUGH INFO", "claim": "臺北市立景興國民中學是創辦於1985年的臺灣國民中學，學生人數超過一千人，現任校長爲蔡來淑。", "evidence": [[17032, null, null, null]], "predicted_pages": ["人", "臺北", "臺北市立景興國民中學", "校長"]}
+{"id": 15884, "label": "NOT ENOUGH INFO", "claim": "於1880年出生在美國阿拉巴馬州的海倫·凱勒因疾病失去了視力和聽力。", "evidence": [[15250, null, null, null]], "predicted_pages": ["海倫·凱勒", "鄧氏墨頭魚", "美國", "雅雯·史華霍", "疾病"]}
+{"id": 16275, "label": "NOT ENOUGH INFO", "claim": "亞馬遜、AT&T、AOL、Apple Inc.、Netflix都使用了數字版權管理，而數字版權管理的使用存在爭議，有組織認爲數字版權管理是反競爭行爲。", "evidence": [[16174, null, null, null]], "predicted_pages": ["行爲", "區域限制", "反競爭行爲", "數字版權管理"]}
+{"id": 16815, "label": "NOT ENOUGH INFO", "claim": "透過印刷手段產生的版畫屬於一種視覺藝術形式，所使用的媒介有木刻版畫、銅板版畫、石版版畫、絲網版畫和數位版，至今發現最早的版畫收藏在英國大英博物館。", "evidence": [[16325, null, null, null]], "predicted_pages": ["木刻版畫", "視覺藝術", "版畫"]}
+{"id": 18850, "label": "NOT ENOUGH INFO", "claim": "《碧藍幻想Versus》是一款遊戲，贏得比賽的方式是通過結合攻擊來清空他們的角色的生命槽來消滅對手。", "evidence": [[18325, null, null, null]], "predicted_pages": ["碧藍幻想Versus", "生命值", "競賽", "遊戲", "攻擊", "碧藍幻想"]}
+{"id": 16355, "label": "NOT ENOUGH INFO", "claim": "生於1924年的美國電影男演員馬龍·白蘭度僅獲得過一次奧斯卡影帝。", "evidence": [[16213, null, null, null]], "predicted_pages": ["馬龍·白蘭度", "約翰·保羅·利瓦達利", "丹尼爾·戴劉易斯", "美國電影", "影帝", "奧斯卡"]}
+{"id": 19284, "label": "NOT ENOUGH INFO", "claim": "臺南縣爲臺灣開發最早的地方，車輛約有 110.4 萬。", "evidence": [[18644, null, null, null]], "predicted_pages": ["臺灣", "臺南縣", "載具"]}
+{"id": 14839, "label": "NOT ENOUGH INFO", "claim": "韭菜起源於亞洲，已經有3000多年曆史，其營養素很多，僅次於胡蘿蔔。", "evidence": [[14472, null, null, null]], "predicted_pages": ["胡蘿蔔", "亞洲", "韭菜"]}
+{"id": 14523, "label": "NOT ENOUGH INFO", "claim": "日野HS2ARXLUTF的製造商爲日野汽車與國瑞汽車，是一款大型重機。", "evidence": [[13924, null, null, null]], "predicted_pages": ["日野汽車", "製造業"]}
+{"id": 15348, "label": "NOT ENOUGH INFO", "claim": "臺灣男演員劉文正曾經多次在諾貝爾獎中獲獎。", "evidence": [[14773, null, null, null]], "predicted_pages": ["劉文正", "寇世勳", "吉隆建設", "諾貝爾獎"]}
+{"id": 13463, "label": "NOT ENOUGH INFO", "claim": "傳說文殊菩薩預知釋迦牟尼將在美國境內誕生，但當時該地一片荒涼，於是文殊菩薩慈悲爲懷，提前二十年率領弟子們至美國建造城池，來迎接佛陀降臨人世。", "evidence": [[20545, null, null, null]], "predicted_pages": ["美國", "佛"]}
+{"id": 10034, "label": "NOT ENOUGH INFO", "claim": "奧古斯都表弟異常英俊但不在意個人打扮。", "evidence": [[16023, null, null, null]], "predicted_pages": ["表親"]}
+{"id": 17461, "label": "NOT ENOUGH INFO", "claim": "臺北市立景興國民中學是創辦於1985年的臺北市國民中學，學生人數超過一千人，首任校長爲蔡來淑。", "evidence": [[17043, null, null, null]], "predicted_pages": ["臺北", "人", "臺北市立景興國民中學", "校長"]}
+{"id": 17641, "label": "NOT ENOUGH INFO", "claim": "五大茶葉出口國爲英國、俄羅斯、巴基斯坦、美國和埃及，出口量佔世界總出口量的60%左右。", "evidence": [[17105, null, null, null]], "predicted_pages": ["各國石油出口量列表", "恆天然合作社集團", "英國茶文化", "茶", "世界", "中茶公司"]}
+{"id": 21009, "label": "NOT ENOUGH INFO", "claim": "由於女神杯被偷走後下落不明，國際足協世界盃的冠軍獎盃改用大力神杯。", "evidence": [[20492, null, null, null]], "predicted_pages": ["國際足協世界盃獎盃", "2016年國際足協女子U20世界盃", "國際足協世界盃", "2008年國際足協U17女子世界盃", "2010年國際足協世界盃"]}
+{"id": 16849, "label": "NOT ENOUGH INFO", "claim": "在童年時已當過童星的陳家樂曾獲得《第11屆華語青年影像論壇》的一個獎項。", "evidence": [[16491, null, null, null]], "predicted_pages": ["陳家樂", "賈斯汀·亨利", "紀曉君", "金馬獎最佳童星", "雙城故事", "金馬獎頒獎典禮"]}
+{"id": 16923, "label": "NOT ENOUGH INFO", "claim": "美國波士頓是此國家最古老的都市之一，因爲開發較早的緣故，使波士頓海拔非常高。", "evidence": [[16565, null, null, null]], "predicted_pages": ["波士頓", "海拔", "田川市"]}
+{"id": 14471, "label": "NOT ENOUGH INFO", "claim": "霹靂遊俠的拍攝地點在加州，是自1982年至1986年的熱門電視劇，此片曾在超過80個國家放映。", "evidence": [[13815, null, null, null]], "predicted_pages": ["加利福尼亞州", "電視劇", "戰地醫院", "霹靂遊俠", "七龍珠Z"]}
+{"id": 14695, "label": "NOT ENOUGH INFO", "claim": "出生於比薩的伽利略傳說曾在比薩斜塔做質量相異者同時落地實驗。", "evidence": [[14110, null, null, null]], "predicted_pages": ["伽利略·伽利萊", "比薩斜塔", "比薩"]}
+{"id": 15245, "label": "NOT ENOUGH INFO", "claim": "於2003年建築完成的翠豐臺位於香港新界，由其士集團負責承建，原是荃灣南豐紗廠的姊妹校。", "evidence": [[14685, null, null, null]], "predicted_pages": ["南豐紗廠", "其士國際", "翠豐臺"]}
+{"id": 17971, "label": "NOT ENOUGH INFO", "claim": "1945年沃夫岡·呂茨意外身亡，後葬於愛德比教堂的墓地。", "evidence": [[17491, null, null, null]], "predicted_pages": ["沃夫岡·呂茨", "墳場"]}
+{"id": 17934, "label": "NOT ENOUGH INFO", "claim": "臺南市新市區新市國民小學校徽中的綠色代表絕望，紅色代表活力，整體設計意涵爲希望孩子們除了學習不佳以外，身體也瘦弱。", "evidence": [[17428, null, null, null]], "predicted_pages": ["臺南市", "臺南市新市區新市國民小學"]}
+{"id": 20462, "label": "NOT ENOUGH INFO", "claim": "魔塵是中國原創的長篇系列漫畫，主角光靈是擁有強大超能力的小男孩。", "evidence": [[19909, null, null, null]], "predicted_pages": ["巨神兵", "光靈", "魔塵", "奇異博士", "超能力"]}
+{"id": 20513, "label": "NOT ENOUGH INFO", "claim": "劉銘傳擔任臺灣巡撫時籌建的臺灣鐵路，是當時中國第二條以載客爲目的的鐵路。", "evidence": [[20048, null, null, null]], "predicted_pages": ["臺灣鐵路_(清朝)", "中國", "巡撫", "福建臺灣巡撫", "臺灣", "劉銘傳"]}
+{"id": 15985, "label": "NOT ENOUGH INFO", "claim": "明治天皇最後死於因爲糖尿病造成的腎衰竭，使身體代謝廢物難排除，最後中毒。", "evidence": [[15588, null, null, null]], "predicted_pages": ["腎功能衰竭", "糖尿病"]}
+{"id": 15307, "label": "NOT ENOUGH INFO", "claim": "寶瓶座又稱作水瓶座，面積排行是全天88個星座中的第十位，1846年天文學家也在水瓶座附近發現流星。", "evidence": [[14665, null, null, null]], "predicted_pages": ["天蠍座", "雙魚座", "星座", "寶瓶座", "流星", "金牛座"]}
+{"id": 13430, "label": "NOT ENOUGH INFO", "claim": "幾何學這個詞最早來自希臘語中的土地和測量兩個詞合成而來，意指測量土地的法術。", "evidence": [[19829, null, null, null]], "predicted_pages": ["希臘語"]}
+{"id": 20281, "label": "NOT ENOUGH INFO", "claim": "原先想從事學術研究的海倫娜·博納姆·卡特因爲父母生病的關係，使她輟學進入戲劇圈尋找演出機會。", "evidence": [[19853, null, null, null]], "predicted_pages": ["海倫娜·博納姆·卡特", "學術"]}
+{"id": 20857, "label": "NOT ENOUGH INFO", "claim": "由於美國政治家約瑟夫·張伯倫的努力下，使維多利亞女王頒佈皇家特許狀，伯明翰大學因而創立。", "evidence": [[20471, null, null, null]], "predicted_pages": ["伯明翰大學", "皇家特許狀"]}
+{"id": 15858, "label": "NOT ENOUGH INFO", "claim": "1962至1975年間臺北市政府運用「國民住宅基金」興建的臺北市整建住宅，提供11,012戶的居住空間，且皆爲連棟式公寓。", "evidence": [[15506, null, null, null]], "predicted_pages": ["臺北市政府", "臺北市", "臺北市整建住宅"]}
+{"id": 20473, "label": "NOT ENOUGH INFO", "claim": "黑麝生活在位於海拔3000到4400米之間的潮溼針葉林線附近，又叫黑獐子。", "evidence": [[19883, null, null, null]], "predicted_pages": ["黑麝"]}
+{"id": 14525, "label": "NOT ENOUGH INFO", "claim": "最早襪子的發明主要爲護腳、御熱及吸汗防臭，其類型有船襪、中筒襪和五趾襪等等。", "evidence": [[13850, null, null, null]], "predicted_pages": ["襪子", "五趾襪", "長襪", "船襪"]}
+{"id": 16269, "label": "NOT ENOUGH INFO", "claim": "數字版權管理的使用存在爭議，亞馬遜、AT&T、AOL、Apple Inc.、Netflix都使用了數字版權管理，有組織認爲數字版權管理是反競爭行爲。", "evidence": [[16257, null, null, null]], "predicted_pages": ["區域限制", "破解芯片", "行爲", "反競爭行爲", "數字版權管理"]}
+{"id": 14716, "label": "NOT ENOUGH INFO", "claim": "《經濟學人》常常在報導和評論中稱讚政治人物和國家的腐敗或不誠實行爲。", "evidence": [[14252, null, null, null]], "predicted_pages": ["經濟學人", "行爲", "經濟學", "政治人物"]}
+{"id": 15353, "label": "NOT ENOUGH INFO", "claim": "歐洲畫家拉斐爾的畫作非常的多，拉斐爾去世是因爲醫生的錯誤治療所導致。", "evidence": [[14851, null, null, null]], "predicted_pages": ["拉斐爾", "畫家", "醫生"]}
+{"id": 19529, "label": "NOT ENOUGH INFO", "claim": "日治時期時臺南市的行政區之一稱作泉町，臺南廳更動町名由來是因爲境內生產「高尾」、「山下」等飲用水。", "evidence": [[18995, null, null, null]], "predicted_pages": ["泉町", "町", "臺南市"]}
+{"id": 14941, "label": "NOT ENOUGH INFO", "claim": "相傳自炎帝神農時期開始祭祀太陽神，而道教的太陽神稱作太陽星君，太陽星君造像通常爲人類形象。", "evidence": [[14366, null, null, null]], "predicted_pages": ["神農", "星君", "太陽星君", "道教"]}
+{"id": 17549, "label": "NOT ENOUGH INFO", "claim": "全美第17大城市舊金山位於加州的聖安地列斯斷層上，受到太平洋寒流影響，舊金山是典型的涼夏型副熱帶夏幹氣候。", "evidence": [[17010, null, null, null]], "predicted_pages": ["加利福尼亞州", "舊金山", "太平洋"]}
+{"id": 20364, "label": "NOT ENOUGH INFO", "claim": "臺北市立內湖高級中學的水球大戰是爲了讓畢業生釋放壓力，來迎接接下來的大考挑戰。", "evidence": [[19955, null, null, null]], "predicted_pages": ["2013年夏季世界大學運動會水球比賽男子賽事", "譚穎_(水球運動員)", "夏季奧林匹克運動會水球比賽", "夏季世界大學運動會水球比賽", "臺北市立內湖高級中學", "2008年夏季奧林匹克運動會中國水球隊"]}
+{"id": 20801, "label": "NOT ENOUGH INFO", "claim": "江蘇人唐培經曾赴英國倫敦大學任教，並獲得統計學博士學位。", "evidence": [[20487, null, null, null]], "predicted_pages": ["唐培經", "倫敦大學"]}
+{"id": 14435, "label": "NOT ENOUGH INFO", "claim": "位於臺灣東南部的臺東縣因清代的開發政策，使其開發時間較其它縣市晚，也長期是臺灣最缺乏醫療資源的地方之一。", "evidence": [[13895, null, null, null]], "predicted_pages": ["臺灣", "大坵村_(金門縣)", "臺東縣", "清朝"]}
+{"id": 18545, "label": "NOT ENOUGH INFO", "claim": "保羅·烏切洛是生活於中世紀末期和文藝復興初期的義大利畫家，一般認爲出生於1397年。", "evidence": [[18007, null, null, null]], "predicted_pages": ["意大利", "中世紀", "文藝復興", "保羅·烏切洛", "中世紀後期"]}
+{"id": 20317, "label": "NOT ENOUGH INFO", "claim": "臺北市流浪貓保護協會於2016年失火時被人發現地下室藏有60只聲帶已被割掉的柴犬。", "evidence": [[19935, null, null, null]], "predicted_pages": ["高雄市關懷流浪動物協會", "柴犬", "臺北市流浪貓保護協會"]}
+{"id": 21053, "label": "NOT ENOUGH INFO", "claim": "日本政治家高木毅被週刊報導曾經潛入一名20歲的少女家中偷走她的日記。", "evidence": [[20612, null, null, null]], "predicted_pages": ["高木毅", "日本政治", "日本", "日記"]}
+{"id": 14450, "label": "NOT ENOUGH INFO", "claim": "2002年歐洲歌唱大賽中的倒數第一名是來自拉脫維亞的選手瑪麗亞·N奪下。", "evidence": [[13987, null, null, null]], "predicted_pages": ["愛沙尼亞在歐洲歌唱大賽之歷年表現", "2002年歐洲歌唱大賽", "史蒂芬妮婭·利伯拉卡基斯", "歐洲歌唱大賽", "阿塞拜疆在歐洲歌唱大賽之歷年表現"]}
+{"id": 15116, "label": "NOT ENOUGH INFO", "claim": "日本國家政治的中樞地區是永田町，位於日本東京都千代田區南端，且日本首相的辦公室與寓所都位於永田町。", "evidence": [[14764, null, null, null]], "predicted_pages": ["東京都", "日本", "內閣總理大臣", "千代田區", "永田町"]}
+{"id": 16043, "label": "NOT ENOUGH INFO", "claim": "屬於喬治亞州的皮奇縣英文名爲Peach Count，其命名是因爲以該州最有名的零食桃子的英語Peach而來。", "evidence": [[15894, null, null, null]], "predicted_pages": ["喬治亞州", "蟠桃山", "皮奇縣_(喬治亞州)", "桃花公主"]}
+{"id": 18990, "label": "NOT ENOUGH INFO", "claim": "布萊頓玩具和模型博物館主要收藏世界的玩具和模型，內有工作坊和圖書館。", "evidence": [[18466, null, null, null]], "predicted_pages": ["博物館", "布萊頓玩具和模型博物館", "比堅尼戰士", "紐倫堡玩具博物館", "玩具", "世界"]}
+{"id": 20302, "label": "NOT ENOUGH INFO", "claim": "由於位於臺南二中對面的總館十分陳舊，已經不符合當代需求，因此2021年新的臺南市立圖書館總館於永康東橋重劃區開幕。", "evidence": [[19860, null, null, null]], "predicted_pages": ["臺南市立圖書館公園總館", "臺南市", "2021", "臺南市立圖書館總館"]}
+{"id": 14706, "label": "NOT ENOUGH INFO", "claim": "艋舺豐川閣是佛教系稻荷信仰的社祠，位於有名町。", "evidence": [[14213, null, null, null]], "predicted_pages": ["稻荷神", "祠", "臺北稻荷神社", "艋舺豐川閣"]}
+{"id": 15166, "label": "NOT ENOUGH INFO", "claim": "清朝時廕生出身的王文煥是政治人物，生卒年不詳。", "evidence": [[14822, null, null, null]], "predicted_pages": ["況澄_(道光進士)", "清朝", "王文煥", "鄺廷保", "曠輔廷", "徐誠_(洪武進士)"]}
+{"id": 17955, "label": "NOT ENOUGH INFO", "claim": "道明會在華語區的活動只有中國福建一帶，位於高雄的道明高級中學與該會以斷絕關係。", "evidence": [[17466, null, null, null]], "predicted_pages": ["中學", "聖道明", "高雄市", "會", "漢語圈"]}
+{"id": 15790, "label": "NOT ENOUGH INFO", "claim": "伍樂城在九歲學造鋼，一年後學習小號。", "evidence": [[15157, null, null, null]], "predicted_pages": ["中學一年級", "鋼"]}
+{"id": 20492, "label": "NOT ENOUGH INFO", "claim": "位在貴州省的梵淨山是中國黃河以南最初從海中抬升爲陸地的古老地區。", "evidence": [[20012, null, null, null]], "predicted_pages": ["海", "梵淨山", "陸地", "黃河", "中國"]}
+{"id": 15923, "label": "NOT ENOUGH INFO", "claim": "晚清官宦王賡榮是山右三王之一，曾撰著《得毋訒齋詩文集》。", "evidence": [[15164, null, null, null]], "predicted_pages": ["吳蘭芬", "官僚", "季芝昌", "詩", "鄭克明", "王賡榮"]}
+{"id": 18094, "label": "NOT ENOUGH INFO", "claim": "嘉薰醫生系列的主角爲一名病理科醫師，他的朋友名叫雯。", "evidence": [[17614, null, null, null]], "predicted_pages": ["姚尋源", "楊連君", "珍妮花·摩利遜", "柏哲德氏病", "醫生", "怪醫杜立德"]}
+{"id": 20372, "label": "NOT ENOUGH INFO", "claim": "由於連年霍亂、民不聊生，西漢初年劉邦採取政府無爲，百姓自治的治理方法與民一同休養生息。", "evidence": [[19956, null, null, null]], "predicted_pages": ["西漢"]}
+{"id": 14436, "label": "NOT ENOUGH INFO", "claim": "位於臺灣東南部，東臨太平洋的臺東縣因爲清代的開發政策，導致開發時間較其它縣市晚，也長期是臺灣最缺乏醫療資源的地方之一。", "evidence": [[13866, null, null, null]], "predicted_pages": ["臺東縣", "東"]}
+{"id": 16940, "label": "NOT ENOUGH INFO", "claim": "生於北京的徐靜蕾是女演員及導演，她執導的《杜拉拉昇職記》在中國大陸票房突破一億，成爲大陸首個票房破億的女導演。", "evidence": [[16415, null, null, null]], "predicted_pages": ["喜羊羊與灰太狼之牛氣沖天", "完美陌生人", "中國億元票房導演俱樂部", "徐靜蕾", "瘋狂的賽車", "北京市"]}
+{"id": 15462, "label": "NOT ENOUGH INFO", "claim": "臺灣人喫糕餅的習慣是隨著閩粵移民而來，而臺灣在地發展的漢餅稱作臺式漢餅，後來經不斷改良各地的特色餅類成爲更貼合現代口感又具有地方特色的精緻小點。", "evidence": [[15048, null, null, null]], "predicted_pages": ["臺式漢餅", "糕點"]}
+{"id": 15660, "label": "NOT ENOUGH INFO", "claim": "教育界人物姚立德是現任考試院考試委員，國中畢業時因家境經濟問題，放棄臺北市立建國高級中學而選擇就讀國立臺北工專。", "evidence": [[14990, null, null, null]], "predicted_pages": ["臺灣國中教育", "中學", "臺北", "考試院", "國立臺北科技大學"]}
+{"id": 17883, "label": "NOT ENOUGH INFO", "claim": "虎山實小於2022年底獲得了聯合國Eco School第五面綠旗認證，成爲亞洲第一所永久綠旗的學校。", "evidence": [[17192, null, null, null]], "predicted_pages": ["亞洲", "聯合國", "學校", "國家聯盟", "貴金古高速公路", "喬安娜·埃文斯"]}
+{"id": 17889, "label": "NOT ENOUGH INFO", "claim": "作家王小波出生於一個知識分子家庭，曾任北京大學講師，晚年成爲電影導演。", "evidence": [[17321, null, null, null]], "predicted_pages": ["夜半歌聲", "王小波"]}
+{"id": 17923, "label": "NOT ENOUGH INFO", "claim": "馬耳他屬於副熱帶夏幹氣候，因此冬天雨量豐富，夏季極少下雨且溫度高。", "evidence": [[17446, null, null, null]], "predicted_pages": ["亞熱帶"]}
+{"id": 13288, "label": "NOT ENOUGH INFO", "claim": "空軍的歷史最早爲1911年義大利與鄂圖曼帝國交戰時，首次使用飛彈作爲偵察工具。", "evidence": [[19377, null, null, null]], "predicted_pages": ["卡爾斯州_(俄羅斯帝國)", "維也納之圍", "空軍", "俄羅斯農業黨", "克里米亞歷史"]}
+{"id": 19174, "label": "NOT ENOUGH INFO", "claim": "馬耳他在1964年宣佈投降英國，併成爲大英國協的會員國，後來成立了共和國並於2004年加入歐盟。", "evidence": [[18680, null, null, null]], "predicted_pages": ["歐洲聯盟", "英國", "保羅·勞塔爾", "馬耳他", "共和制"]}
+{"id": 21120, "label": "NOT ENOUGH INFO", "claim": "李喬的父親長期參與抗日運動不在家，家中經濟全仰賴母親寫作，因此他對於母親十分尊敬。", "evidence": [[20729, null, null, null]], "predicted_pages": ["樂安公主_(北齊)", "家", "父親", "抗日", "母親"]}
+{"id": 14680, "label": "NOT ENOUGH INFO", "claim": "艾倫與爸爸的關係緊張，且雙親彼此也不睦，因此他的童年不是很愉快。", "evidence": [[14222, null, null, null]], "predicted_pages": ["富爸爸·窮爸爸", "親本", "童年"]}
+{"id": 18507, "label": "NOT ENOUGH INFO", "claim": "在浙江歌唱比賽第二名的馬應圖是政治人物。", "evidence": [[17996, null, null, null]], "predicted_pages": ["陳譯賢", "歐洲歌唱大賽歷屆冠軍列表", "林景程", "全國歌唱比賽"]}
+{"id": 18720, "label": "NOT ENOUGH INFO", "claim": "位於日本本州的千葉縣由原上總國、安房國、下總國合併設置而成，且千葉縣三面被海圍繞。", "evidence": [[18220, null, null, null]], "predicted_pages": ["日本", "上總國", "千葉縣", "下總國", "本州", "安房國"]}
+{"id": 19591, "label": "NOT ENOUGH INFO", "claim": "位於臺北市中正區且男女合校的市立國小是臺北市國語實驗國民小學，創辦於1913年。", "evidence": [[19117, null, null, null]], "predicted_pages": ["臺北市立大學附設實驗國民小學", "國立臺北教育大學附設實驗國民小學", "臺北市國語實驗國民小學", "臺北市信義區吳興國民小學", "臺北市", "臺北市中正區螢橋國民小學"]}
+{"id": 20403, "label": "NOT ENOUGH INFO", "claim": "位於臺北市信義區的永春高級中學肄業人數約1650人。", "evidence": [[19900, null, null, null]], "predicted_pages": ["人", "中學", "永春縣"]}
+{"id": 19229, "label": "NOT ENOUGH INFO", "claim": "以接觸傳染爲途徑的傳染病，常發生於學校或團體。", "evidence": [[18726, null, null, null]], "predicted_pages": ["感染", "傳染病"]}
+{"id": 20721, "label": "NOT ENOUGH INFO", "claim": "法國有一個樂團叫做SETI，音樂是使用電子樂器以及電子音樂技術來製作。", "evidence": [[20299, null, null, null]], "predicted_pages": ["SETI", "樂團", "電子音樂", "音樂", "技術"]}
+{"id": 18195, "label": "NOT ENOUGH INFO", "claim": "OBike爲無車柱型的自行車系統，會員需以手機應用程式執行借車與還車。", "evidence": [[17718, null, null, null]], "predicted_pages": ["會員", "自行車", "流動應用程式"]}
+{"id": 16936, "label": "NOT ENOUGH INFO", "claim": "生於中國的徐靜蕾是女演員及導演，她執導的《杜拉拉昇職記》在中國大陸票房突破一億，成爲大陸第一個票房破億的女導演。", "evidence": [[16543, null, null, null]], "predicted_pages": ["完美陌生人", "中國億元票房導演俱樂部", "徐靜蕾", "瘋狂的賽車", "杜拉拉昇職記_(電視劇)", "鬼滅之刃劇場版_無限列車篇"]}
+{"id": 15746, "label": "NOT ENOUGH INFO", "claim": "楊勇是湖南省的一個農民家庭的成員，曾經是勞動童子軍的成員。", "evidence": [[15243, null, null, null]], "predicted_pages": ["農民", "楊勇", "互惠生", "兒子", "格里戈裏·伊萬諾維奇·庫利克"]}
+{"id": 16660, "label": "NOT ENOUGH INFO", "claim": "位於中國湖南省的虎門鎮建立於1985年，當地產業以服裝業爲主。", "evidence": [[16164, null, null, null]], "predicted_pages": ["虎門鎮", "朝陽水庫", "虎門", "新橋鎮_(衡山縣)", "新田縣"]}
