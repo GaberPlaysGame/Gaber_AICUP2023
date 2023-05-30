@@ -21,9 +21,20 @@ top_n = 4
 print(df_evidences)
 
 top_rows = (
-        df_evidences.where(df_evidences["prob"].gt(0.1)).groupby("claim", group_keys=True).apply(
+    df_evidences.where(df_evidences["prob"].gt(0.9)).groupby("claim", group_keys=True).apply(
+    lambda x: x.nlargest(top_n, "prob"))
+    .reset_index(drop=True)
+)
+print(top_rows)
+
+if top_rows.empty == True:
+    top_rows = (
+        df_evidences.groupby("claim").apply(
         lambda x: x.nlargest(top_n, "prob"))
         .reset_index(drop=True)
     )
-print(top_rows)
-print(top_rows.empty)
+    print(top_rows)
+
+claim = "馬丁·路德·金恩在1998年4月4日，於美國田納西州孟菲斯旅館內遭人暗殺去世。"
+predicted_evidence = top_rows[top_rows["claim"] == claim]["predicted_evidence"].tolist()
+print(predicted_evidence)

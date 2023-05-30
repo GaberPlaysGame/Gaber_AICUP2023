@@ -170,14 +170,18 @@ def evaluate_retrieval(
         Dict[str, float]: F1 score, precision, and recall
     """
     df_evidences["prob"] = probs
+    # top_rows = (
+    #     df_evidences.groupby("claim").apply(
+    #     lambda x: x.nlargest(top_n, "prob"))
+    #     .reset_index(drop=True)
+    # )
     top_rows = (
         df_evidences.where(df_evidences["prob"].gt(threshold)).groupby("claim", group_keys=True).apply(
         lambda x: x.nlargest(top_n, "prob"))
         .reset_index(drop=True)
     )
-    if top_rows.empty:
-        top_rows = (
-        df_evidences.groupby("claim", group_keys=True).apply(
+    top_rows_no_threshold = (
+        df_evidences.groupby("claim").apply(
         lambda x: x.nlargest(top_n, "prob"))
         .reset_index(drop=True)
     )
@@ -205,11 +209,21 @@ def evaluate_retrieval(
 
     if save_name is not None:
         # write doc7_sent5 file
-        with open(f"data/{save_name}", "w", encoding="utf8") as f:
+        with open(f"data/{save_name}.jsonl", "w", encoding="utf8") as f:
             for instance in ground_truths:
                 claim = instance["claim"]
                 predicted_evidence = top_rows[
                     top_rows["claim"] == claim]["predicted_evidence"].tolist()
+                if not predicted_evidence:
+                    predicted_evidence = top_rows_no_threshold[
+                        top_rows_no_threshold["claim"] == claim]["predicted_evidence"].tolist()
+                instance["predicted_evidence"] = predicted_evidence
+                f.write(json.dumps(instance, ensure_ascii=False) + "\n")
+        with open(f"data/{save_name}_no_threshold.jsonl", "w", encoding="utf8") as f:
+            for instance in ground_truths:
+                claim = instance["claim"]
+                predicted_evidence = top_rows_no_threshold[
+                    top_rows_no_threshold["claim"] == claim]["predicted_evidence"].tolist()
                 instance["predicted_evidence"] = predicted_evidence
                 f.write(json.dumps(instance, ensure_ascii=False) + "\n")
 
@@ -425,7 +439,7 @@ train_dataloader = DataLoader(
 )
 eval_dataloader = DataLoader(val_dataset, batch_size=TEST_BATCH_SIZE)
 
-device = torch.device("cuda") if torch.cuda.is_available() else torch.device(
+device = torch.device("cuda:1") if torch.cuda.is_available() else torch.device(
     "cpu")
 print(torch.cuda.is_available())
 model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
@@ -440,9 +454,9 @@ model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
 #     # model = nn.parallel.DistributedDataParallel(model)
 model.to(device)
 
-optimizer = AdamW(model.parameters(), lr=LR)
-num_training_steps = NUM_EPOCHS * len(train_dataloader)
-lr_scheduler = set_lr_scheduler(optimizer, num_training_steps, warmup_ratio=WARMUP_RATIO)
+# optimizer = AdamW(model.parameters(), lr=LR)
+# num_training_steps = NUM_EPOCHS * len(train_dataloader)
+# lr_scheduler = set_lr_scheduler(optimizer, num_training_steps, warmup_ratio=WARMUP_RATIO)
 
 writer = SummaryWriter(LOG_DIR)
 
@@ -497,41 +511,45 @@ torch.cuda.empty_cache()
 
 # print("Finished training!")
 
-# torch.cuda.empty_cache()
+torch.cuda.empty_cache()
 import json
 ckpt_name = "model.350.pt"  #@param {type:"string"}
+THRESHOLD = 0.3
 model = load_model(model, ckpt_name, CKPT_DIR)
-print("Start final evaluations and write prediction files.")
 
-train_evidences = pair_with_wiki_sentences_eval(
-    mapping=mapping,
-    df=pd.DataFrame(TRAIN_GT),
-)
-train_set = SentRetrievalBERTDataset(train_evidences, tokenizer)
-train_dataloader = DataLoader(train_set, batch_size=TEST_BATCH_SIZE)
+# print("Start final evaluations and write prediction files.")
 
-print("Start calculating training scores")
-probs = get_predicted_probs(model, train_dataloader, device)
-train_results = evaluate_retrieval(
-    probs=probs,
-    df_evidences=train_evidences,
-    ground_truths=TRAIN_GT,
-    top_n=TOP_N,
-    save_name=f"sent_retrieval/train_doc5sent{TOP_N}_neg{NEGATIVE_RATIO}_{LR}_e{NUM_EPOCHS}_{MODEL_SHORT}_new.jsonl",
-)
-print(f"Training scores => {train_results}")
+# train_evidences = pair_with_wiki_sentences_eval(
+#     mapping=mapping,
+#     df=pd.DataFrame(TRAIN_GT),
+# )
+# train_set = SentRetrievalBERTDataset(train_evidences, tokenizer)
+# train_dataloader = DataLoader(train_set, batch_size=TEST_BATCH_SIZE)
 
-print("Start validation")
-probs = get_predicted_probs(model, eval_dataloader, device)
-val_results = evaluate_retrieval(
-    probs=probs,
-    df_evidences=dev_evidences,
-    ground_truths=DEV_GT,
-    top_n=TOP_N,
-    save_name=f"sent_retrieval/dev_doc5sent{TOP_N}_neg{NEGATIVE_RATIO}_{LR}_e{NUM_EPOCHS}_{MODEL_SHORT}.jsonl",
-)
+# print("Start calculating training scores")
+# probs = get_predicted_probs(model, train_dataloader, device)
+# train_results = evaluate_retrieval(
+#     probs=probs,
+#     df_evidences=train_evidences,
+#     ground_truths=TRAIN_GT,
+#     top_n=TOP_N,
+#     save_name=f"sent_retrieval/train_doc5sent{TOP_N}_neg{NEGATIVE_RATIO}_{LR}_e{NUM_EPOCHS}_{MODEL_SHORT}_threshold{THRESHOLD}",
+#     threshold=THRESHOLD,
+# )
+# print(f"Training scores => {train_results}")
 
-print(f"Validation scores => {val_results}")
+# print("Start validation")
+# probs = get_predicted_probs(model, eval_dataloader, device)
+# val_results = evaluate_retrieval(
+#     probs=probs,
+#     df_evidences=dev_evidences,
+#     ground_truths=DEV_GT,
+#     top_n=TOP_N,
+#     save_name=f"sent_retrieval/dev_doc5sent{TOP_N}_neg{NEGATIVE_RATIO}_{LR}_e{NUM_EPOCHS}_{MODEL_SHORT}_threshold{THRESHOLD}",
+#     threshold=THRESHOLD,
+# )
+
+# print(f"Validation scores => {val_results}")
 
 test_data = load_json("data/test_doc5_sbert_public.jsonl")
 
@@ -551,6 +569,30 @@ evaluate_retrieval(
     ground_truths=test_data,
     top_n=TOP_N,
     cal_scores=False,
-    save_name= f"sent_retrieval/test_doc5sent{TOP_N}_neg{NEGATIVE_RATIO}_{LR}_e{NUM_EPOCHS}_{MODEL_SHORT}_new.jsonl",
-    # save_name=f"test_doc5sent{TOP_N}.jsonl",
+    save_name= f"sent_retrieval/test_doc5sent{TOP_N}_public" +
+        f"_neg{NEGATIVE_RATIO}_{LR}_e{NUM_EPOCHS}_{MODEL_SHORT}_threshold{THRESHOLD}",
+    threshold=THRESHOLD,
+ )
+
+test_data = load_json("data/test_doc5_sbert_private.jsonl")
+
+test_evidences = pair_with_wiki_sentences_eval(
+    mapping,
+    pd.DataFrame(test_data),
+    is_testset=True,
 )
+test_set = SentRetrievalBERTDataset(test_evidences, tokenizer)
+test_dataloader = DataLoader(test_set, batch_size=TEST_BATCH_SIZE)
+
+print("Start predicting the test data")
+probs = get_predicted_probs(model, test_dataloader, device)
+evaluate_retrieval(
+    probs=probs,
+    df_evidences=test_evidences,
+    ground_truths=test_data,
+    top_n=TOP_N,
+    cal_scores=False,
+    save_name= f"sent_retrieval/test_doc5sent{TOP_N}_private" +
+        f"_neg{NEGATIVE_RATIO}_{LR}_e{NUM_EPOCHS}_{MODEL_SHORT}_threshold{THRESHOLD}",
+    threshold=THRESHOLD,
+ )

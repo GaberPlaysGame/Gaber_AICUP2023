@@ -69,12 +69,13 @@ LABEL2ID: Dict[str, int] = {
     "NOT ENOUGH INFO": 2,
 }
 ID2LABEL: Dict[int, str] = {v: k for k, v in LABEL2ID.items()}
+SR_THRESHOLD = 0.1
 
-TRAIN_DATA = load_json("data/train_doc5sent5.jsonl")
-DEV_DATA = load_json("data/dev_doc5sent5.jsonl")
+TRAIN_DATA = load_json(f"data/sent_retrieval/train_doc5sent5_neg0.1_2e-05_e1_hfl_bert_threshold{SR_THRESHOLD}.jsonl")
+DEV_DATA = load_json(f"data/sent_retrieval/dev_doc5sent5_neg0.1_2e-05_e1_hfl_bert_threshold{SR_THRESHOLD}.jsonl")
 
-TRAIN_PKL_FILE = Path("data/train_doc5sent5.pkl")
-DEV_PKL_FILE = Path("data/dev_doc5sent5.pkl")
+TRAIN_PKL_FILE = Path(f"data/train_doc5sent5_neg0.1_2e-05_e1_hfl_bert_threshold{SR_THRESHOLD}.pkl")
+DEV_PKL_FILE = Path(f"data/dev_doc5sent5_neg0.1_2e-05_e1_hfl_bert_threshold{SR_THRESHOLD}.pkl")
 
 wiki_pages = jsonl_dir_to_df("data/wiki-pages")
 mapping = generate_evidence_to_wiki_pages_mapping(wiki_pages,)
@@ -176,13 +177,6 @@ def join_with_topk_evidence(
 
     return df
 
-# MODEL_NAME = "bert-base-chinese"  #@param {type:"string"}
-# MODEL_NAME = "ckiplab/bert-base-chinese" #@param {type:"string"}
-# MODEL_NAME = "ckiplab/albert-base-chinese" #@param {type:"string"}
-# MODEL_NAME = "hfl/chinese-bert-wwm" #@param {type:"string"}
-# MODEL_NAME = "hfl/chinese-bert-wwm-ext" #@param {type:"string"}
-# MODEL_NAME = "hfl/chinese-macbert-base" #@param {type:"string"}
-# MODEL_NAME = "hfl/chinese-roberta-wwm-ext" #@param {type:"string"}
 MODEL_NAME = "hfl/chinese-lert-base" #@param {type:"string"}
 # MODEL_NAME = "hfl/chinese-lert-large" #@param {type:"string"}
 
@@ -193,14 +187,14 @@ TEST_BATCH_SIZE = 32  #@param {type:"integer"}
 SEED = 42  #@param {type:"integer"}
 LR = 5.625e-5  #@param {type:"number"}
 NUM_EPOCHS = 20  #@param {type:"integer"}
-REAL_EPOCHS = 8
+REAL_EPOCHS = 7
 MAX_SEQ_LEN = 256  #@param {type:"integer"}
 EVIDENCE_TOPK = 5  #@param {type:"integer"}
 VALIDATION_STEP = 25  #@param {type:"integer"}
 
 OUTPUT_FILENAME = "submission.jsonl"
 
-EXP_DIR = f"claim_verification/e{NUM_EPOCHS}_bs{TRAIN_BATCH_SIZE}_" + f"{LR}_top{EVIDENCE_TOPK}_{MODEL_SHORT}_eval{EVAL_VERSION}_maxlen{MAX_SEQ_LEN}"
+EXP_DIR = f"claim_verification/e{NUM_EPOCHS}_bs{TRAIN_BATCH_SIZE}_" + f"{LR}_top{EVIDENCE_TOPK}_{MODEL_SHORT}_eval{EVAL_VERSION}_maxlen{MAX_SEQ_LEN}_sr_threshold{SR_THRESHOLD}"
 LOG_DIR = "logs/" + EXP_DIR
 CKPT_DIR = "checkpoints/" + EXP_DIR
 
@@ -211,12 +205,6 @@ if not Path(CKPT_DIR).exists():
     Path(CKPT_DIR).mkdir(parents=True)
 
 if not TRAIN_PKL_FILE.exists():
-    # train_df = pd.DataFrame(TRAIN_DATA)
-    # train_df = train_df.parallel_apply(partial(
-    #     join_with_topk_evidence,
-    #     mapping=mapping,
-    #     topk=EVIDENCE_TOPK,
-    # ), axis=1)
     train_df = join_with_topk_evidence(
         pd.DataFrame(TRAIN_DATA),
         mapping,
@@ -228,13 +216,6 @@ else:
         train_df = pickle.load(f)
 
 if not DEV_PKL_FILE.exists():
-    # dev_df = pd.DataFrame(DEV_DATA)
-    # dev_df = dev_df.parallel_apply(partial(
-    #     join_with_topk_evidence,
-    #     mapping=mapping,
-    #     mode="eval",
-    #     topk=EVIDENCE_TOPK,
-    # ), axis=1)
     dev_df = join_with_topk_evidence(
         pd.DataFrame(DEV_DATA),
         mapping,
@@ -259,7 +240,6 @@ val_dataset = AicupTopkEvidenceBERTDataset(
     tokenizer=tokenizer,
     max_length=MAX_SEQ_LEN,
 )
-
 train_dataloader = DataLoader(
     train_dataset,
     shuffle=True,
@@ -268,9 +248,7 @@ train_dataloader = DataLoader(
 )
 eval_dataloader = DataLoader(val_dataset, batch_size=TEST_BATCH_SIZE, num_workers=0,)
 
-device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
-# device = torch.device("cpu")
-
+device = torch.device("cuda:0") if torch.cuda.is_available() else torch.device("cpu")
 model = AutoModelForSequenceClassification.from_pretrained(
     MODEL_NAME,
     num_labels=len(LABEL2ID),
@@ -282,8 +260,9 @@ model.to(device)
 optimizer = AdamW(model.parameters(), lr=LR)
 num_training_steps = NUM_EPOCHS * len(train_dataloader)
 lr_scheduler = set_lr_scheduler(optimizer, num_training_steps)
-
 writer = SummaryWriter(LOG_DIR)
+
+### Step 3: Training
 
 progress_bar = tqdm(range(num_training_steps))
 current_steps = 0
@@ -330,45 +309,135 @@ for epoch in range(REAL_EPOCHS):
 
 print("Finished training!")
 
-TEST_DATA = load_json("data/test_doc5sent5_public.jsonl")
-TEST_PKL_FILE = Path("data/test_doc5sent5_public.pkl")
+# ### Step 4: Generate Result On Test Data
 
-if not TEST_PKL_FILE.exists():
-    # test_df = pd.DataFrame(TEST_DATA)
-    # test_df = test_df.parallel_apply(partial(
-    #     join_with_topk_evidence,
-    #     mapping=mapping,
-    #     topk=EVIDENCE_TOPK,
-    #     mode="eval",
-    # ), axis=1)
-    test_df = join_with_topk_evidence(
-        pd.DataFrame(TEST_DATA),
-        mapping,
-        mode="eval",
-        topk=EVIDENCE_TOPK,
-    )
-    test_df.to_pickle(TEST_PKL_FILE, protocol=4)
-else:
-    with open(TEST_PKL_FILE, "rb") as f:
-        test_df = pickle.load(f)
+# ckpt_name = "val_acc=0.6725_model.575.pt"  #@param {type:"string"}
 
-test_dataset = AicupTopkEvidenceBERTDataset(
-    test_df,
-    tokenizer=tokenizer,
-    max_length=MAX_SEQ_LEN,
-)
-test_dataloader = DataLoader(test_dataset, batch_size=TEST_BATCH_SIZE)
+# #### On Private Data
+# suffix = "private"
+# test_data_name = f"test_doc5sent5_{suffix}_neg0.1_2e-05_e1_hfl_bert"
+# TEST_DATA = load_json(f"data/sent_retrieval/{test_data_name}_threshold{SR_THRESHOLD}.jsonl")
+# TEST_DATA_NO_THRESHOLD = load_json(f"data/sent_retrieval/{test_data_name}_threshold{SR_THRESHOLD}_no_threshold.jsonl")
+# TEST_PKL_FILE = Path(f"data/test_doc5sent5_{suffix}_threshold{SR_THRESHOLD}.pkl")
+# TEST_PKL_FILE_NO_THRESHOLD = Path(f"data/test_doc5sent5_{suffix}_threshold{SR_THRESHOLD}_no_threshold.pkl")
 
-torch.cuda.empty_cache()
-ckpt_name = "val_acc=0.6725_model.575.pt"  #@param {type:"string"}
-model = load_model(model, ckpt_name, CKPT_DIR)
-predicted_label = run_predict(model, test_dataloader, device)
+# if not TEST_PKL_FILE.exists():
+#     test_df = join_with_topk_evidence(
+#         pd.DataFrame(TEST_DATA),
+#         mapping,
+#         mode="eval",
+#         topk=EVIDENCE_TOPK,
+#     )
+#     test_df.to_pickle(TEST_PKL_FILE, protocol=4)
+# else:
+#     with open(TEST_PKL_FILE, "rb") as f:
+#         test_df = pickle.load(f)
+# if not TEST_PKL_FILE_NO_THRESHOLD.exists():
+#     test_df_nothreshold = join_with_topk_evidence(
+#         pd.DataFrame(TEST_DATA_NO_THRESHOLD),
+#         mapping,
+#         mode="eval",
+#         topk=EVIDENCE_TOPK,
+#     )
+#     test_df_nothreshold.to_pickle(TEST_PKL_FILE_NO_THRESHOLD, protocol=4)
+# else:
+#     with open(TEST_PKL_FILE_NO_THRESHOLD, "rb") as f:
+#         test_df_nothreshold = pickle.load(f)
 
-predict_dataset = test_df.copy()
-predict_dataset["predicted_label"] = list(map(ID2LABEL.get, predicted_label))
-predict_dataset[["id", "predicted_label", "predicted_evidence"]].to_json(
-    f"submission/{ckpt_name[:14]}_{MODEL_SHORT}_{LR}_{EVAL_VERSION}_e{NUM_EPOCHS}_data3_maxlen{MAX_SEQ_LEN}_{OUTPUT_FILENAME}",
-    orient="records",
-    lines=True,
-    force_ascii=False,
-)
+# test_dataset = AicupTopkEvidenceBERTDataset(
+#     test_df,
+#     tokenizer=tokenizer,
+#     max_length=MAX_SEQ_LEN,
+# )
+# test_dataloader = DataLoader(test_dataset, batch_size=TEST_BATCH_SIZE)
+
+# torch.cuda.empty_cache()
+# model = load_model(model, ckpt_name, CKPT_DIR)
+# predicted_label = run_predict(model, test_dataloader, device)
+
+# predict_dataset = test_df_nothreshold.copy()
+# predict_dataset["predicted_label"] = list(map(ID2LABEL.get, predicted_label))
+# predict_dataset[["id", "predicted_label", "predicted_evidence"]].to_json(
+#     f"submission/{suffix}_{ckpt_name[:14]}_{MODEL_SHORT}_{LR}_{EVAL_VERSION}_e{NUM_EPOCHS}_data3_maxlen{MAX_SEQ_LEN}_{OUTPUT_FILENAME}",
+#     orient="records",
+#     lines=True,
+#     force_ascii=False,
+# )
+
+# #### On Public Data
+# suffix = "public"
+# test_data_name = f"test_doc5sent5_{suffix}_neg0.1_2e-05_e1_hfl_bert"
+# TEST_DATA = load_json(f"data/sent_retrieval/{test_data_name}_threshold{SR_THRESHOLD}.jsonl")
+# TEST_DATA_NO_THRESHOLD = load_json(f"data/sent_retrieval/{test_data_name}_threshold{SR_THRESHOLD}_no_threshold.jsonl")
+# TEST_PKL_FILE = Path(f"data/test_doc5sent5_{suffix}_threshold{SR_THRESHOLD}.pkl")
+# TEST_PKL_FILE_NO_THRESHOLD = Path(f"data/test_doc5sent5_{suffix}_threshold{SR_THRESHOLD}_no_threshold.pkl")
+
+# if not TEST_PKL_FILE.exists():
+#     test_df = join_with_topk_evidence(
+#         pd.DataFrame(TEST_DATA),
+#         mapping,
+#         mode="eval",
+#         topk=EVIDENCE_TOPK,
+#     )
+#     test_df.to_pickle(TEST_PKL_FILE, protocol=4)
+# else:
+#     with open(TEST_PKL_FILE, "rb") as f:
+#         test_df = pickle.load(f)
+# if not TEST_PKL_FILE_NO_THRESHOLD.exists():
+#     test_df_nothreshold = join_with_topk_evidence(
+#         pd.DataFrame(TEST_DATA_NO_THRESHOLD),
+#         mapping,
+#         mode="eval",
+#         topk=EVIDENCE_TOPK,
+#     )
+#     test_df_nothreshold.to_pickle(TEST_PKL_FILE_NO_THRESHOLD, protocol=4)
+# else:
+#     with open(TEST_PKL_FILE_NO_THRESHOLD, "rb") as f:
+#         test_df_nothreshold = pickle.load(f)
+
+# test_dataset = AicupTopkEvidenceBERTDataset(
+#     test_df,
+#     tokenizer=tokenizer,
+#     max_length=MAX_SEQ_LEN,
+# )
+# test_dataloader = DataLoader(test_dataset, batch_size=TEST_BATCH_SIZE)
+
+# torch.cuda.empty_cache()
+# model = load_model(model, ckpt_name, CKPT_DIR)
+# predicted_label = run_predict(model, test_dataloader, device)
+
+# predict_dataset = test_df_nothreshold.copy()
+# predict_dataset["predicted_label"] = list(map(ID2LABEL.get, predicted_label))
+# predict_dataset[["id", "predicted_label", "predicted_evidence"]].to_json(
+#     f"submission/{suffix}_{ckpt_name[:14]}_{MODEL_SHORT}_{LR}_{EVAL_VERSION}_e{NUM_EPOCHS}_data3_maxlen{MAX_SEQ_LEN}_{OUTPUT_FILENAME}",
+#     orient="records",
+#     lines=True,
+#     force_ascii=False,
+# )
+
+# #### Merge Public & Private Data
+# all_data_name = f"submission/all_{ckpt_name[:14]}_{MODEL_SHORT}_{LR}_{EVAL_VERSION}_e{NUM_EPOCHS}_data3_maxlen{MAX_SEQ_LEN}_{OUTPUT_FILENAME}"
+# public_data_name = f"submission/public_{ckpt_name[:14]}_{MODEL_SHORT}_{LR}_{EVAL_VERSION}_e{NUM_EPOCHS}_data3_maxlen{MAX_SEQ_LEN}_{OUTPUT_FILENAME}"
+# private_data_name = f"submission/private_{ckpt_name[:14]}_{MODEL_SHORT}_{LR}_{EVAL_VERSION}_e{NUM_EPOCHS}_data3_maxlen{MAX_SEQ_LEN}_{OUTPUT_FILENAME}"
+
+# with open(public_data_name, "r", encoding="utf8") as f:
+#     data = f.read()
+#     f.close()
+# with open(private_data_name, "r", encoding="utf8") as f:
+#     data2 = f.read()
+#     data += data2
+#     f.close()
+# with open(all_data_name, "w", encoding="utf8") as f:
+#     f.write(data)
+#     f.close()
+
+# ANSWER_DATA = load_json(all_data_name)
+# answer_df = pd.DataFrame(ANSWER_DATA)
+# answer_df = answer_df.sort_values("id")
+# print(answer_df)
+# answer_df.to_json(
+#     f"submission/allsorted_{ckpt_name[:14]}_{MODEL_SHORT}_{LR}_{EVAL_VERSION}_e{NUM_EPOCHS}_data3_maxlen{MAX_SEQ_LEN}_{OUTPUT_FILENAME}",
+#     orient="records",
+#     lines=True,
+#     force_ascii=False,
+# )
