@@ -120,9 +120,6 @@ def run_evaluation_ensemble(
     loss1 = 0
     loss2 = 0
     loss3 = 0
-    # weight1 = 1
-    # weight2 = 1
-    # weight3 = 1
 
     with torch.no_grad():
         for batch in tqdm(dataloader):
@@ -144,11 +141,8 @@ def run_evaluation_ensemble(
             
     for i in range(0, len(y_pred1)):
         logits1 = y_pred1[i]
-        # logits1 = [j * weight1 for j in logits1]
         logits2 = y_pred2[i]
-        # logits2 = [j * weight2 for j in logits2]
         logits3 = y_pred3[i]
-        # logits3 = [j * weight3 for j in logits3]
         all_logits = [logits1, logits2, logits3]
 
         ave_logits = [sum(x) / 3 for x in zip(*all_logits)]
@@ -241,29 +235,26 @@ eval_dataloader = DataLoader(val_dataset, batch_size=EVAL_BATCH_SIZE, num_worker
 device = torch.device("cuda:1") if torch.cuda.is_available() else torch.device("cpu")
 
 ckpt_name1 = "val_acc=0.6944_model.2460.pt"  #@param {type:"string"}
-# ckpt_name2 = "val_acc=0.6798_model.1175.pt"  #@param {type:"string"}
-ckpt_name2 = "val_acc=0.6901_model.1250.pt"  #@param {type:"string"}
-ckpt_name3 = "val_acc=0.7004_model.960.pt"  #@param {type:"string"}
+ckpt_name2 = "val_acc=0.7004_model.960.pt"  #@param {type:"string"}
+ckpt_name3 = "val_acc=0.6803_model.750.pt"  #@param {type:"string"}
 EXP_DIR_HEAD_8 = f"claim_verification/e{NUM_EPOCHS}_bs{8}_"
 EXP_DIR_HEAD_16 = f"claim_verification/e{NUM_EPOCHS}_bs{16}_"
 EXP_DIR_HEAD_32 = f"claim_verification/e{NUM_EPOCHS}_bs{32}_"
 EXP_DIR_HEAD_48 = f"claim_verification/e{NUM_EPOCHS}_bs{48}_"
 EXP_DIR_TAIL_1 = f"split={0.1}_{LR}_top{5}_{MODEL_LARGE_SHORT}_eval{EVAL_VERSION}_maxlen{MAX_SEQ_LEN}_sr_threshold{0.0}"
-# EXP_DIR_TAIL_2 = f"split={0.1}_{LR}_top{5}_{MODEL_SHORT}_eval{EVAL_VERSION}_maxlen{MAX_SEQ_LEN}_sr_threshold{0.05}"
-EXP_DIR_TAIL_2 = f"split={0.1}_{LR}_top{5}_{MODEL_LARGE_SHORT}_eval{EVAL_VERSION}_maxlen{MAX_SEQ_LEN}_sr_threshold{0.05}"
-EXP_DIR_TAIL_3 = f"split={0.1}_{LR}_top{5}_{MODEL_SHORT}_eval{EVAL_VERSION}_maxlen{MAX_SEQ_LEN}_sr_threshold{0.0}"
+EXP_DIR_TAIL_2 = f"split={0.1}_{LR}_top{5}_{MODEL_SHORT}_eval{EVAL_VERSION}_maxlen{MAX_SEQ_LEN}_sr_threshold{0.0}"
+EXP_DIR_TAIL_3 = f"split={0.2}_{LR}_top{5}_{MODEL_SHORT}_eval{EVAL_VERSION}_maxlen{MAX_SEQ_LEN}_sr_threshold{0.3}"
 
 CKPT_DIR_1 = "checkpoints/" + EXP_DIR_HEAD_16 + EXP_DIR_TAIL_1  
-# CKPT_DIR_2 = "checkpoints/" + EXP_DIR_HEAD_32 + EXP_DIR_TAIL_2  
-CKPT_DIR_2 = "checkpoints/" + EXP_DIR_HEAD_16 + EXP_DIR_TAIL_2  
-CKPT_DIR_3 = "checkpoints/" + EXP_DIR_HEAD_32 + EXP_DIR_TAIL_3  
+CKPT_DIR_2 = "checkpoints/" + EXP_DIR_HEAD_32 + EXP_DIR_TAIL_2  
+CKPT_DIR_3 = "checkpoints/" + EXP_DIR_HEAD_48 + EXP_DIR_TAIL_3  
 
 model1 = AutoModelForSequenceClassification.from_pretrained(
     MODEL_LARGE_NAME,
     num_labels=len(LABEL2ID),
 )
 model2 = AutoModelForSequenceClassification.from_pretrained(
-    MODEL_LARGE_NAME,
+    MODEL_NAME,
     num_labels=len(LABEL2ID),
 )
 model3 = AutoModelForSequenceClassification.from_pretrained(
@@ -332,21 +323,6 @@ predict_dataset[["id", "predicted_label", "predicted_evidence"]].to_json(
     force_ascii=False,
 )
 
-TEST_DATA_OUTPUT = load_json(f"submission/{suffix}_ensemble_{ckpt_name1[8:14]}_{ckpt_name2[8:14]}_{ckpt_name3[8:14]}_{OUTPUT_FILENAME}")
-TEST_DATA_ANS = load_json(f"data/{suffix}_test_data_ans.jsonl")
-acc = 0
-sample = 100
-
-output_df = pd.DataFrame(TEST_DATA_OUTPUT[:sample])
-ans_df = pd.DataFrame(TEST_DATA_ANS)
-
-for i in range(0, sample):
-    predict_label = output_df["predicted_label"].iloc[i]
-    ans_label = ans_df["label"].iloc[i]
-    if predict_label == ans_label:
-        acc += 1
-print(acc / sample)
-
 #### On Public Data
 suffix = "public"
 test_data_name = f"split_{TRAIN_TEST_SPLIT}/test_doc5sent5_{suffix}_neg0.1_2e-05_e1_hfl_bert_split={TRAIN_TEST_SPLIT}"
@@ -396,21 +372,6 @@ predict_dataset[["id", "predicted_label", "predicted_evidence"]].to_json(
     lines=True,
     force_ascii=False,
 )
-
-TEST_DATA_OUTPUT = load_json(f"submission/{suffix}_ensemble_{ckpt_name1[8:14]}_{ckpt_name2[8:14]}_{ckpt_name3[8:14]}_{OUTPUT_FILENAME}")
-TEST_DATA_ANS = load_json(f"data/{suffix}_test_data_ans.jsonl")
-acc = 0
-sample = 100
-
-output_df = pd.DataFrame(TEST_DATA_OUTPUT[:sample])
-ans_df = pd.DataFrame(TEST_DATA_ANS)
-
-for i in range(0, sample):
-    predict_label = output_df["predicted_label"].iloc[i]
-    ans_label = ans_df["label"].iloc[i]
-    if predict_label == ans_label:
-        acc += 1
-print(acc / sample)
 
 #### Merge Public & Private Data
 all_data_name = Path(f"submission/all_ensemble_{ckpt_name1[8:14]}_{ckpt_name2[8:14]}_{ckpt_name3[8:14]}_{OUTPUT_FILENAME}")

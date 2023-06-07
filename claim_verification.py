@@ -134,11 +134,10 @@ def join_with_topk_evidence(
 
     return df
 
+MODEL_NAME = "hfl/chinese-lert-base" #@param {type:"string"}
+# MODEL_NAME = "hfl/chinese-lert-large" #@param {type:"string"}
 
-# MODEL_NAME = "hfl/chinese-lert-base" #@param {type:"string"}
-MODEL_NAME = "hfl/chinese-lert-large" #@param {type:"string"}
-
-MODEL_SHORT = "hfl-lert-large-1"
+MODEL_SHORT = "hfl-lert-base-1"
 EVAL_VERSION = 2
 TRAIN_BATCH_SIZE = 16  #@param {type:"integer"}
 TEST_BATCH_SIZE = 32  #@param {type:"integer"}
@@ -169,8 +168,6 @@ TRAIN_PKL_FILE = Path(filename_train + f".pkl")
 TRAIN_JSONL_FILE = filename_train + f".jsonl"
 DEV_PKL_FILE = Path(filename_dev + f".pkl")
 DEV_JSONL_FILE = filename_dev + f".jsonl"
-# TRAIN_PKL_FILE = Path(f"data/claim_verification/train_doc5sent5_neg0.1_2e-05_e1_hfl_bert_split=0.1_threshold{SR_THRESHOLD}_top{EVIDENCE_TOPK}.pkl")
-# DEV_PKL_FILE = Path(f"data/claim_verification/dev_doc5sent5_neg0.1_2e-05_e1_hfl_bert_split=0.1_threshold{SR_THRESHOLD}_top{EVIDENCE_TOPK}.pkl")
 
 if not TRAIN_PKL_FILE.exists():
     train_df = join_with_topk_evidence(
@@ -233,7 +230,6 @@ model = AutoModelForSequenceClassification.from_pretrained(
 )
 # if torch.cuda.device_count() > 1:
 #     model = nn.DataParallel(model)
-# torch.cuda.empty_cache()
 model.to(device)
 optimizer = AdamW(model.parameters(), lr=LR)
 num_training_steps = NUM_EPOCHS * len(train_dataloader)

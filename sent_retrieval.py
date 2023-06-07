@@ -2,6 +2,7 @@ from pathlib import Path
 from typing import Dict, List, Set, Tuple, Union
 
 # third-party libs
+import json
 import numpy as np
 import pandas as pd
 from pandarallel import pandarallel
@@ -51,7 +52,7 @@ _y = [LABEL2ID[data["label"]] for data in TRAIN_DATA]
 # GT means Ground Truth
 TRAIN_GT, DEV_GT = train_test_split(
     DOC_DATA,
-    test_size=0.2,
+    test_size=0.1,
     random_state=SEED,
     shuffle=True,
     stratify=_y,
@@ -156,7 +157,7 @@ def evaluate_retrieval(
     top_n: int = 5,
     cal_scores: bool = True,
     save_name: str = None,
-    threshold: int = 0.3,
+    threshold: int = 0.0,
 ) -> Dict[str, float]:
     """Calculate the scores of sentence retrieval
 
@@ -391,14 +392,9 @@ def pair_with_wiki_sentences_eval(
         "predicted_evidence": predicted_evidence,
     })
 
-# MODEL_NAME = "bert-base-chinese"  #@param {type:"string"}
 MODEL_NAME = "hfl/chinese-bert-wwm" #@param {type:"string"}
-# MODEL_NAME = "hfl/chinese-bert-wwm-ext" #@param {type:"string"}
-# MODEL_NAME = "hfl/chinese-macbert-base" #@param {type:"string"}
-# MODEL_NAME = "hfl/chinese-roberta-wwm-ext" #@param {type:"string"}
-# MODEL_NAME = "hfl/chinese-lert-base" #@param {type:"string"}
 
-MODEL_SHORT = "hfl_bert"
+MODEL_SHORT = "hfl_bert_split=0.1"
 NUM_EPOCHS = 1  #@param {type:"integer"}
 LR = 2e-5  #@param {type:"number"}
 TRAIN_BATCH_SIZE = 64  #@param {type:"integer"}
@@ -406,9 +402,10 @@ TEST_BATCH_SIZE = 256  #@param {type:"integer"}
 NEGATIVE_RATIO = 0.1  #@param {type:"number"}
 WARMUP_RATIO = 0.1  #@param {type:"number"}
 VALIDATION_STEP = 50  #@param {type:"integer"}
+MAX_SEQ_LEN = 192
 TOP_N = 5  #@param {type:"integer"}
 
-EXP_DIR = f"sent_retrieval/e{NUM_EPOCHS}_bs{TRAIN_BATCH_SIZE}_" + f"{LR}_neg{NEGATIVE_RATIO}_warm{WARMUP_RATIO}_top{TOP_N}_{MODEL_SHORT}_new"
+EXP_DIR = f"sent_retrieval/e{NUM_EPOCHS}_bs{TRAIN_BATCH_SIZE}_" + f"{LR}_neg{NEGATIVE_RATIO}_warm{WARMUP_RATIO}_maxlen{MAX_SEQ_LEN}_top{TOP_N}_{MODEL_SHORT}_new"
 LOG_DIR = "logs/" + EXP_DIR
 CKPT_DIR = "checkpoints/" + EXP_DIR
 
@@ -429,8 +426,8 @@ print(counts)
 dev_evidences = pair_with_wiki_sentences_eval(mapping, pd.DataFrame(DEV_GT))
 tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
-train_dataset = SentRetrievalBERTDataset(train_df, tokenizer=tokenizer)
-val_dataset = SentRetrievalBERTDataset(dev_evidences, tokenizer=tokenizer)
+train_dataset = SentRetrievalBERTDataset(train_df, tokenizer=tokenizer, max_length=MAX_SEQ_LEN)
+val_dataset = SentRetrievalBERTDataset(dev_evidences, tokenizer=tokenizer, max_length=MAX_SEQ_LEN)
 
 train_dataloader = DataLoader(
     train_dataset,
@@ -438,78 +435,73 @@ train_dataloader = DataLoader(
     batch_size=TRAIN_BATCH_SIZE,
 )
 eval_dataloader = DataLoader(val_dataset, batch_size=TEST_BATCH_SIZE)
+del train_df
 
 device = torch.device("cuda:1") if torch.cuda.is_available() else torch.device(
     "cpu")
 print(torch.cuda.is_available())
 model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
-# print(torch.cuda.device_count())
+# Multiple GPU
 # if torch.cuda.device_count() > 1:
-#     # import os
-#     # os.environ['MASTER_ADDR'] = 'localhost'
-#     # os.environ['MASTER_PORT'] = '5678'
-#     # torch.distributed.init_process_group(backend="nccl")
-#     model = nn.DataParallel(model)
-#     # model = model.cuda()
-#     # model = nn.parallel.DistributedDataParallel(model)
+    # model = nn.DataParallel(model)
 model.to(device)
 
-# optimizer = AdamW(model.parameters(), lr=LR)
-# num_training_steps = NUM_EPOCHS * len(train_dataloader)
-# lr_scheduler = set_lr_scheduler(optimizer, num_training_steps, warmup_ratio=WARMUP_RATIO)
+optimizer = AdamW(model.parameters(), lr=LR)
+num_training_steps = NUM_EPOCHS * len(train_dataloader)
+lr_scheduler = set_lr_scheduler(optimizer, num_training_steps, warmup_ratio=WARMUP_RATIO)
 
 writer = SummaryWriter(LOG_DIR)
 
 torch.cuda.empty_cache()
 
-# progress_bar = tqdm(range(num_training_steps))
-# current_steps = 0
-# for epoch in range(NUM_EPOCHS):
-#     model.train()
+progress_bar = tqdm(range(num_training_steps))
+current_steps = 0
+for epoch in range(NUM_EPOCHS):
+    model.train()
 
-#     for batch in train_dataloader:
-#         torch.cuda.empty_cache()
-#         batch = {k: v.to(device) for k, v in batch.items()}
-#         outputs = model(**batch)
-#         loss = outputs.loss
-#         # loss.sum().backward()
-#         loss.backward()
+    for batch in train_dataloader:
+        torch.cuda.empty_cache()
+        batch = {k: v.to(device) for k, v in batch.items()}
+        outputs = model(**batch)
+        loss = outputs.loss
+        # loss.sum().backward()
+        loss.backward()
 
-#         optimizer.step()
-#         lr_scheduler.step()
-#         optimizer.zero_grad()
-#         progress_bar.update(1)
-#         writer.add_scalar("training_loss", loss.sum().item(), current_steps)
+        optimizer.step()
+        lr_scheduler.step()
+        optimizer.zero_grad()
+        progress_bar.update(1)
+        writer.add_scalar("training_loss", loss.sum().item(), current_steps)
 
-#         y_pred = torch.argmax(outputs.logits, dim=1).tolist()
-#         y_true = batch["labels"].tolist()
+        y_pred = torch.argmax(outputs.logits, dim=1).tolist()
+        y_true = batch["labels"].tolist()
 
-#         current_steps += 1
+        current_steps += 1
 
-#         if current_steps % VALIDATION_STEP == 0 and current_steps > 0:
-#             print("Start validation")
-#             probs = get_predicted_probs(model, eval_dataloader, device)
-#             # print(probs)
+        if current_steps % VALIDATION_STEP == 0 and current_steps > 0:
+            print("Start validation")
+            probs = get_predicted_probs(model, eval_dataloader, device)
+            # print(probs)
 
-#             val_results = evaluate_retrieval(
-#                 probs=probs,
-#                 df_evidences=dev_evidences,
-#                 ground_truths=DEV_GT,
-#                 top_n=TOP_N,
-#             )
-#             print(current_steps, val_results)
+            val_results = evaluate_retrieval(
+                probs=probs,
+                df_evidences=dev_evidences,
+                ground_truths=DEV_GT,
+                top_n=TOP_N,
+            )
+            print(current_steps, val_results)
 
-#             # log each metric separately to TensorBoard
-#             for metric_name, metric_value in val_results.items():
-#                 writer.add_scalar(
-#                     f"dev_{metric_name}",
-#                     metric_value,
-#                     current_steps,
-#                 )
+            # log each metric separately to TensorBoard
+            for metric_name, metric_value in val_results.items():
+                writer.add_scalar(
+                    f"dev_{metric_name}",
+                    metric_value,
+                    current_steps,
+                )
 
-#             save_checkpoint(model, CKPT_DIR, current_steps)
+            save_checkpoint(model, CKPT_DIR, current_steps)
 
-# print("Finished training!")
+print("Finished training!")
 
 torch.cuda.empty_cache()
 import json
@@ -517,39 +509,39 @@ ckpt_name = "model.350.pt"  #@param {type:"string"}
 THRESHOLD = 0.3
 model = load_model(model, ckpt_name, CKPT_DIR)
 
-# print("Start final evaluations and write prediction files.")
+print("Start final evaluations and write prediction files.")
 
-# train_evidences = pair_with_wiki_sentences_eval(
-#     mapping=mapping,
-#     df=pd.DataFrame(TRAIN_GT),
-# )
-# train_set = SentRetrievalBERTDataset(train_evidences, tokenizer)
-# train_dataloader = DataLoader(train_set, batch_size=TEST_BATCH_SIZE)
+train_evidences = pair_with_wiki_sentences_eval(
+    mapping=mapping,
+    df=pd.DataFrame(TRAIN_GT),
+)
+train_set = SentRetrievalBERTDataset(train_evidences, tokenizer)
+train_dataloader = DataLoader(train_set, batch_size=TEST_BATCH_SIZE)
 
-# print("Start calculating training scores")
-# probs = get_predicted_probs(model, train_dataloader, device)
-# train_results = evaluate_retrieval(
-#     probs=probs,
-#     df_evidences=train_evidences,
-#     ground_truths=TRAIN_GT,
-#     top_n=TOP_N,
-#     save_name=f"sent_retrieval/train_doc5sent{TOP_N}_neg{NEGATIVE_RATIO}_{LR}_e{NUM_EPOCHS}_{MODEL_SHORT}_threshold{THRESHOLD}",
-#     threshold=THRESHOLD,
-# )
-# print(f"Training scores => {train_results}")
+print("Start calculating training scores")
+probs = get_predicted_probs(model, train_dataloader, device)
+train_results = evaluate_retrieval(
+    probs=probs,
+    df_evidences=train_evidences,
+    ground_truths=TRAIN_GT,
+    top_n=TOP_N,
+    save_name=f"sent_retrieval/train_doc5sent{TOP_N}_neg{NEGATIVE_RATIO}_{LR}_e{NUM_EPOCHS}_{MODEL_SHORT}_threshold{THRESHOLD}",
+    threshold=THRESHOLD,
+)
+print(f"Training scores => {train_results}")
 
-# print("Start validation")
-# probs = get_predicted_probs(model, eval_dataloader, device)
-# val_results = evaluate_retrieval(
-#     probs=probs,
-#     df_evidences=dev_evidences,
-#     ground_truths=DEV_GT,
-#     top_n=TOP_N,
-#     save_name=f"sent_retrieval/dev_doc5sent{TOP_N}_neg{NEGATIVE_RATIO}_{LR}_e{NUM_EPOCHS}_{MODEL_SHORT}_threshold{THRESHOLD}",
-#     threshold=THRESHOLD,
-# )
+print("Start validation")
+probs = get_predicted_probs(model, eval_dataloader, device)
+val_results = evaluate_retrieval(
+    probs=probs,
+    df_evidences=dev_evidences,
+    ground_truths=DEV_GT,
+    top_n=TOP_N,
+    save_name=f"sent_retrieval/dev_doc5sent{TOP_N}_neg{NEGATIVE_RATIO}_{LR}_e{NUM_EPOCHS}_{MODEL_SHORT}_threshold{THRESHOLD}",
+    threshold=THRESHOLD,
+)
 
-# print(f"Validation scores => {val_results}")
+print(f"Validation scores => {val_results}")
 
 test_data = load_json("data/test_doc5_sbert_public.jsonl")
 
